@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.venv/
+.env
+
+# Experiment artifacts
+/outputs/
+/results/
+/analysis/
+/data/
+/checkpoints/
+/logs/
+/figures/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Paper PDF is kept locally until the public preprint is posted
+/PO1_Learning_Dynamics_of_Continual_Learning.pdf
+
+# Internal release task file (kept locally, not published)
+/codex_merge_release_JD.md
+
+# Model and dataset caches
+.cache/
+huggingface/

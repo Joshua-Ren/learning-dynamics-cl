@@ -1,0 +1,11 @@
+[project]
+name = "plasticity-loss"
+version = "0.1.0"
+description = "Readout-transmission and long-horizon plasticity-loss experiments."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

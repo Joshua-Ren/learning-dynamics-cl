@@ -1,0 +1,28 @@
+project_name: "sft_vs_rl"
+
+seed: 42
+
+dataset:
+  name: "openai/gsm8k"
+  config: "main"
+  # num_samples:  # You can pass a number here to limit the number of samples to use.
+  seed: 42
+
+model:
+  name: "Qwen/Qwen3.5-0.8B" #"microsoft/Phi-3-mini-4k-instruct" #"Qwen/Qwen2.5-Math-7B-Instruct" # Qwen/Qwen2.5-7B-Instruct # "mistralai/Mistral-7B-v0.1" # "deepseek-ai/deepseek-llm-7b-chat" #"Qwen/Qwen2.5-Math-1.5B" #
+  max_length: 256
+
+train:
+  learning_rate: 1e-4
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  logging_steps: 10
+  save_steps: 200
+  save_total_limit: 2
+  report_to: none
+
+  # Evaluations
+  eval_strategy: "steps"
+  do_eval: false
+  prediction_loss_only: false
+  eval_steps: 100

@@ -1,0 +1,11 @@
+{
+  "gsm8k_sft": {
+    "hf_hub_url": "openai/gsm8k",
+    "subset": "main",
+    "split": "train",
+    "columns": {
+      "prompt": "question",
+      "response": "answer"
+    }
+  }
+}

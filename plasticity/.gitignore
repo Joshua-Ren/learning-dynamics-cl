@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+wandb/
+outputs/
+checkpoints/
+data/
+figures/
+logs/
+cache/

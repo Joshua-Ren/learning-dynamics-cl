@@ -1,0 +1,26 @@
+# Core dependencies shared by the three releases.
+# The forgetting training/evaluation path also requires the companion
+# LLaMA-Factory fork; see forgetting/README.md.
+torch>=2.6,<3
+transformers>=4.56,<5
+huggingface_hub
+trl>=0.26,<0.27
+datasets>=4,<5
+accelerate>=1.10,<2
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+scikit-learn
+tqdm
+peft
+sentencepiece
+protobuf
+safetensors
+wandb
+einops
+jsonlines
+pyyaml
+jupyter
+ipykernel

@@ -1,0 +1,24 @@
+# Generated experiment artifacts
+results/
+figures/
+logs/
+out/
+outputs/
+wandb/
+
+# Local caches and credentials
+.cache/
+.env
+*.pem
+*.key
+
+# Python and Jupyter state
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Model and dataset artifacts
+*.pt
+*.pth
+*.safetensors
+*.parquet

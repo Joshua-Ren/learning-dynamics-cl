@@ -111,6 +111,10 @@ This is a minimal code release, not a one-command artifact bundle. Exact paper-s
 
 The default commands write beneath `outputs/`. Use explicit path arguments for external datasets and checkpoints, and inspect each command with `--help` before launching a full run.
 
+## Acknowledgements
+
+Repository release engineering, integration, and documentation cleanup were completed with assistance from OpenAI Codex.
+
 ## Citation
 
 The manuscript is currently a preprint and does not provide an arXiv identifier.

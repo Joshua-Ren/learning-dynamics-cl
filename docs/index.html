@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Dynamics of Continual Learning</title>
+<meta name="description" content="A unified view of data attribution, forgetting, and plasticity loss through a single token-level update–behavior interaction.">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Learning Dynamics of Continual Learning">
+<meta property="og:description" content="Data attribution, forgetting, and plasticity loss are the same evolving learning dynamics, seen through one update–behavior interaction.">
+<meta property="og:image" content="assets/fig1_loop.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #ffffff;
+    --bg-alt: #f5f8fb;
+    --card: #ffffff;
+    --text: #14181d;
+    --text-dim: #4c5560;
+    --text-faint: #8a95a1;
+    --rule: #e2e9f0;
+    --accent: #4a84b8;
+    --accent-soft: #eaf2fa;
+    --ch1: #2f6fa8;
+    --ch2: #c96a2c;
+    --ww: #8a3535;
+    --callout: #7a4fc9;
+    --link: #3f76ab;
+    --code-bg: #f5f8fb;
+    --shadow: 0 1px 2px rgba(20,30,40,0.03), 0 4px 16px rgba(20,30,40,0.04);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #14181d;
+      --bg-alt: #1a1f26;
+      --card: #1e242c;
+      --text: #e7edf3;
+      --text-dim: #aeb9c4;
+      --text-faint: #7c8794;
+      --rule: #2b333d;
+      --accent: #7fb2e0;
+      --accent-soft: #1b2a38;
+      --ch1: #7fb2e0;
+      --ch2: #e3985e;
+      --ww: #d98a8a;
+      --callout: #b48af5;
+      --link: #7fb2e0;
+      --code-bg: #1a1f26;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.3);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight:700;
+    letter-spacing:-0.02em;
+  }
+  .wrap{max-width:860px; margin:0 auto; padding:0 24px;}
+  a{color:var(--link); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* ---- Hero ---- */
+  header.hero{
+    padding:88px 0 56px;
+    border-bottom:1px solid var(--rule);
+    background:var(--bg);
+  }
+  .hero h1{
+    font-size:2.15rem;
+    line-height:1.22;
+    text-align:center;
+    margin:0 auto 10px;
+    max-width:760px;
+  }
+  .subtitle{
+    text-align:center;
+    color:var(--text-dim);
+    font-size:1.05rem;
+    max-width:600px;
+    margin:0 auto 28px;
+  }
+  .authors{
+    text-align:center;
+    font-size:1rem;
+    color:var(--text);
+    margin-bottom:6px;
+  }
+  .affil{
+    text-align:center;
+    color:var(--text-faint);
+    font-size:0.9rem;
+    margin-bottom:8px;
+  }
+  .venue-tag{
+    text-align:center;
+    font-size:0.82rem;
+    color:var(--text-faint);
+    letter-spacing:0.02em;
+    margin-bottom:30px;
+  }
+  .venue-tag span{
+    border:1px solid var(--rule);
+    border-radius:999px;
+    padding:4px 12px;
+  }
+
+  .links{
+    display:flex; justify-content:center; gap:12px; flex-wrap:wrap;
+    margin-top:8px;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:9px 18px;
+    border-radius:10px;
+    border:1px solid var(--rule);
+    background:var(--bg-alt);
+    color:var(--text);
+    font-size:0.92rem;
+    font-weight:500;
+    transition:transform .12s ease, border-color .12s ease, background .12s ease;
+  }
+  .btn:hover{ text-decoration:none; border-color:var(--accent); background:var(--accent-soft); }
+  .btn.primary{ background:var(--accent); color:#fff; border-color:var(--accent); }
+  .btn.disabled{ opacity:0.45; pointer-events:none; }
+  .btn svg{width:16px; height:16px; flex:none;}
+
+  /* ---- Sections ---- */
+  main section{ padding:56px 0; }
+  main section + section{ border-top:1px solid var(--rule); }
+  .kicker{
+    text-transform:uppercase;
+    letter-spacing:0.09em;
+    font-size:0.86rem;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  h2.section-title{ font-size:1.55rem; margin:0 0 18px; }
+  p{ color:var(--text); }
+  .lede{ font-size:1.08rem; color:var(--text-dim); }
+
+  .abstract-card{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:14px;
+    padding:28px 30px;
+    box-shadow:var(--shadow);
+    font-size:0.98rem;
+    color:var(--text-dim);
+  }
+  .abstract-card p{ color:inherit; margin:14px 0; }
+
+  figure{ margin:28px 0; text-align:center; }
+  figure .frame{
+    display:inline-block;
+    max-width:100%;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:16px;
+    padding:14px;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  figure .frame img{
+    max-width:100%;
+    display:block;
+    border-radius:8px;
+    cursor:zoom-in;
+    transition:opacity .12s ease;
+  }
+  figure .frame:hover img{ opacity:0.94; }
+  figure .frame .zoom-hint{
+    position:absolute;
+    top:22px; right:22px;
+    width:30px; height:30px;
+    border-radius:8px;
+    background:rgba(20,24,29,0.55);
+    color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0;
+    transition:opacity .12s ease;
+    pointer-events:none;
+  }
+  figure .frame:hover .zoom-hint{ opacity:1; }
+  figure .frame .zoom-hint svg{ width:16px; height:16px; }
+
+  /* ---- Lightbox ---- */
+  .lightbox{
+    position:fixed; inset:0;
+    background:rgba(10,12,15,0.92);
+    display:none;
+    align-items:center; justify-content:center;
+    z-index:1000;
+    padding:32px;
+    overflow:auto;
+    cursor:zoom-out;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{
+    max-width:92vw;
+    max-height:88vh;
+    border-radius:10px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+    cursor:zoom-in;
+    transition:max-width .15s ease, max-height .15s ease;
+  }
+  .lightbox img.zoomed{
+    max-width:none;
+    max-height:none;
+    width:auto;
+    cursor:zoom-out;
+  }
+  .lightbox-close{
+    position:absolute;
+    top:20px; right:24px;
+    width:40px; height:40px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.25);
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    font-size:1.3rem;
+    line-height:1;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+  }
+  .lightbox-hint{
+    position:absolute;
+    bottom:22px; left:50%;
+    transform:translateX(-50%);
+    color:rgba(255,255,255,0.65);
+    font-size:0.8rem;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    padding:6px 14px;
+    border-radius:999px;
+  }
+  figcaption{
+    margin-top:12px;
+    font-size:0.86rem;
+    color:var(--text-faint);
+    text-align:left;
+    max-width:100%;
+  }
+  figcaption b{ color:var(--text-dim); }
+
+  .eq{
+    font-family:'JetBrains Mono', monospace;
+    background:var(--code-bg);
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:18px 20px;
+    font-size:0.88rem;
+    overflow-x:auto;
+    color:var(--text);
+  }
+  .eq-formula{
+    display:block;
+    text-align:center;
+    font-size:1.0rem;
+    white-space:nowrap;
+    overflow-x:auto;
+    padding:6px 0 16px;
+    margin-bottom:10px;
+    border-bottom:1px solid var(--rule);
+  }
+  .o-term{ color:var(--ch2); }
+  .u-term{ color:var(--ch1); }
+  .ww-term{ color:var(--ww); }
+
+  #takeaway strong{ color:var(--callout); font-weight:700; }
+
+  /* ---- Sidebar TOC ---- */
+  .toc-sidebar{
+    position:fixed;
+    top:140px;
+    left:max(20px, calc(50% - 430px - 210px));
+    width:190px;
+    max-height:calc(100vh - 180px);
+    overflow-y:auto;
+  }
+  .toc-sidebar .toc-label{
+    font-size:0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.09em;
+    color:var(--text-faint);
+    font-weight:600;
+    margin-bottom:10px;
+    padding-left:13px;
+  }
+  .toc-sidebar a{
+    display:block;
+    padding:7px 0 7px 13px;
+    font-size:0.86rem;
+    color:var(--text-faint);
+    border-left:2px solid var(--rule);
+    line-height:1.3;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .toc-sidebar a:hover{ color:var(--text); text-decoration:none; }
+  .toc-sidebar a.active{ color:var(--accent); border-left-color:var(--accent); font-weight:600; }
+  @media (max-width: 1300px){ .toc-sidebar{ display:none; } }
+
+  .rq-eq{
+    display:block;
+    text-align:center;
+    font-size:1.35rem;
+    font-family:'JetBrains Mono', monospace;
+    white-space:nowrap;
+    overflow-x:auto;
+    margin:16px 0;
+    color:var(--text);
+  }
+  .frac{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    vertical-align:middle;
+    margin:0 5px;
+    font-size:0.82em;
+    line-height:1.35;
+  }
+  .frac .num{ padding:0 4px 3px; border-bottom:1.5px solid currentColor; }
+  .frac .den{ padding:3px 4px 0; }
+
+  .stage-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+    margin:24px 0 8px;
+  }
+  .stage-card{
+    border:1px solid var(--rule);
+    border-radius:12px;
+    padding:16px 16px 14px;
+    background:var(--card);
+  }
+  .stage-card .n{ font-size:0.76rem; color:var(--accent); font-weight:700; letter-spacing:0.06em; }
+  .stage-card h4{ margin:6px 0 6px; font-size:1rem; text-wrap:balance; }
+  .stage-card p{ margin:0; font-size:0.86rem; color:var(--text-dim); }
+  @media (max-width:680px){ .stage-grid{ grid-template-columns:1fr; } }
+
+  table.mini{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.86rem;
+    margin:18px 0;
+  }
+  table.mini th, table.mini td{
+    border-bottom:1px solid var(--rule);
+    padding:8px 10px;
+    text-align:center;
+  }
+  table.mini td:not(:first-child){ font-family:'JetBrains Mono', monospace; }
+  table.mini thead th{ color:var(--text-faint); font-weight:600; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.04em; }
+  table.mini tbody tr:last-child td{ border-bottom:none; }
+  table.mini td.best{ color:var(--accent); font-weight:700; }
+
+  .note{
+    font-size:0.86rem;
+    color:var(--text-faint);
+    border-left:2px solid var(--rule);
+    padding-left:14px;
+    margin:18px 0;
+  }
+
+  .highlight{
+    background:var(--accent-soft);
+    border-left:3px solid var(--accent);
+    border-radius:8px;
+    padding:16px 20px;
+    margin:20px 0;
+    font-size:1rem;
+    color:var(--text);
+  }
+  .highlight b{ color:var(--accent); }
+
+  pre.bibtex{
+    background:var(--code-bg);
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:20px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.8rem;
+    overflow-x:auto;
+    color:var(--text-dim);
+    line-height:1.55;
+  }
+
+  footer{
+    padding:40px 0 60px;
+    text-align:center;
+    color:var(--text-faint);
+    font-size:0.82rem;
+  }
+  footer a{ color:var(--text-faint); }
+
+  .toc{
+    display:flex; justify-content:center; gap:22px; flex-wrap:wrap;
+    margin-top:34px;
+    font-size:0.86rem;
+  }
+  .toc a{ color:var(--text-dim); }
+  .toc a:hover{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="toc-sidebar" id="toc-sidebar">
+  <div class="toc-label">On this page</div>
+  <a href="#tldr">TL;DR</a>
+  <a href="#method">Method &amp; Insights</a>
+  <a href="#selection">Selection</a>
+  <a href="#interference">Interference</a>
+  <a href="#sustainability">Plasticity</a>
+  <a href="#takeaway">Takeaway</a>
+  <a href="#cite">Cite</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="venue-tag"><span>Preprint &middot; under review</span></div>
+    <h1>Learning Dynamics of Continual Learning</h1>
+    <p class="subtitle">A unified view of data attribution, forgetting, and plasticity loss</p>
+
+    <p class="authors"><a href="https://joshua-ren.github.io/" target="_blank" rel="noopener noreferrer">Yi Ren</a><sup>1,2</sup>&nbsp; <a href="https://vengdeng.github.io/" target="_blank" rel="noopener noreferrer">Wenlong Deng</a><sup>3</sup>&nbsp; <a href="https://guanzhehong.github.io/" target="_blank" rel="noopener noreferrer">Guanzhe Hong</a><sup>2</sup>&nbsp; <a href="https://clarelyle.com/" target="_blank" rel="noopener noreferrer">Clare Lyle</a><sup>4</sup>&nbsp; <a href="https://www.cs.ox.ac.uk/people/yarin.gal/website/" target="_blank" rel="noopener noreferrer">Yarin Gal</a><sup>1,2</sup></p>
+    <p class="affil"><sup>1</sup><a href="https://oatml.cs.ox.ac.uk/" target="_blank" rel="noopener noreferrer">OATML</a>&nbsp; <sup>2</sup>University of Oxford&nbsp; <sup>3</sup>UBC&nbsp; <sup>4</sup>Google DeepMind</p>
+
+    <div class="links">
+      <a class="btn disabled" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Paper (arXiv — Sep 15)</a>
+      <a class="btn" href="https://github.com/Joshua-Ren/learning-dynamics-cl" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code</a>
+      <a class="btn disabled" href="#">🤗 Hugging Face (coming soon)</a>
+    </div>
+
+    <div class="toc">
+      <a href="#tldr">TL;DR</a>
+      <a href="#method">Method</a>
+      <a href="#selection">Selection</a>
+      <a href="#interference">Interference</a>
+      <a href="#sustainability">Plasticity</a>
+      <a href="#takeaway">Takeaway</a>
+      <a href="#cite">Cite</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- TEASER -->
+  <section id="teaser">
+    <div class="wrap">
+      <figure>
+        <div class="frame" onclick="openLightbox('assets/fig1_loop.png', this.querySelector('img').alt)"><img src="assets/fig1_loop.png" alt="A learning-dynamics view of lifelong continual learning: selection, interference, and sustainability as three stages of the same update–behavior interaction."><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+        <figcaption><b>Main takeaway.</b> A continual learner repeatedly faces three questions: what to learn from, what an update may disrupt, and whether future learning remains effective. We connect all three through the same token-level interaction Δ<sub>t</sub>(o, u) </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- TL;DR -->
+  <section id="tldr">
+    <div class="wrap">
+      <div class="kicker">TL;DR</div>
+      <div class="abstract-card">
+        <p style="margin-top:0">Every time a model learns something new, it changes something else. Which changes are useful, which cause forgetting, and when do repeated updates make future learning harder? We study these questions through one simple local interaction: <b>how does learning from one token change the model's behavior on another?</b></p>
+        <p>Rather than treating the interaction as a black-box score, we decompose it into interpretable components that reveal <b>why</b> an update helps, interferes with existing behavior, or weakens future learning. The same local interaction therefore describes <b>what to learn from, what an update may break, and whether the model will remain easy to adapt later.</b></p>
+      </div>
+
+      <div class="stage-grid">
+        <div class="stage-card">
+          <div class="n">① SELECTION</div>
+          <h4>What should the model learn from?</h4>
+          <p>Positive interactions identify useful updates.</p>
+        </div>
+        <div class="stage-card">
+          <div class="n">② INTERFERENCE</div>
+          <h4>What does an update break?</h4>
+          <p>Negative interactions reveal collision and erosion.</p>
+        </div>
+        <div class="stage-card">
+          <div class="n">③ PLASTICITY</div>
+          <h4>Will future learning still work?</h4>
+          <p>Repeated updates can weaken future learnability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method">
+    <div class="wrap">
+      <div class="kicker">Method & Insights</div>
+      <h2 class="section-title">One interaction, two channels, three closely related tasks</h2>
+      <p>Learning from an updating token <code>u</code> changes the model's confidence in an observing token <code>o</code> by an amount Δ<sub>t</sub>(o,u). A first-order expansion turns this into a gradient inner product; separating the softmax force, the shared readout matrix <b>w</b>, and the residual backbone exposes two distinct, <i>forward-pass only</i> channels:</p>
+
+      <div class="eq">
+        <span class="eq-formula">Δ<sub>t</sub>(o,u) &nbsp;≈&nbsp;
+        η (<span class="o-term">g<sub>o</sub></span><sup>⊤</sup><span class="u-term">g<sub>u</sub></span>)(<span class="o-term">h<sub>L,o</sub></span><sup>⊤</sup><span class="u-term">h<sub>L,u</sub></span>)
+        &nbsp;+&nbsp;
+        η (<span class="ww-term">w</span><sup>⊤</sup><span class="o-term">g<sub>o</sub></span>)<sup>⊤</sup>(<span class="ww-term">w</span><sup>⊤</sup><span class="u-term">g<sub>u</sub></span>) Σ<sub>ℓ</sub> <span class="o-term">h̃<sub>ℓ,o</sub></span><sup>⊤</sup><span class="u-term">h̃<sub>ℓ,u</sub></span></span>
+        <b>CH1 (1st term) — direct</b>: sparse, token-aligned interaction in vocabulary space.<br>
+        <b>CH2 (2nd term) — diffuse</b>: interaction mediated by the shared readout <span class="ww-term"><b>w</b></span>, coupling tokens beyond direct overlap.<br>
+        <br>
+        <b>CORE INSIGHTS</b><br>
+        <b>Energy ‖g<sub>u</sub>‖<sub>2</sub><sup>2</sup></b>: update strength, revealing collision-prone updates.<br>
+        <b>Collision / erosion</b>: few strong conflicts vs. accumulated weak interference.<br>
+        <b>Shared geometry <span class="ww-term">ww<sup>⊤</sup></span></b>: couples token forces and controls backbone transmission.<br>
+        <b>Readout transmission</b>: tracks how repeated learning changes future learnability.
+      </div>
+
+      <figure>
+        <div class="frame" onclick="openLightbox('assets/fig3_channels.png', this.querySelector('img').alt)"><img src="assets/fig3_channels.png" alt="Geometry of CH1 and CH2: token forces, direct vs readout-mediated interaction, and empirical readout geometry."><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+        <figcaption><b>A force-based view of LLM behavior.</b> The key object to keep in mind is simple: how two token forces align, ⟨g<sub>o</sub>,g<sub>u</sub>⟩. CH1 measures this alignment directly, while CH2 asks how it changes after passing through the shared readout.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SELECTION -->
+  <section id="selection">
+    <div class="wrap">
+      <div class="kicker">① Selection — §4</div>
+      <h2 class="section-title">Selection: direct overlap first, shared geometry when needed</h2>
+      <p class="lede">Data attribution is the positive regime of the same interaction: examples with stronger positive Δ<sub>t</sub>(o,u) are more useful candidates for learning. Our approximation scores this interaction using forward-pass quantities only.</p>
+
+      <p><b>CH1 is already strong when direct token alignment is available; CH2 becomes useful when that alignment weakens.</b> 
+            On a controlled math-attribution benchmark, CH1, equivalent to our earlier <a href="https://arxiv.org/abs/2508.10180" target="_blank" rel="noopener noreferrer">For-Value</a> score, already saturates AUC and recall while requiring no backward pass. We then stress-test direct alignment by translating the same queries across languages. Semantic relevance is preserved, but surface-level token alignment is weakened. Here, CH1 begins to degrade, while adding the readout-mediated CH2 substantially improves attribution.</p>
+
+      <div style="overflow-x:auto">
+      <table class="mini">
+        <thead><tr><th>Method</th><th>Math AUC</th><th>Math Recall</th><th>X-lingual MMLU</th><th>X-lingual GSM8K</th><th>Backward?</th><th>Complexity</th></tr></thead>
+        <tbody>
+          <tr><td>Random</td><td>0.50</td><td>0.10</td><td>0.025</td><td>0.020</td><td>&ndash;</td><td><code>O(n)</code></td></tr>
+          <tr><td>Embd</td><td>0.56</td><td>0.15</td><td>0.475</td><td>0.370</td><td>no</td><td><code>O(nd)</code></td></tr>
+          <tr><td>DataInf</td><td>0.99</td><td>0.88</td><td>0.313</td><td>0.175</td><td>yes</td><td><code>O(nd<sub>in</sub>L)</code></td></tr>
+          <tr><td>HyperINF</td><td>0.99</td><td>0.94</td><td>0.606</td><td>0.645</td><td>yes</td><td><code>O(nd<sup>3</sup>L)</code></td></tr>
+          <tr><td>LESS</td><td>0.84</td><td>0.59</td><td>0.319</td><td>0.355</td><td>yes</td><td><code>O(nd<sub>proj</sub>)</code></td></tr>
+          <tr><td><a href="https://arxiv.org/abs/2508.10180" target="_blank" rel="noopener noreferrer">For-Value</a> (CH1)</td><td>1.00</td><td>1.00</td><td>0.506</td><td>0.830</td><td>no</td><td><code>O(nd)</code></td></tr>
+          <tr><td class="best">CH1 + CH2</td><td class="best">1.00</td><td class="best">1.00</td><td class="best">0.625</td><td class="best">0.930</td><td>no</td><td><code>O(ndL)</code></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note">Left two columns: retrieving same-class math examples, Qwen2.5-1.5B (Table 1). Right two columns: cross-lingual attribution accuracy on Llama-3.2-3B, tracing a translated candidate back to its English source (Table 2; other models show the same pattern). CH1 nearly saturates attribution when direct token alignment is strong. CH2 provides complementary signal as that alignment weakens, rather than acting as a universal upgrade.</p>
+      <p>
+        <strong>Does this help with real retrieval?</strong>
+        In a multilingual agent-memory setting, using CH1+CH2 improves Llama-3.2-3B's
+        top-1 retrieval accuracy from 0.861 (CH1 alone) to <strong>1.000</strong>.
+        More importantly, downstream answer accuracy rises from <strong>0%</strong> to
+        <strong>94.4%</strong> once the retrieved memory is used.
+      </p>
+
+      <p>
+        <strong>Does better attribution translate into better training data?</strong>
+        As a closed-loop check, we select the top 5% of GSM8K examples using CH1+CH2
+        and fine-tune on the resulting subset. This reaches <strong>0.636</strong>
+        accuracy on Qwen2.5-1.5B and <strong>0.313</strong> on Llama-3.2-3B, compared
+        with 0.610 / 0.295 for random selection and 0.587 / 0.301 for gradient-based
+        LESS. Candidate scoring requires only forward-pass quantities.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTERFERENCE -->
+  <section id="interference">
+    <div class="wrap">
+      <div class="kicker">② Interference — §5</div>
+      <h2 class="section-title">Two mechanisms of forgetting: collision and erosion</h2>
+      <p class="lede"><b>Collision:</b> a few strong conflicts, often visible in accuracy.<br>
+                      <b>Erosion:</b> many weak interactions that accumulate into behavioral drift, often missed by accuracy.</p>
+
+      <figure>
+        <div class="frame" onclick="openLightbox('assets/fig5_collision_erosion.png', this.querySelector('img').alt)"><img src="assets/fig5_collision_erosion.png" alt="Two mechanisms of forgetting: collision (a few strong conflicts) versus erosion (many weak conflicts that accumulate)."><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+        <figcaption><b>Collision vs. erosion.</b> A strong conflict drives abrupt forgetting (left), while weak interactions accumulate into gradual behavioral drift (right).</figcaption>
+      </figure>
+
+      <p>
+        <strong>Collision — a few updates hit hard.</strong>
+        A strongly opposing update can directly push down an existing high-confidence behavior.
+        This risk is especially relevant for objectives with explicit negative-gradient components,
+        such as <strong>unlearning, DPO, and GRPO</strong>, where some responses are intentionally suppressed.
+        In these settings, the
+        <a href="https://openreview.net/forum?id=tPNHOoZFl9" target="_blank" rel="noopener noreferrer">
+          squeezing effect
+        </a>
+        from our previous work may also become relevant: strong negative updates, especially on
+        already-unlikely outputs, can redistribute probability mass in unintuitive ways.
+      </p>
+
+      <div class="highlight"><b>Energy tracks collision risk.</b> Proposition 5.1 shows that high update energy and strong negative force tend to occur together. This makes E<sub>u</sub> = ‖g<sub>u</sub>‖<sub>2</sub><sup>2</sup> a simple scalar proxy for collision-prone updates.</div>
+
+      <p>The link between collision and energy is visible in real training data — and on-policy rollouts show a strikingly different pattern from off-policy SFT targets.</p>
+
+      <figure>
+        <div class="frame" onclick="openLightbox('assets/fig6ab_energy.png', this.querySelector('img').alt)"><img src="assets/fig6ab_energy.png" alt="Left: entropy versus target probability, colored by SFT vs. on-policy RL sampling. Right: entropy versus update energy — extreme-energy tokens concentrate in the low-entropy, low-confidence confident-conflict region."><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+        <figcaption>Collision and energy go together in practice.
+                    Off-policy SFT targets are much more likely to enter the low-entropy, low-confidence conflict regime, and those same tokens also carry extreme update energy.</figcaption>
+      </figure>
+
+      <p>The intervention follows directly: masking updates with too big <b>E<sub>u</sub></b> substantially improves retention of general capability during SFT. Push the threshold too aggressively, though, and downstream learning starts to suffer — this targets specific high-risk updates, not training volume in general.</p>
+
+      <p><b>This isn't just theoretical — several popular methods already do it.</b> A number of finetuning objectives known to be more stable than plain off-policy SFT turn out to suppress extreme energy as a side effect of their design: <a href="https://arxiv.org/abs/2306.13649" target="_blank" rel="noopener noreferrer">GKD</a> replaces the one-hot target with a softer teacher distribution, <a href="https://thinkingmachines.ai/blog/on-policy-distillation" target="_blank" rel="noopener noreferrer">OPD</a> samples on-policy so extreme-energy tokens are rarely even visited, and <a href="https://arxiv.org/abs/1906.02629" target="_blank" rel="noopener noreferrer">label smoothing</a> caps how large the energy can get in the first place. Heuristic methods like <a href="https://arxiv.org/abs/2601.02151" target="_blank" rel="noopener noreferrer">EAFT</a> go after the same quantity directly, by downweighting exactly the low-entropy conflicting tokens Prop. 5.1 flags. We work through the derivation for each in Appendix D.1 — the short version is below.</p>
+
+      <table class="mini">
+        <thead><tr><th>Objective</th><th>Update force</th><th>Risk of extreme energy</th></tr></thead>
+        <tbody>
+          <tr><td>SFT</td><td>e<sub>yu</sub> &minus; π</td><td>possible</td></tr>
+          <tr><td>RL (on-policy)</td><td>e<sub>yu</sub> &minus; π</td><td>uncommon</td></tr>
+          <tr><td>GKD</td><td>π<sub>teacher</sub> &minus; π</td><td>suppressed</td></tr>
+          <tr><td>OPD</td><td>A<sub>u</sub>(e<sub>yu</sub> &minus; π)</td><td>suppressed by sampling</td></tr>
+          <tr><td>Label smoothing</td><td>(1&minus;ε)e<sub>yu</sub> + εu &minus; π</td><td>bounded by ε</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Simplified from Table 8 (Appendix D.1). π abbreviates π<sub>θ</sub>(·|s<sub>u</sub>); e<sub>yu</sub> is the one-hot target; u is the uniform distribution; A<sub>u</sub> is OPD's log-ratio weight.</p>
+
+      <p><b>Erosion — weak interactions accumulate.</b> 
+            MMLU's likelihood-based accuracy only checks which of A/B/C/D scores highest; it says little about whether the model still behaves like a multiple-choice assistant when generating. 
+            That gap is where erosion hides: many individually mild updates can gradually shift the model's <i>response style</i> while measured accuracy barely moves.</p>
+
+      <div style="overflow-x:auto">
+      <table class="mini">
+        <thead><tr><th>Method</th><th>Non-IF</th><th>Boxed</th><th>P(A...D)</th><th>MMLU</th></tr></thead>
+        <tbody>
+          <tr><td>base</td><td>11.4%</td><td>0.0%</td><td>0.981</td><td>70.67%</td></tr>
+          <tr><td>SFT</td><td>63.7%</td><td>53.3%</td><td>0.399</td><td>69.94%</td></tr>
+          <tr><td>EAFT</td><td>60.7%</td><td>44.7%</td><td>0.418</td><td>70.03%</td></tr>
+          <tr><td>Mask E<sub>u</sub>&gt;1.8</td><td>65.4%</td><td>46.6%</td><td>0.385</td><td>69.69%</td></tr>
+          <tr><td>Mask E<sub>u</sub>&gt;1.5</td><td>55.1%</td><td>40.8%</td><td>0.444</td><td>69.72%</td></tr>
+          <tr><td>Mask E<sub>u</sub>&gt;1.0</td><td>51.5%</td><td>11.9%</td><td>0.521</td><td>69.18%</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note">Qwen3-4B-Instruct after OpenMathInstruct-2 fine-tuning. Non-IF, Boxed, and P(A...D) are from the generative MMLU evaluation (Table 11); MMLU is the standard likelihood-based multiple-choice accuracy (Table 9). Non-IF: doesn't answer with a letter at all. Boxed: adopts the training corpus's <code>\boxed{}</code> convention. P(A...D): probability mass on a valid choice.</p>
+
+      <p>
+      <strong>Energy-based defenses do not resolve erosion.</strong>
+      Even the most aggressive energy masking leaves <strong>51.5%</strong> of responses
+      non-compliant, compared with <strong>11.4%</strong> at base, while likelihood-based
+      MMLU accuracy barely changes. This is consistent with erosion being distributed across
+      many ordinary-looking updates rather than concentrated in the high-energy tail.</p>
+
+
+      <p><b>The fix isn't less learning — it's a different template.</b> If erosion accumulates because many updates share a response format with the protected behavior, the fix isn't to shrink those updates — it's to change the format, which changes the interaction paths they accumulate through. The semantic task content, and how well the new task is learned, stay basically untouched.</p>
+
+      <div style="overflow-x:auto">
+      <table class="mini">
+        <thead><tr><th>Training format</th><th>Protected behavior (ΔIF)</th><th>New-task learning (ΔAcc)</th></tr></thead>
+        <tbody>
+          <tr><td>Matching format</td><td>&minus;86.7 pts</td><td>+44.8 pts</td></tr>
+          <tr><td class="best">Separated format</td><td class="best">&minus;0.01 pts</td><td class="best">+45.3 pts</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note">Qwen3-4B, MMLU protected under <code>Question:/Answer:</code>, GSM8K learned under <code>Problem:/Result:</code> (Table 7). "Matching format" evaluates the protected behavior in the incoming task's format; "Separated format" evaluates it in its own.</p>
+
+      <div class="highlight"><b>Same learning gain, radically different forgetting.</b> The new task improves by roughly the same amount either way — but the protected behavior collapses under a matching format and barely moves under a separated one. Nothing about the new task's difficulty changed; only the path its updates took through the model did. For the full analysis and ablations, see Section 5.4 of the paper.</div>
+
+      <p class="note"><b>Why this matters.</b> Collision is concentrated: a few high-energy updates carry much of the risk, so filtering them helps. Erosion is distributed: many individually mild updates accumulate through aligned interaction paths, so magnitude filtering is insufficient. Changing those paths can substantially reduce erosion without reducing learning.</p>
+    </div>
+  </section>
+
+  <!-- PLASTICITY -->
+  <section id="sustainability">
+    <div class="wrap">
+      <div class="kicker">③ Plasticity — §6</div>
+      <h2 class="section-title">Learning today reshapes how easily the model learns tomorrow</h2>
+
+      <p>
+        Continual learning is ultimately a lifelong process: the model keeps updating,
+        repeatedly moves across tasks, and is expected to remain adaptable throughout.
+        This raises a fundamental question:
+        <strong>after learning for a long time, can the model still learn efficiently from the next task?</strong>
+        This failure mode is commonly studied as
+        <a href="https://proceedings.mlr.press/v202/lyle23b.html"
+          target="_blank" rel="noopener noreferrer">
+          <em>plasticity loss</em>
+        </a>,
+        and large language models are not immune to it.
+      </p>
+
+      <p>
+        Our interaction framework suggests a different way to look at plasticity loss:
+        <strong>as a signal-transmission problem</strong>.
+        If we view the token force <i>g</i> as an incoming learning signal, then
+        <i>w</i><sup>T</sup><i>g</i> is the signal after it passes through the shared
+        readout geometry on its way into the backbone.
+        From this perspective, plasticity should not be identified with the raw strength
+        of the force itself. What matters is the <strong>gain</strong>: how much of that
+        signal is transmitted relative to how strong the original signal was.
+      </p>
+
+      <p>
+        This naturally suggests normalizing out the input magnitude.
+        Borrowing the classical Rayleigh-quotient view of directional gain, we measure
+        the task-conditioned readout transmission as
+      </p>
+
+      <div class="highlight">
+        <b>Readout transmission as a Rayleigh quotient.</b>
+        <div class="rq-eq">R<sub>D</sub> = E<sub>u~D</sub>&thinsp;[&thinsp;<span class="frac"><span class="num">‖<span class="ww-term">w</span><sup>⊤</sup><span class="u-term">g<sub>u</sub></span>‖<sup>2</sup></span><span class="den">‖<span class="u-term">g<sub>u</sub></span>‖<sup>2</sup></span></span>&thinsp;]&thinsp; = &thinsp;E<sub>u~D</sub>&thinsp;[&thinsp;<span class="frac"><span class="num"><span class="u-term">g<sub>u</sub></span><sup>⊤</sup><span class="ww-term">ww</span><sup>⊤</sup><span class="u-term">g<sub>u</sub></span></span><span class="den"><span class="u-term">g<sub>u</sub></span><sup>⊤</sup><span class="u-term">g<sub>u</sub></span></span></span>&thinsp;]</div>
+        The numerator measures the squared strength of task D's token force after passing through the shared readout; the denominator removes the force's raw magnitude. R<sub>D</sub> is therefore a task-conditioned Rayleigh quotient of the readout geometry <span class="ww-term">ww</span><sup>⊤</sup>, measuring how effectively a force in that task direction is transmitted into hidden space.
+      </div>
+      <p>
+        The normalization separates <strong>signal gain</strong> from
+        <strong>signal strength</strong>: a task can still produce large output-level
+        errors while becoming progressively worse at transmitting them into the backbone.
+        This lets us study plasticity as a task-conditioned change in transmission geometry, rather than simply a change in gradient magnitude.
+      </p>
+
+
+      <p>
+        <strong>Why this can compound.</strong> The Rayleigh quotient also suggests a simple mechanism for how plasticity can
+        deteriorate over time. Different tasks place their token forces in different
+        directions of the shared readout geometry. Training on one task therefore does
+        not reshape <span class="ww-term">ww</span><sup>⊤</sup> uniformly: it preferentially strengthens and
+        reorganizes the directions used by that task, while transmission along other
+        task directions can weaken.
+      </p>
+
+      <p>
+        This can create a <strong>self-reinforcing loop</strong>. If the readout
+        transmission for a future task drops, less of that task's learning signal reaches
+        the backbone. Subsequent adaptation then relies relatively more on the readout
+        itself, potentially reshaping the same geometry further. In this view,
+        plasticity loss is not simply a weaker gradient: it can emerge from the
+        <strong>progressive reallocation of signal gain across task directions</strong>.
+      </p>
+
+      <figure>
+        <div class="frame" onclick="openLightbox('assets/fig8ab_readout.png', this.querySelector('img').alt)"><img src="assets/fig8ab_readout.png" alt="Left: different tasks induce token forces with different support over the shared readout geometry. Right: a self-reinforcing loop by which task-focused training can degenerate readout transmission for other tasks."><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+        <figcaption>  <strong>A self-reinforcing route to plasticity loss.</strong>
+          Different tasks probe different directions of the shared readout geometry (left).
+          Task-focused training can weaken transmission along other directions; once less
+          signal reaches the backbone, future adaptation may rely even more on the readout,
+          reinforcing the imbalance (right).</figcaption>
+      </figure>
+
+      <p>
+        <strong>If this picture is right, future-task transmission should decline as adaptation becomes harder.</strong>
+        Over long-horizon training, <i>R</i><sub>D</sub> falls along held-out
+        task directions while the in-distribution probe stays stable. This suggests a
+        task-conditioned loss of transmission rather than a generic collapse.
+        More strongly, if the readout is part of the bottleneck, restoring it should
+        recover plasticity, and settings with greater degeneration should recover more.
+      </p>
+
+      <figure>
+        <div class="frame" onclick="openLightbox('assets/fig_plasticity_composite.png', this.querySelector('img').alt)"><img src="assets/fig_plasticity_composite.png" alt="(a) Task-conditioned transmission declines over long-horizon training for out-of-distribution tasks but not an in-distribution probe. (b) Resetting the readout toward its base-model value substantially improves subsequent adaptation. (c) Settings with more pre-adaptation readout degeneration show larger gains from the reset."><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+        <figcaption>  <strong>Readout degeneration tracks lost plasticity and predicts its recovery.</strong>
+                              (a) Future-task transmission declines over long-horizon training.
+                              (b) Restoring the readout partially recovers subsequent adaptation.
+                              (c) Greater prior degeneration predicts larger reset gains
+                              (Spearman ρ = 0.83).</figcaption>
+      </figure>
+
+      <p>
+        <strong>The readout is an important, but not exclusive, source of plasticity loss.</strong>
+        Resetting it recovers a substantial fraction of lost adaptability, but not all of it;
+        resetting the last four blocks provides a modest additional gain.
+        The bottleneck is therefore real, measurable, and partially reversible.
+      </p>
+    </div>
+  </section>
+
+  <!-- TAKEAWAY -->
+  <section id="takeaway">
+    <div class="wrap">
+      <div class="kicker">Takeaway</div>
+
+      <p>A single token-level interaction gives us a common language for <b>selection, forgetting, and plasticity</b>. By decomposing it into direct force alignment and readout-mediated transmission, we can ask not only <i>what</i> changes after an update, but also <i>why</i>: which examples are useful, how interference accumulates, and when future learning signals begin to weaken.</p>
+
+      <p>This work builds on our <a href="https://arxiv.org/abs/2407.10490" target="_blank" rel="noopener noreferrer">ICLR 2025 learning-dynamics framework</a>. The earlier formulation described fine-tuning through a sequence-level, Jacobian-dependent kernel. Here we turn that view into a token-wise, layer-wise, forward-computable decomposition that can be evaluated throughout training, making the framework practical not only for predicting learning dynamics, but also for analyzing their underlying mechanisms.
+        From our previous paper, you may remember the
+      <strong>AKG decomposition</strong> and the <strong>squeezing effect</strong>.
+      From this one, we hope you remember four things:
+      <strong>CH1 + CH2</strong>, <strong>update energy</strong>,
+      <strong>collision vs. erosion</strong>, and the
+      <strong>Rayleigh quotient for readout transmission</strong>.
+      
+      </p>
+    </div>
+  </section>
+
+  <!-- CITE -->
+  <section id="cite">
+    <div class="wrap">
+      <div class="kicker">Cite</div>
+      <h2 class="section-title">BibTeX</h2>
+      <pre class="bibtex">@misc{ren2026learningdynamicscl,
+  title  = {Learning Dynamics of Continual Learning: A Unified View of Data Attribution, Forgetting, and Plasticity Loss},
+  author = {Ren, Yi and Deng, Wenlong and Hong, Guanzhe and Lyle, Clare and Gal, Yarin},
+  year   = {2026},
+  note   = {Preprint.},
+  url    = {TODO: arXiv URL (posting 2026-09-15)}
+}</pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Learning Dynamics of Continual Learning &middot; preprint, 2026</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="" onclick="toggleZoom(event)">
+  <div class="lightbox-hint">Click image to zoom in/out &middot; click outside or press Esc to close</div>
+</div>
+
+<script>
+var zoomLevel = null; // null = fit-to-screen; otherwise a multiple of the image's natural width
+
+function openLightbox(src, alt){
+  var lb = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
+  img.src = src;
+  img.alt = alt || '';
+  zoomLevel = null;
+  img.classList.remove('zoomed');
+  img.style.width = '';
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e){
+  if(e) e.stopPropagation();
+  var lb = document.getElementById('lightbox');
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function applyZoom(img){
+  if(zoomLevel === null){
+    img.classList.remove('zoomed');
+    img.style.width = '';
+  } else {
+    img.classList.add('zoomed');
+    img.style.width = Math.round(img.naturalWidth * zoomLevel) + 'px';
+  }
+}
+function toggleZoom(e){
+  e.stopPropagation();
+  zoomLevel = (zoomLevel === null) ? 1 : null;
+  applyZoom(e.target);
+}
+document.getElementById('lightbox-img').addEventListener('wheel', function(e){
+  if(!(e.ctrlKey || e.metaKey)) return; // plain scroll still pans when zoomed in
+  e.preventDefault();
+  var img = e.target;
+  if(zoomLevel === null){
+    zoomLevel = img.getBoundingClientRect().width / img.naturalWidth;
+  }
+  var factor = Math.exp(-e.deltaY * 0.0018);
+  zoomLevel = Math.min(6, Math.max(0.25, zoomLevel * factor));
+  applyZoom(img);
+}, {passive:false});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeLightbox();
+});
+
+// Sidebar TOC: highlight the section currently in view
+(function(){
+  var links = document.querySelectorAll('.toc-sidebar a');
+  var sections = [];
+  links.forEach(function(link){
+    var id = link.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if(el) sections.push({id: id, el: el, link: link});
+  });
+  function setActive(id){
+    links.forEach(function(link){
+      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+    });
+  }
+  var observer = new IntersectionObserver(function(entries){
+    var visible = entries.filter(function(e){ return e.isIntersecting; });
+    if(visible.length > 0){
+      visible.sort(function(a,b){ return a.boundingClientRect.top - b.boundingClientRect.top; });
+      setActive(visible[0].target.id);
+    }
+  }, {rootMargin: '-15% 0px -70% 0px', threshold: 0});
+  sections.forEach(function(s){ observer.observe(s.el); });
+})();
+</script>
+
+</body>
+</html>

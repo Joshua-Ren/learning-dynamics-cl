@@ -1,0 +1,8 @@
+# Tested in the original trace environment: Python 3.10.20 and CUDA 13.0.
+# Install a CUDA-compatible PyTorch build for the target machine, then run:
+#   pip install -r requirements.txt
+torch==2.11.0
+transformers==5.12.1
+datasets==4.8.2
+peft==0.18.1
+accelerate==1.13.0

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+
+# Fresh full-parameter runs are intentionally local artifacts.
+artifacts/reproduced_runs/
+artifacts/checkpoints/
+artifacts/data/
+artifacts/gsm8k_test_data/
+artifacts/run_*/
+artifacts/score_analysis_*/

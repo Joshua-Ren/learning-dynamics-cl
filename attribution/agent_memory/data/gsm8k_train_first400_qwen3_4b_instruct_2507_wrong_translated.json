@@ -1,0 +1,1068 @@
+{
+  "source_dataset": "openai/gsm8k",
+  "subset": "main",
+  "split": "train",
+  "source_path": "attribution/agent_memory/data/gsm8k_train_first400_source.json",
+  "baseline_path": "attribution/agent_memory/reference/baselines/gsm8k_baseline_train_first400_qwen3_4b_instruct_2507.json",
+  "source_filter": "Qwen/Qwen3-4B-Instruct-2507 greedy incorrect on GSM8K train first400",
+  "translation_backend": "causal_local_lm",
+  "translation_model": "Qwen/Qwen3-4B-Instruct-2507",
+  "reuse_translation_paths": [
+    "attribution/agent_memory/data/gsm8k_train_first200_qwen3_1p7b_wrong_translated.json",
+    "attribution/agent_memory/data/gsm8k_train_first200_qwen25_1p5b_instruct_wrong_codex_manual_translated.json",
+    "attribution/agent_memory/data/gsm8k_train_first200_llama32_3b_instruct_wrong_codex_manual_translated.json"
+  ],
+  "source_language": "en",
+  "record_level": true,
+  "fields": [
+    "question",
+    "answer"
+  ],
+  "languages": {
+    "en": {
+      "name": "English",
+      "code": "eng_Latn"
+    },
+    "zh": {
+      "name": "Chinese",
+      "code": "zho_Hans"
+    },
+    "fr": {
+      "name": "French",
+      "code": "fra_Latn"
+    },
+    "ko": {
+      "name": "Korean",
+      "code": "kor_Hang"
+    },
+    "es": {
+      "name": "Spanish",
+      "code": "spa_Latn"
+    }
+  },
+  "num_source_records": 34,
+  "wrong_indices": [
+    15,
+    33,
+    59,
+    63,
+    108,
+    116,
+    118,
+    122,
+    128,
+    129,
+    167,
+    175,
+    187,
+    224,
+    228,
+    229,
+    232,
+    235,
+    237,
+    261,
+    282,
+    289,
+    301,
+    303,
+    304,
+    321,
+    328,
+    340,
+    356,
+    358,
+    362,
+    365,
+    395,
+    399
+  ],
+  "records": [
+    {
+      "index": 15,
+      "source": {
+        "question": "James creates a media empire.  He creates a movie for $2000.  Each DVD cost $6 to make.  He sells it for 2.5 times that much.  He sells 500 movies a day for 5 days a week.  How much profit does he make in 20 weeks?",
+        "answer": "He sold each DVD for 6*2.5=$<<6*2.5=15>>15\nSo he makes a profit of 15-6=$<<15-6=9>>9\nSo each day he makes a profit of 9*500=$<<9*500=4500>>4500\nSo he makes 4500*5=$<<4500*5=22500>>22,500\nHe makes 22,500*20=$<<22500*20=450000>>450,000\nThen after the cost of creating the movie he has a profit of 450,000-2000=$<<450000-2000=448000>>448,000\n#### 448000"
+      },
+      "translations": {
+        "en": {
+          "question": "James creates a media empire.  He creates a movie for $2000.  Each DVD cost $6 to make.  He sells it for 2.5 times that much.  He sells 500 movies a day for 5 days a week.  How much profit does he make in 20 weeks?",
+          "answer": "He sold each DVD for 6*2.5=$<<6*2.5=15>>15\nSo he makes a profit of 15-6=$<<15-6=9>>9\nSo each day he makes a profit of 9*500=$<<9*500=4500>>4500\nSo he makes 4500*5=$<<4500*5=22500>>22,500\nHe makes 22,500*20=$<<22500*20=450000>>450,000\nThen after the cost of creating the movie he has a profit of 450,000-2000=$<<450000-2000=448000>>448,000\n#### 448000"
+        },
+        "zh": {
+          "question": "James 创建了一个媒体帝国。他花 $2000 制作了一部电影。每张 DVD 的制作成本是 $6。他以成本的 2.5 倍出售。每周 5 天，他每天卖出 500 部电影。20 周内他赚多少利润？",
+          "answer": "他每张 DVD 卖 6*2.5=$<<6*2.5=15>>15\n所以每张的利润是 15-6=$<<15-6=9>>9\n所以他每天的利润是 9*500=$<<9*500=4500>>4500\n所以他每周赚 4500*5=$<<4500*5=22500>>22,500\n他 20 周赚 22,500*20=$<<22500*20=450000>>450,000\n再扣除制作电影的成本后，他的利润是 450,000-2000=$<<450000-2000=448000>>448,000\n#### 448000"
+        },
+        "fr": {
+          "question": "James crée un empire médiatique. Il crée un film pour 2000 $. Chaque DVD coûte 6 $ à fabriquer. Il le vend 2,5 fois ce coût. Il vend 500 films par jour, 5 jours par semaine. Quel profit réalise-t-il en 20 semaines ?",
+          "answer": "Il vend chaque DVD 6*2.5=$<<6*2.5=15>>15\nDonc il fait un profit de 15-6=$<<15-6=9>>9\nDonc chaque jour il fait un profit de 9*500=$<<9*500=4500>>4500\nDonc il fait 4500*5=$<<4500*5=22500>>22,500\nIl fait 22,500*20=$<<22500*20=450000>>450,000\nPuis, après le coût de création du film, il a un profit de 450,000-2000=$<<450000-2000=448000>>448,000\n#### 448000"
+        },
+        "ko": {
+          "question": "James는 미디어 제국을 만듭니다. 그는 영화를 $2000에 제작합니다. 각 DVD는 만드는 데 $6가 듭니다. 그는 그것을 그 비용의 2.5배에 판매합니다. 그는 일주일에 5일, 하루에 영화 500장을 팝니다. 20주 동안 얼마의 이익을 얻나요?",
+          "answer": "그는 각 DVD를 6*2.5=$<<6*2.5=15>>15 에 팔았습니다\n따라서 이익은 15-6=$<<15-6=9>>9 입니다\n그래서 하루 이익은 9*500=$<<9*500=4500>>4500 입니다\n그래서 그는 4500*5=$<<4500*5=22500>>22,500 을 법니다\n그는 22,500*20=$<<22500*20=450000>>450,000 을 법니다\n그 다음 영화 제작 비용을 빼면 이익은 450,000-2000=$<<450000-2000=448000>>448,000 입니다\n#### 448000"
+        },
+        "es": {
+          "question": "James crea un imperio mediático. Crea una película por $2000. Cada DVD cuesta $6 de fabricar. Lo vende por 2.5 veces ese costo. Vende 500 películas al día durante 5 días a la semana. ¿Cuánta ganancia obtiene en 20 semanas?",
+          "answer": "Vendió cada DVD por 6*2.5=$<<6*2.5=15>>15\nAsí que obtiene una ganancia de 15-6=$<<15-6=9>>9\nAsí que cada día obtiene una ganancia de 9*500=$<<9*500=4500>>4500\nAsí que obtiene 4500*5=$<<4500*5=22500>>22,500\nObtiene 22,500*20=$<<22500*20=450000>>450,000\nLuego, después del costo de crear la película, tiene una ganancia de 450,000-2000=$<<450000-2000=448000>>448,000\n#### 448000"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "source": {
+        "question": "To make pizza, together with other ingredients, Kimber needs 10 cups of water, 16 cups of flour, and 1/2 times as many teaspoons of salt as the number of cups of flour. Calculate the combined total number of cups of water, flour, and teaspoons of salt that she needs to make the pizza.",
+        "answer": "To make the pizza, Kimber half as many teaspoons of salt as the number of cups of flour, meaning she needs 1/2*16 = <<16*1/2=8>>8 teaspoons of salt.\nThe total number of cups of flour and teaspoons of salt she needs is 8+16 = <<8+16=24>>24\nShe also needs 10 cups of water, which means the total number of cups of water and flour and teaspoons of salt she needs is 24+10 = <<24+10=34>>34\n#### 34"
+      },
+      "translations": {
+        "en": {
+          "question": "To make pizza, together with other ingredients, Kimber needs 10 cups of water, 16 cups of flour, and 1/2 times as many teaspoons of salt as the number of cups of flour. Calculate the combined total number of cups of water, flour, and teaspoons of salt that she needs to make the pizza.",
+          "answer": "To make the pizza, Kimber half as many teaspoons of salt as the number of cups of flour, meaning she needs 1/2*16 = <<16*1/2=8>>8 teaspoons of salt.\nThe total number of cups of flour and teaspoons of salt she needs is 8+16 = <<8+16=24>>24\nShe also needs 10 cups of water, which means the total number of cups of water and flour and teaspoons of salt she needs is 24+10 = <<24+10=34>>34\n#### 34"
+        },
+        "zh": {
+          "question": "制作比萨时，Kimber需要10杯水、16杯面粉，以及盐的量是面粉杯数的一半。计算她制作比萨所需的水、面粉和盐的总量。",
+          "answer": "制作比萨时，Kimber需要的盐量是面粉杯数的一半，因此她需要1/2*16 = <<16*1/2=8>>8茶匙盐。\n她需要的面粉和盐的总量是8+16 = <<8+16=24>>24\n她还需要10杯水，因此她需要的水、面粉和盐的总量是24+10 = <<24+10=34>>34\n#### 34"
+        },
+        "fr": {
+          "question": "Pour faire une pizza, en combinant d'autres ingrédients, Kimber a besoin de 10 tasses d'eau, 16 tasses de farine et 1/2 fois autant de cuillères à café de sel que le nombre de tasses de farine. Calculez le nombre total de tasses d'eau, de farine et de cuillères à café de sel dont elle a besoin pour faire la pizza.",
+          "answer": "Pour faire la pizza, Kimber a la moitié autant de cuillères à café de sel que le nombre de tasses de farine, ce qui signifie qu'elle en a besoin de 1/2*16 = <<16*1/2=8>>8 cuillères à café de sel.\nLe nombre total de tasses de farine et de cuillères à café de sel dont elle a besoin est 8+16 = <<8+16=24>>24\nElle a également besoin de 10 tasses d'eau, ce qui signifie que le nombre total de tasses d'eau, de farine et de cuillères à café de sel dont elle a besoin est 24+10 = <<24+10=34>>34\n#### 34"
+        },
+        "ko": {
+          "question": "피자를 만들기 위해 키머는 물 10 컵, 밀가루 16 컵, 그리고 밀가루 컵 수의 1/2만큼의 소금을 필요로 합니다. 피자를 만들기 위해 키머가 필요한 물, 밀가루, 소금의 총량을 계산하세요.",
+          "answer": "피자를 만들기 위해 키머는 밀가루 컵 수의 1/2만큼의 소금을 필요로 하므로, 소금은 1/2*16 = <<16*1/2=8>>8 토스프온입니다. 밀가루와 소금의 총량은 8+16 = <<8+16=24>>24입니다. 또한 물 10 컵을 필요로 하므로, 물과 밀가루, 소금의 총량은 24+10 = <<24+10=34>>34입니다. #### 34"
+        },
+        "es": {
+          "question": "Para hacer pizza, junto con otros ingredientes, Kimber necesita 10 tazas de agua, 16 tazas de harina y 1/2 veces tantas cucharaditas de sal como el número de tazas de harina. Calcule el número total combinado de tazas de agua, harina y cucharaditas de sal que necesita para hacer la pizza.",
+          "answer": "Para hacer la pizza, Kimber necesita la mitad de cucharaditas de sal que el número de tazas de harina, lo que significa que necesita 1/2*16 = <<16*1/2=8>>8 cucharaditas de sal.\nEl número total de tazas de harina y cucharaditas de sal que necesita es 8+16 = <<8+16=24>>24\nTambién necesita 10 tazas de agua, lo que significa que el número total de tazas de agua y harina y cucharaditas de sal que necesita es 24+10 = <<24+10=34>>34\n#### 34"
+        }
+      }
+    },
+    {
+      "index": 59,
+      "source": {
+        "question": "Every hour Joanne has to collect the coins out of the fountain inside the mall. During the first hour, she collected 15 coins. For the next two hours, she collected 35 coins from the fountain. In the fourth hour, she collected 50 coins from the fountain but she gave 15 of them to her coworker so she could buy a soda. How many coins did she have after the fourth hour?",
+        "answer": "15 coins collected in hour one\n35 coins collected in hour two\n35 coins collected in hour three\n50 coins collected in hour four\nBefore giving her coworker some coins there were 15+35+35+50=<<15+35+35+50=135>>135 coins\nThe number of coins after given 15 to her coworker is 135-15=<<135-15=120>>120\n#### 120"
+      },
+      "translations": {
+        "en": {
+          "question": "Every hour Joanne has to collect the coins out of the fountain inside the mall. During the first hour, she collected 15 coins. For the next two hours, she collected 35 coins from the fountain. In the fourth hour, she collected 50 coins from the fountain but she gave 15 of them to her coworker so she could buy a soda. How many coins did she have after the fourth hour?",
+          "answer": "15 coins collected in hour one\n35 coins collected in hour two\n35 coins collected in hour three\n50 coins collected in hour four\nBefore giving her coworker some coins there were 15+35+35+50=<<15+35+35+50=135>>135 coins\nThe number of coins after given 15 to her coworker is 135-15=<<135-15=120>>120\n#### 120"
+        },
+        "zh": {
+          "question": "每小时乔安妮都必须从商场内的喷泉里收集硬币。第一小时，她收集了15枚硬币。接下来的两个小时内，她从喷泉里收集了35枚硬币。第四小时，她从喷泉里收集了50枚硬币，但给了15枚给她的同事，以便买饮料。第四小时结束后，她有多少枚硬币？",
+          "answer": "第一小时收集了15枚硬币\n第二小时收集了35枚硬币\n第三小时收集了35枚硬币\n第四小时收集了50枚硬币\n在给同事15枚硬币之前，共有15+35+35+50=<<15+35+35+50=135>>135枚硬币\n在给了同事15枚硬币后，剩下135-15=<<135-15=120>>120枚硬币\n#### 120"
+        },
+        "fr": {
+          "question": "Chaque heure, Joanne doit ramasser les pièces dans la fontaine située dans le centre commercial. La première heure, elle a ramassé 15 pièces. Pendant les deux prochaines heures, elle a ramassé 35 pièces à la fontaine. La quatrième heure, elle a ramassé 50 pièces à la fontaine, mais elle en a donné 15 à son collègue afin de pouvoir acheter une soda. Combien de pièces avait-elle après la quatrième heure ?",
+          "answer": "15 pièces ramassées pendant la première heure\n35 pièces ramassées pendant la deuxième heure\n35 pièces ramassées pendant la troisième heure\n50 pièces ramassées pendant la quatrième heure\nAvant de donner 15 pièces à son collègue, il y avait 15+35+35+50=<<15+35+35+50=135>>135 pièces\nLe nombre de pièces après avoir donné 15 à son collègue est 135-15=<<135-15=120>>120\n#### 120"
+        },
+        "ko": {
+          "question": "매 시간마다 조아인은 쇼핑몰 내의 조각물에서 동전을 모아야 합니다. 첫 시간에는 15개의 동전을 모았습니다. 다음 두 시간 동안은 조각물에서 35개의 동전을 모았습니다. 네 번째 시간에는 조각물에서 50개의 동전을 모았지만, 그 중 15개를 동료에게 주어 콜라를 사기 위해 사용했습니다. 네 번째 시간 이후에 조아인은 몇 개의 동전을 가지고 있나요?",
+          "answer": "첫 시간에 15개의 동전을 모았습니다\n두 번째 시간에 35개의 동전을 모았습니다\n세 번째 시간에 35개의 동전을 모았습니다\n네 번째 시간에 50개의 동전을 모았습니다\n동료에게 동전을 주기 전에 총 15+35+35+50=<<15+35+35+50=135>>135개의 동전이 있었습니다\n15개를 동료에게 주고 나서 남은 동전 수는 135-15=<<135-15=120>>120입니다\n#### 120"
+        },
+        "es": {
+          "question": "Cada hora Joanne tiene que recoger las monedas del manantial dentro del centro comercial. Durante la primera hora, recogió 15 monedas. En las siguientes dos horas, recogió 35 monedas del manantial. En la cuarta hora, recogió 50 monedas del manantial, pero le dio 15 de ellas a su compañero de trabajo para comprar una soda. ¿Cuántas monedas tenía después de la cuarta hora?",
+          "answer": "15 monedas recogidas en la primera hora\n35 monedas recogidas en la segunda hora\n35 monedas recogidas en la tercera hora\n50 monedas recogidas en la cuarta hora\nAntes de darle 15 monedas a su compañero de trabajo había 15+35+35+50=<<15+35+35+50=135>>135 monedas\nEl número de monedas después de darle 15 a su compañero de trabajo es 135-15=<<135-15=120>>120\n#### 120"
+        }
+      }
+    },
+    {
+      "index": 63,
+      "source": {
+        "question": "Shawna's workout goal is 30 situps. On Monday, Shawna was only able to do 12 situps, so she decided that she would make up for the rest on Tuesday. However, she was only able to do 19 situps on Tuesday. How many situps would Shawna have to do on Wednesday to meet her minimum goal and make up for the ones she didn't do?",
+        "answer": "On Monday, Shawna was short of 30 - 12 = <<30-12=18>>18 situps\nOn Tuesday, Shawna was short of 30 - 19 = <<30-19=11>>11 situps\nOn Wednesday, Shawna would have to do 30 + 18 + 11 = <<30+18+11=59>>59 situps\n#### 59"
+      },
+      "translations": {
+        "en": {
+          "question": "Shawna's workout goal is 30 situps. On Monday, Shawna was only able to do 12 situps, so she decided that she would make up for the rest on Tuesday. However, she was only able to do 19 situps on Tuesday. How many situps would Shawna have to do on Wednesday to meet her minimum goal and make up for the ones she didn't do?",
+          "answer": "On Monday, Shawna was short of 30 - 12 = <<30-12=18>>18 situps\nOn Tuesday, Shawna was short of 30 - 19 = <<30-19=11>>11 situps\nOn Wednesday, Shawna would have to do 30 + 18 + 11 = <<30+18+11=59>>59 situps\n#### 59"
+        },
+        "zh": {
+          "question": "Shawna 的锻炼目标是做 30 个仰卧起坐。星期一，Shawna 只做了 12 个，所以她决定星期二补上剩下的。然而，星期二她只做了 19 个。为了达到最低目标并补上没做的部分，Shawna 星期三必须做多少个仰卧起坐？",
+          "answer": "星期一，Shawna 少做了 30 - 12 = <<30-12=18>>18 个仰卧起坐\n星期二，Shawna 少做了 30 - 19 = <<30-19=11>>11 个仰卧起坐\n星期三，Shawna 必须做 30 + 18 + 11 = <<30+18+11=59>>59 个仰卧起坐\n#### 59"
+        },
+        "fr": {
+          "question": "L'objectif d'entraînement de Shawna est de faire 30 redressements assis. Lundi, Shawna n'a pu en faire que 12, alors elle a décidé de rattraper le reste mardi. Cependant, elle n'a pu en faire que 19 mardi. Combien de redressements assis Shawna devrait-elle faire mercredi pour atteindre son objectif minimum et rattraper ceux qu'elle n'a pas faits ?",
+          "answer": "Lundi, il manquait à Shawna 30 - 12 = <<30-12=18>>18 redressements assis\nMardi, il manquait à Shawna 30 - 19 = <<30-19=11>>11 redressements assis\nMercredi, Shawna devrait faire 30 + 18 + 11 = <<30+18+11=59>>59 redressements assis\n#### 59"
+        },
+        "ko": {
+          "question": "Shawna의 운동 목표는 윗몸일으키기 30개입니다. 월요일에 Shawna는 12개밖에 하지 못해서 나머지는 화요일에 보충하기로 했습니다. 하지만 화요일에도 19개밖에 하지 못했습니다. 최소 목표를 채우고 하지 못한 개수를 보충하려면 Shawna는 수요일에 윗몸일으키기를 몇 개 해야 하나요?",
+          "answer": "월요일에 Shawna는 30 - 12 = <<30-12=18>>18 개가 부족했습니다\n화요일에 Shawna는 30 - 19 = <<30-19=11>>11 개가 부족했습니다\n수요일에 Shawna는 30 + 18 + 11 = <<30+18+11=59>>59 개를 해야 합니다\n#### 59"
+        },
+        "es": {
+          "question": "La meta de ejercicio de Shawna es hacer 30 abdominales. El lunes, Shawna solo pudo hacer 12 abdominales, así que decidió compensar el resto el martes. Sin embargo, el martes solo pudo hacer 19 abdominales. ¿Cuántos abdominales tendría que hacer Shawna el miércoles para cumplir su meta mínima y compensar los que no hizo?",
+          "answer": "El lunes, a Shawna le faltaron 30 - 12 = <<30-12=18>>18 abdominales\nEl martes, a Shawna le faltaron 30 - 19 = <<30-19=11>>11 abdominales\nEl miércoles, Shawna tendría que hacer 30 + 18 + 11 = <<30+18+11=59>>59 abdominales\n#### 59"
+        }
+      }
+    },
+    {
+      "index": 108,
+      "source": {
+        "question": "Henry took 9 pills a day for 14 days. Of these 9 pills, 4 pills cost $1.50 each, and the other pills each cost $5.50 more. How much did he spend in total on the pills?",
+        "answer": "There were 9-4 = <<9-4=5>>5 other pills\nEach of the other pills cost 1.50+5.50 = <<1.50+5.50=7>>7 dollars each.\nThe 5 pills cost a total of 7*5 = <<7*5=35>>35 dollars.\nThe first 4 pills cost 1.50*4 = <<1.50*4=6>>6 dollars in total.\nHenry spent a total of 35+6 = <<35+6=41>>41 dollars.\n#### 41"
+      },
+      "translations": {
+        "en": {
+          "question": "Henry took 9 pills a day for 14 days. Of these 9 pills, 4 pills cost $1.50 each, and the other pills each cost $5.50 more. How much did he spend in total on the pills?",
+          "answer": "There were 9-4 = <<9-4=5>>5 other pills\nEach of the other pills cost 1.50+5.50 = <<1.50+5.50=7>>7 dollars each.\nThe 5 pills cost a total of 7*5 = <<7*5=35>>35 dollars.\nThe first 4 pills cost 1.50*4 = <<1.50*4=6>>6 dollars in total.\nHenry spent a total of 35+6 = <<35+6=41>>41 dollars.\n#### 41"
+        },
+        "zh": {
+          "question": "Henry 连续 14 天每天吃 9 粒药。在这 9 粒药中，4 粒每粒价格为 $1.50，其他药每粒比它们贵 $5.50。他一共在这些药上花了多少钱？",
+          "answer": "其他药有 9-4 = <<9-4=5>>5 粒\n其他每粒药的价格是 1.50+5.50 = <<1.50+5.50=7>>7 美元。\n这 5 粒药总共花费 7*5 = <<7*5=35>>35 美元。\n前 4 粒药总共花费 1.50*4 = <<1.50*4=6>>6 美元。\nHenry 总共花了 35+6 = <<35+6=41>>41 美元。\n#### 41"
+        },
+        "fr": {
+          "question": "Henry a pris 9 pilules par jour pendant 14 jours. Parmi ces 9 pilules, 4 coûtent 1,50 $ chacune, et les autres pilules coûtent chacune 5,50 $ de plus. Combien a-t-il dépensé au total pour les pilules ?",
+          "answer": "Il y avait 9-4 = <<9-4=5>>5 autres pilules\nChacune des autres pilules coûtait 1.50+5.50 = <<1.50+5.50=7>>7 dollars.\nLes 5 pilules ont coûté au total 7*5 = <<7*5=35>>35 dollars.\nLes 4 premières pilules ont coûté au total 1.50*4 = <<1.50*4=6>>6 dollars.\nHenry a dépensé au total 35+6 = <<35+6=41>>41 dollars.\n#### 41"
+        },
+        "ko": {
+          "question": "Henry는 14일 동안 하루에 알약 9개를 먹었습니다. 이 9개의 알약 중 4개는 각각 $1.50이고, 나머지 알약은 각각 그보다 $5.50 더 비쌉니다. 그는 알약에 총 얼마를 썼나요?",
+          "answer": "나머지 알약은 9-4 = <<9-4=5>>5 개였습니다\n나머지 각 알약의 가격은 1.50+5.50 = <<1.50+5.50=7>>7 달러입니다.\n그 5개의 알약은 총 7*5 = <<7*5=35>>35 달러입니다.\n처음 4개의 알약은 총 1.50*4 = <<1.50*4=6>>6 달러입니다.\nHenry는 총 35+6 = <<35+6=41>>41 달러를 썼습니다.\n#### 41"
+        },
+        "es": {
+          "question": "Henry tomó 9 pastillas al día durante 14 días. De estas 9 pastillas, 4 costaban $1.50 cada una, y las otras pastillas costaban $5.50 más cada una. ¿Cuánto gastó en total en las pastillas?",
+          "answer": "Había 9-4 = <<9-4=5>>5 pastillas restantes\nCada una de las otras pastillas costaba 1.50+5.50 = <<1.50+5.50=7>>7 dólares.\nLas 5 pastillas costaron un total de 7*5 = <<7*5=35>>35 dólares.\nLas primeras 4 pastillas costaron 1.50*4 = <<1.50*4=6>>6 dólares en total.\nHenry gastó un total de 35+6 = <<35+6=41>>41 dólares.\n#### 41"
+        }
+      }
+    },
+    {
+      "index": 116,
+      "source": {
+        "question": "Valerie needs to put stamps on the envelopes she is about to mail. She has thank you cards for each of her grandmother, uncle and aunt for the birthday presents they sent. She also has to pay the water bill and the electric bill separately. She wants to send three more mail-in rebates than she does bills and she has twice as many job applications as rebates to mail. How many stamps does she need if everything needs 1 stamp except the electric bill, which needs 2?",
+        "answer": "Valerie has to send a thank you card to each of 3 people, so she has 3 * 1 = <<3*1=3>>3 thank you cards to mail.\nShe has 2 bills to mail.\nShe has 3 more rebates than bills, so 3 + 2 = <<3+2=5>>5 mail-in rebates to mail.\nShe has twice as many job applications as rebates, so she has 2 * 5 = <<2*5=10>>10 applications to mail.\nShe has 3 + 2 + 5 + 10 = <<3+2+5+10=20>>20 pieces of mail to send.\nThe electric bill needs an extra stamp, so she needs 20 + 1 = <<20+1=21>>21 stamps.\n#### 21"
+      },
+      "translations": {
+        "en": {
+          "question": "Valerie needs to put stamps on the envelopes she is about to mail. She has thank you cards for each of her grandmother, uncle and aunt for the birthday presents they sent. She also has to pay the water bill and the electric bill separately. She wants to send three more mail-in rebates than she does bills and she has twice as many job applications as rebates to mail. How many stamps does she need if everything needs 1 stamp except the electric bill, which needs 2?",
+          "answer": "Valerie has to send a thank you card to each of 3 people, so she has 3 * 1 = <<3*1=3>>3 thank you cards to mail.\nShe has 2 bills to mail.\nShe has 3 more rebates than bills, so 3 + 2 = <<3+2=5>>5 mail-in rebates to mail.\nShe has twice as many job applications as rebates, so she has 2 * 5 = <<2*5=10>>10 applications to mail.\nShe has 3 + 2 + 5 + 10 = <<3+2+5+10=20>>20 pieces of mail to send.\nThe electric bill needs an extra stamp, so she needs 20 + 1 = <<20+1=21>>21 stamps.\n#### 21"
+        },
+        "zh": {
+          "question": "Valerie 需要给她即将寄出的信封贴邮票。她有感谢卡要寄给祖母、叔叔和阿姨，感谢他们送来的生日礼物。她还要分别支付水费账单和电费账单。她想寄出的邮寄返利表比账单多 3 份，并且她要寄出的工作申请数量是返利表的两倍。如果除了电费账单需要 2 张邮票以外，其他每件都需要 1 张邮票，她需要多少张邮票？",
+          "answer": "Valerie 要给 3 个人各寄一张感谢卡，所以她有 3 * 1 = <<3*1=3>>3 张感谢卡要寄。\n她有 2 份账单要寄。\n她的返利表比账单多 3 份，所以要寄的邮寄返利表有 3 + 2 = <<3+2=5>>5 份。\n她的工作申请数量是返利表的两倍，所以她有 2 * 5 = <<2*5=10>>10 份申请要寄。\n她要寄的邮件共有 3 + 2 + 5 + 10 = <<3+2+5+10=20>>20 件。\n电费账单需要多 1 张邮票，所以她需要 20 + 1 = <<20+1=21>>21 张邮票。\n#### 21"
+        },
+        "fr": {
+          "question": "Valerie doit mettre des timbres sur les enveloppes qu'elle s'apprête à envoyer. Elle a des cartes de remerciement pour sa grand-mère, son oncle et sa tante pour les cadeaux d'anniversaire qu'ils lui ont envoyés. Elle doit aussi payer séparément la facture d'eau et la facture d'électricité. Elle veut envoyer trois demandes de remboursement par courrier de plus que de factures, et elle a deux fois plus de candidatures à envoyer que de remboursements. Combien de timbres lui faut-il si tout nécessite 1 timbre sauf la facture d'électricité, qui en nécessite 2 ?",
+          "answer": "Valerie doit envoyer une carte de remerciement à chacune de 3 personnes, donc elle a 3 * 1 = <<3*1=3>>3 cartes de remerciement à poster.\nElle a 2 factures à poster.\nElle a 3 remboursements de plus que de factures, donc elle a 3 + 2 = <<3+2=5>>5 demandes de remboursement à envoyer par courrier.\nElle a deux fois plus de candidatures que de remboursements, donc elle a 2 * 5 = <<2*5=10>>10 candidatures à poster.\nElle a 3 + 2 + 5 + 10 = <<3+2+5+10=20>>20 courriers à envoyer.\nLa facture d'électricité nécessite un timbre supplémentaire, donc elle a besoin de 20 + 1 = <<20+1=21>>21 timbres.\n#### 21"
+        },
+        "ko": {
+          "question": "Valerie는 부치려는 봉투들에 우표를 붙여야 합니다. 그녀에게는 생일 선물을 보내 준 할머니, 삼촌, 이모 각각에게 보낼 감사 카드가 있습니다. 또한 수도 요금 고지서와 전기 요금 고지서를 따로 보내야 합니다. 그녀는 고지서보다 3통 더 많은 우편 리베이트를 보내고 싶고, 보낼 입사 지원서는 리베이트의 두 배입니다. 전기 요금 고지서만 우표가 2장 필요하고 나머지는 모두 우표가 1장씩 필요하다면, 우표가 몇 장 필요하나요?",
+          "answer": "Valerie는 3명 각각에게 감사 카드를 보내야 하므로, 보낼 감사 카드는 3 * 1 = <<3*1=3>>3 장입니다.\n그녀는 고지서 2통을 보내야 합니다.\n리베이트는 고지서보다 3통 더 많으므로, 보낼 우편 리베이트는 3 + 2 = <<3+2=5>>5 통입니다.\n입사 지원서는 리베이트의 두 배이므로, 보낼 지원서는 2 * 5 = <<2*5=10>>10 통입니다.\n그녀가 보낼 우편물은 3 + 2 + 5 + 10 = <<3+2+5+10=20>>20 통입니다.\n전기 요금 고지서는 추가 우표가 1장 더 필요하므로, 그녀는 20 + 1 = <<20+1=21>>21 장의 우표가 필요합니다.\n#### 21"
+        },
+        "es": {
+          "question": "Valerie necesita poner estampillas en los sobres que está a punto de enviar. Tiene tarjetas de agradecimiento para su abuela, su tío y su tía por los regalos de cumpleaños que le enviaron. También tiene que pagar la factura del agua y la factura de electricidad por separado. Quiere enviar tres reembolsos por correo más que facturas, y tiene el doble de solicitudes de empleo que reembolsos para enviar. ¿Cuántas estampillas necesita si todo necesita 1 estampilla excepto la factura de electricidad, que necesita 2?",
+          "answer": "Valerie tiene que enviar una tarjeta de agradecimiento a cada una de 3 personas, así que tiene 3 * 1 = <<3*1=3>>3 tarjetas de agradecimiento para enviar.\nTiene 2 facturas para enviar.\nTiene 3 reembolsos más que facturas, así que tiene 3 + 2 = <<3+2=5>>5 reembolsos por correo para enviar.\nTiene el doble de solicitudes de empleo que reembolsos, así que tiene 2 * 5 = <<2*5=10>>10 solicitudes para enviar.\nTiene 3 + 2 + 5 + 10 = <<3+2+5+10=20>>20 piezas de correo para enviar.\nLa factura de electricidad necesita una estampilla extra, así que necesita 20 + 1 = <<20+1=21>>21 estampillas.\n#### 21"
+        }
+      }
+    },
+    {
+      "index": 118,
+      "source": {
+        "question": "Jeanette is practicing her juggling. Each week she can juggle 2 more objects than the week before. If she starts out juggling 3 objects and practices for 5 weeks, how many objects can she juggle?",
+        "answer": "First find the total number of additional objects she learns to juggle: 2 objects/week * 5 weeks = <<2*5=10>>10 objects\nThen add the initial number of objects she could juggle to find the total: 10 objects + 3 objects = <<10+3=13>>13 objects\n#### 13"
+      },
+      "translations": {
+        "en": {
+          "question": "Jeanette is practicing her juggling. Each week she can juggle 2 more objects than the week before. If she starts out juggling 3 objects and practices for 5 weeks, how many objects can she juggle?",
+          "answer": "First find the total number of additional objects she learns to juggle: 2 objects/week * 5 weeks = <<2*5=10>>10 objects\nThen add the initial number of objects she could juggle to find the total: 10 objects + 3 objects = <<10+3=13>>13 objects\n#### 13"
+        },
+        "zh": {
+          "question": "Jeanette 练习杂耍。每周她能比前一周多杂耍 2 个物体。她开始能杂耍 3 个，练习 5 周后能杂耍几个？",
+          "answer": "额外学会的数量是 2*5=<<2*5=10>>10 个。加上一开始的 3 个，总共 10+3=<<10+3=13>>13 个。#### 13"
+        },
+        "fr": {
+          "question": "Jeanette s’entraîne au jonglage. Chaque semaine elle peut jongler avec 2 objets de plus. Elle commence avec 3 objets et pratique 5 semaines. Avec combien d’objets peut-elle jongler ?",
+          "answer": "Elle ajoute 2*5=<<2*5=10>>10 objets. Avec les 3 du départ, cela fait 10+3=<<10+3=13>>13 objets. #### 13"
+        },
+        "ko": {
+          "question": "Jeanette는 저글링을 연습합니다. 매주 전주보다 2개 더 할 수 있습니다. 처음에 3개를 하고 5주 연습하면 몇 개를 할 수 있습니까?",
+          "answer": "추가로 할 수 있게 된 수는 2*5=<<2*5=10>>10개입니다. 처음 3개를 더하면 10+3=<<10+3=13>>13개입니다. #### 13"
+        },
+        "es": {
+          "question": "Jeanette practica malabares. Cada semana puede hacer malabares con 2 objetos más. Empieza con 3 objetos y practica 5 semanas. ¿Con cuántos objetos puede hacerlo?",
+          "answer": "Aprende 2*5=<<2*5=10>>10 objetos adicionales. Sumando los 3 iniciales: 10+3=<<10+3=13>>13 objetos. #### 13"
+        }
+      }
+    },
+    {
+      "index": 122,
+      "source": {
+        "question": "In a conference room, 40 chairs with a capacity of 2 people each were arranged in rows in preparation for the board meeting of a company, whose number of members was the same as the chairs' capacity. If 2/5 of the chairs were not occupied, and the rest each had two people, calculate the number of board members who did attend the meeting.",
+        "answer": "The total capacity of the 40 chairs was 40*2=<<40*2=80>>80 people.\nIf 2/5 of the chairs were unoccupied, 2/5*80=<<2/5*80=32>>32 people missed the board meeting since the number of members was the same as the chair's capacity.\nThe number of board members who attended the meeting was 80-32=<<80-32=48>>48\n#### 48"
+      },
+      "translations": {
+        "en": {
+          "question": "In a conference room, 40 chairs with a capacity of 2 people each were arranged in rows in preparation for the board meeting of a company, whose number of members was the same as the chairs' capacity. If 2/5 of the chairs were not occupied, and the rest each had two people, calculate the number of board members who did attend the meeting.",
+          "answer": "The total capacity of the 40 chairs was 40*2=<<40*2=80>>80 people.\nIf 2/5 of the chairs were unoccupied, 2/5*80=<<2/5*80=32>>32 people missed the board meeting since the number of members was the same as the chair's capacity.\nThe number of board members who attended the meeting was 80-32=<<80-32=48>>48\n#### 48"
+        },
+        "zh": {
+          "question": "在一个会议室里，安排了40张椅子，每张椅子可坐2人，准备召开公司董事会，董事会成员人数与椅子的容量相同。如果有2/5的椅子未被占用，其余的每张椅子都坐了两人，计算实际出席董事会的成员人数。",
+          "answer": "40张椅子的总容量是40*2=<<40*2=80>>80人。\n如果2/5的椅子未被占用，那么有2/5*80=<<2/5*80=32>>32人未能参加董事会，因为成员人数与椅子的容量相同。\n实际出席董事会的成员人数是80-32=<<80-32=48>>48\n#### 48"
+        },
+        "fr": {
+          "question": "Dans une salle de conférence, 40 chaises, chacune pouvant accueillir 2 personnes, ont été disposées en rangs en préparation pour la réunion du conseil d'entreprise, dont le nombre de membres était égal à la capacité des chaises. Si 2/5 des chaises étaient vides, et le reste comportait deux personnes chacune, calculez le nombre de membres du conseil qui ont assisté à la réunion.",
+          "answer": "La capacité totale des 40 chaises était de 40*2=<<40*2=80>>80 personnes.\nSi 2/5 des chaises étaient vides, 2/5*80=<<2/5*80=32>>32 personnes ont manqué la réunion du conseil puisque le nombre de membres était égal à la capacité des chaises.\nLe nombre de membres du conseil qui ont assisté à la réunion était de 80-32=<<80-32=48>>48\n#### 48"
+        },
+        "ko": {
+          "question": "회의실에서 회사의 이사회 회의를 위해 40개의 의자가 각각 2명을 수용할 수 있도록 행으로 배열되었고, 이 회사의 구성원 수는 의자의 수용 능력과 같았다. 만약 의자의 2/5가 비어 있었고, 나머지는 각각 2명이 앉았다면, 실제로 회의에 참석한 이사원의 수를 구하시오.",
+          "answer": "40개 의자의 총 수용 능력은 40*2=<<40*2=80>>80명이다.\n의자 중 2/5가 비어 있었기 때문에, 구성원 수와 동일한 수의 2/5*80=<<2/5*80=32>>32명이 회의에 참석하지 않았다.\n따라서 회의에 참석한 이사원의 수는 80-32=<<80-32=48>>48\n#### 48"
+        },
+        "es": {
+          "question": "En una sala de conferencias, 40 sillas con una capacidad de 2 personas cada una se dispusieron en filas para la reunión del consejo de una empresa, cuyo número de miembros era igual a la capacidad de las sillas. Si 2/5 de las sillas no estaban ocupadas y el resto tenían dos personas cada una, calcule el número de miembros del consejo que asistieron a la reunión.",
+          "answer": "La capacidad total de las 40 sillas era 40*2=<<40*2=80>>80 personas.\nSi 2/5 de las sillas estaban desocupadas, 2/5*80=<<2/5*80=32>>32 personas no asistieron a la reunión del consejo ya que el número de miembros era igual a la capacidad de las sillas.\nEl número de miembros del consejo que asistieron a la reunión fue 80-32=<<80-32=48>>48\n#### 48"
+        }
+      }
+    },
+    {
+      "index": 128,
+      "source": {
+        "question": "A school principal is booking hotel rooms for a class of 30 students to stay at during an overnight field trip.  Each of the hotel's rooms has two queen size beds, which can fit two students each, and a pull-out couch, which can fit one student.  How many rooms does the principal need to book to fit all of the students in the class?",
+        "answer": "Each room can fit 2*2 + 1 = <<2*2+1=5>>5 students.\nThus, the principal needs to book 30/5 = <<30/5=6>>6 rooms to fit everyone.\n#### 6"
+      },
+      "translations": {
+        "en": {
+          "question": "A school principal is booking hotel rooms for a class of 30 students to stay at during an overnight field trip.  Each of the hotel's rooms has two queen size beds, which can fit two students each, and a pull-out couch, which can fit one student.  How many rooms does the principal need to book to fit all of the students in the class?",
+          "answer": "Each room can fit 2*2 + 1 = <<2*2+1=5>>5 students.\nThus, the principal needs to book 30/5 = <<30/5=6>>6 rooms to fit everyone.\n#### 6"
+        },
+        "zh": {
+          "question": "校长为 30 名学生预订酒店房间。每间有两张大床，每张睡 2 人，还有一张沙发床睡 1 人。需要多少间房？",
+          "answer": "每间房可睡 2*2+1=<<2*2+1=5>>5 人。需要 30/5=<<30/5=6>>6 间房。#### 6"
+        },
+        "fr": {
+          "question": "Un directeur réserve des chambres pour 30 élèves. Chaque chambre a deux grands lits pour 2 élèves chacun et un canapé-lit pour 1 élève. Combien de chambres faut-il ?",
+          "answer": "Chaque chambre loge 2*2+1=<<2*2+1=5>>5 élèves. Il faut 30/5=<<30/5=6>>6 chambres. #### 6"
+        },
+        "ko": {
+          "question": "교장이 학생 30명을 위해 호텔 방을 예약합니다. 각 방에는 2명씩 잘 수 있는 큰 침대 2개와 1명이 잘 수 있는 소파베드가 있습니다. 몇 방이 필요합니까?",
+          "answer": "각 방은 2*2+1=<<2*2+1=5>>5명을 수용합니다. 필요한 방은 30/5=<<30/5=6>>6개입니다. #### 6"
+        },
+        "es": {
+          "question": "Un director reserva habitaciones para 30 estudiantes. Cada habitación tiene dos camas para 2 estudiantes cada una y un sofá cama para 1. ¿Cuántas habitaciones necesita?",
+          "answer": "Cada habitación acomoda 2*2+1=<<2*2+1=5>>5 estudiantes. Necesita 30/5=<<30/5=6>>6 habitaciones. #### 6"
+        }
+      }
+    },
+    {
+      "index": 129,
+      "source": {
+        "question": "Dan owns an ice cream shop and every sixth customer gets a free ice cream cone. Cones cost $2 each. If he sold $100 worth of cones, how many free ones did he give away?",
+        "answer": "He sold 50 cones because 100 / 2 = <<100/2=50>>50\nHe gave away 10 cones because 50 / 5 = <<50/5=10>>10\n#### 10"
+      },
+      "translations": {
+        "en": {
+          "question": "Dan owns an ice cream shop and every sixth customer gets a free ice cream cone. Cones cost $2 each. If he sold $100 worth of cones, how many free ones did he give away?",
+          "answer": "He sold 50 cones because 100 / 2 = <<100/2=50>>50\nHe gave away 10 cones because 50 / 5 = <<50/5=10>>10\n#### 10"
+        },
+        "zh": {
+          "question": "Dan 拥有一家冰淇淋店，每第六位顾客都会得到一个免费的冰淇淋筒。冰淇淋筒每个 $2。如果他卖出了价值 $100 的冰淇淋筒，他免费送出了多少个？",
+          "answer": "他卖出了 50 个冰淇淋筒，因为 100 / 2 = <<100/2=50>>50\n他送出了 10 个冰淇淋筒，因为 50 / 5 = <<50/5=10>>10\n#### 10"
+        },
+        "fr": {
+          "question": "Dan possède un magasin de glaces et chaque sixième client reçoit un cornet de glace gratuit. Les cornets coûtent 2 $ chacun. S'il a vendu pour 100 $ de cornets, combien en a-t-il donnés gratuitement ?",
+          "answer": "Il a vendu 50 cornets parce que 100 / 2 = <<100/2=50>>50\nIl a donné 10 cornets parce que 50 / 5 = <<50/5=10>>10\n#### 10"
+        },
+        "ko": {
+          "question": "Dan은 아이스크림 가게를 운영하고, 여섯 번째 손님마다 무료 아이스크림 콘을 받습니다. 콘은 각각 $2입니다. 그가 콘을 $100어치 팔았다면, 무료 콘을 몇 개 주었나요?",
+          "answer": "그는 100 / 2 = <<100/2=50>>50 이므로 콘 50개를 팔았습니다\n그는 50 / 5 = <<50/5=10>>10 이므로 콘 10개를 나눠 주었습니다\n#### 10"
+        },
+        "es": {
+          "question": "Dan tiene una heladería y cada sexto cliente recibe un cono de helado gratis. Los conos cuestan $2 cada uno. Si vendió $100 en conos, ¿cuántos regaló?",
+          "answer": "Vendió 50 conos porque 100 / 2 = <<100/2=50>>50\nRegaló 10 conos porque 50 / 5 = <<50/5=10>>10\n#### 10"
+        }
+      }
+    },
+    {
+      "index": 167,
+      "source": {
+        "question": "Janet filmed a new movie that is 60% longer than her previous 2-hour long movie.  Her previous movie cost $50 per minute to film, and the newest movie cost twice as much per minute to film as the previous movie.  What was the total amount of money required to film Janet's entire newest film?",
+        "answer": "The first movie was 2*60=<<2*60=120>>120 minutes\nSo this movie is 120*.6=<<120*.6=72>>72 minutes longer\nSo this movie is 192 minutes\nIt also cost 50*2=$<<50*2=100>>100 per minute to film\nSo it cost 192*100=$1920\n#### 1920"
+      },
+      "translations": {
+        "en": {
+          "question": "Janet filmed a new movie that is 60% longer than her previous 2-hour long movie.  Her previous movie cost $50 per minute to film, and the newest movie cost twice as much per minute to film as the previous movie.  What was the total amount of money required to film Janet's entire newest film?",
+          "answer": "The first movie was 2*60=<<2*60=120>>120 minutes\nSo this movie is 120*.6=<<120*.6=72>>72 minutes longer\nSo this movie is 192 minutes\nIt also cost 50*2=$<<50*2=100>>100 per minute to film\nSo it cost 192*100=$1920\n#### 1920"
+        },
+        "zh": {
+          "question": "Janet 拍了一部新电影，比她上一部 2 小时长的电影长 60%。她上一部电影的拍摄成本是每分钟 $50，而最新电影每分钟的拍摄成本是上一部的两倍。拍摄 Janet 整部最新电影总共需要多少钱？",
+          "answer": "第一部电影时长是 2*60=<<2*60=120>>120 分钟\n所以这部电影多出 120*.6=<<120*.6=72>>72 分钟\n所以这部电影时长是 192 分钟\n它的拍摄成本也是每分钟 50*2=$<<50*2=100>>100\n所以成本是 192*100=$1920\n#### 1920"
+        },
+        "fr": {
+          "question": "Janet a tourné un nouveau film qui est 60 % plus long que son précédent film de 2 heures. Son film précédent coûtait 50 $ par minute à tourner, et le nouveau film coûte deux fois plus par minute que le précédent. Quel était le montant total nécessaire pour tourner tout le nouveau film de Janet ?",
+          "answer": "Le premier film durait 2*60=<<2*60=120>>120 minutes\nDonc ce film est plus long de 120*.6=<<120*.6=72>>72 minutes\nDonc ce film dure 192 minutes\nIl coûtait aussi 50*2=$<<50*2=100>>100 par minute à tourner\nDonc il a coûté 192*100=$1920\n#### 1920"
+        },
+        "ko": {
+          "question": "Janet은 이전의 2시간짜리 영화보다 60% 더 긴 새 영화를 촬영했습니다. 그녀의 이전 영화는 촬영하는 데 분당 $50가 들었고, 최신 영화는 이전 영화보다 분당 촬영 비용이 두 배였습니다. Janet의 최신 영화 전체를 촬영하는 데 필요한 총금액은 얼마였나요?",
+          "answer": "첫 번째 영화는 2*60=<<2*60=120>>120 분이었습니다\n따라서 이 영화는 120*.6=<<120*.6=72>>72 분 더 깁니다\n그래서 이 영화는 192분입니다\n또한 촬영 비용은 분당 50*2=$<<50*2=100>>100 입니다\n따라서 비용은 192*100=$1920 입니다\n#### 1920"
+        },
+        "es": {
+          "question": "Janet filmó una nueva película que es un 60% más larga que su película anterior de 2 horas. Su película anterior costó $50 por minuto de filmación, y la película más nueva costó el doble por minuto de filmación que la anterior. ¿Cuál fue la cantidad total de dinero necesaria para filmar toda la película más nueva de Janet?",
+          "answer": "La primera película duraba 2*60=<<2*60=120>>120 minutos\nAsí que esta película es 120*.6=<<120*.6=72>>72 minutos más larga\nAsí que esta película dura 192 minutos\nTambién costó 50*2=$<<50*2=100>>100 por minuto filmarla\nAsí que costó 192*100=$1920\n#### 1920"
+        }
+      }
+    },
+    {
+      "index": 175,
+      "source": {
+        "question": "Conner has a dune buggy that he rides in the desert.  On flat sand, it can ride at a speed of 60 miles per hour.  When traveling on downhill slopes, it can race at 12 miles per hour faster than it can when it is on flat sand.  And when riding on an uphill inclined slow, it travels at a speed 18 miles per hour slower than when it is riding on flat sand.  If Conner rides his dune buggy one-third of the time on flat sand, one-third of the time on uphill slopes, and one-third of the time on downhill slopes, what is his average speed in miles per hour?",
+        "answer": "12 mph faster than 60mph is 60+12=<<60+12=72>>72 mph.\n18 mph slower than 60 mph is 60-18=<<60-18=42>>42 mph.\nIf he spends 1/3 of the time at each of these three speeds, then he averages (60+72+42)/3 = <<(60+72+42)/3=58>>58 mph.\n#### 58"
+      },
+      "translations": {
+        "en": {
+          "question": "Conner has a dune buggy that he rides in the desert.  On flat sand, it can ride at a speed of 60 miles per hour.  When traveling on downhill slopes, it can race at 12 miles per hour faster than it can when it is on flat sand.  And when riding on an uphill inclined slow, it travels at a speed 18 miles per hour slower than when it is riding on flat sand.  If Conner rides his dune buggy one-third of the time on flat sand, one-third of the time on uphill slopes, and one-third of the time on downhill slopes, what is his average speed in miles per hour?",
+          "answer": "12 mph faster than 60mph is 60+12=<<60+12=72>>72 mph.\n18 mph slower than 60 mph is 60-18=<<60-18=42>>42 mph.\nIf he spends 1/3 of the time at each of these three speeds, then he averages (60+72+42)/3 = <<(60+72+42)/3=58>>58 mph.\n#### 58"
+        },
+        "zh": {
+          "question": "Conner 的沙丘车平地速度 60 mph，下坡比平地快 12 mph，上坡比平地慢 18 mph。他三分之一时间在平地、三分之一上坡、三分之一下坡，平均速度是多少？",
+          "answer": "下坡速度 60+12=<<60+12=72>>72 mph，上坡速度 60-18=<<60-18=42>>42 mph。三个速度各占同样时间，平均是 (60+72+42)/3=<<(60+72+42)/3=58>>58 mph。#### 58"
+        },
+        "fr": {
+          "question": "Le buggy de Conner roule à 60 mph sur sable plat, 12 mph plus vite en descente et 18 mph plus lent en montée. Il passe un tiers du temps sur chaque terrain. Quelle est sa vitesse moyenne ?",
+          "answer": "Descente : 60+12=<<60+12=72>>72 mph. Montée : 60-18=<<60-18=42>>42 mph. Avec un tiers du temps à chaque vitesse, moyenne (60+72+42)/3=<<(60+72+42)/3=58>>58 mph. #### 58"
+        },
+        "ko": {
+          "question": "Conner의 버기는 평지에서 60mph, 내리막에서 12mph 더 빠르고 오르막에서 18mph 더 느립니다. 각 지형에서 시간의 1/3씩 달리면 평균 속도는?",
+          "answer": "내리막은 60+12=<<60+12=72>>72mph, 오르막은 60-18=<<60-18=42>>42mph입니다. 같은 시간씩이므로 평균은 (60+72+42)/3=<<(60+72+42)/3=58>>58mph입니다. #### 58"
+        },
+        "es": {
+          "question": "El buggy de Conner va a 60 mph en arena plana, 12 mph más rápido cuesta abajo y 18 mph más lento cuesta arriba. Pasa un tercio del tiempo en cada caso. ¿Velocidad promedio?",
+          "answer": "Cuesta abajo: 60+12=<<60+12=72>>72 mph. Cuesta arriba: 60-18=<<60-18=42>>42 mph. Con el mismo tiempo en cada velocidad, promedio (60+72+42)/3=<<(60+72+42)/3=58>>58 mph. #### 58"
+        }
+      }
+    },
+    {
+      "index": 187,
+      "source": {
+        "question": "Madeline has 5 boxes with 24 crayons in each. She noticed that 5/8 of the crayons in the 2 boxes were not yet used. In the 2 other boxes, only 2/3 of the crayons were used while the last box was not entirely used. How many unused crayons did Madeline have?",
+        "answer": "Two boxes of crayons have 24 x 5/8 = <<24*5/8=15>>15 unused crayons from each box.\nSo, a total of 15 x 2 = <<15*2=30>>30 unused crayons are in the two boxes.\nFor the other 2 boxes, there are 24 x 2/3 = <<24*2/3=16>>16 used crayons from each box.\nHence, there are 24 - 16 = <<24-16=8>>8 unused crayons.\nSo, a total of 8 x 2 = <<8*2=16>>16 unused crayons are in the other two boxes.\nTherefore, Madeline has a total of 30 + 16 + 24 = <<30+16+24=70>>70 unused crayons.\n#### 70"
+      },
+      "translations": {
+        "en": {
+          "question": "Madeline has 5 boxes with 24 crayons in each. She noticed that 5/8 of the crayons in the 2 boxes were not yet used. In the 2 other boxes, only 2/3 of the crayons were used while the last box was not entirely used. How many unused crayons did Madeline have?",
+          "answer": "Two boxes of crayons have 24 x 5/8 = <<24*5/8=15>>15 unused crayons from each box.\nSo, a total of 15 x 2 = <<15*2=30>>30 unused crayons are in the two boxes.\nFor the other 2 boxes, there are 24 x 2/3 = <<24*2/3=16>>16 used crayons from each box.\nHence, there are 24 - 16 = <<24-16=8>>8 unused crayons.\nSo, a total of 8 x 2 = <<8*2=16>>16 unused crayons are in the other two boxes.\nTherefore, Madeline has a total of 30 + 16 + 24 = <<30+16+24=70>>70 unused crayons.\n#### 70"
+        },
+        "zh": {
+          "question": "Madeline 有 5 盒蜡笔，每盒 24 支。2 盒中 5/8 未使用，另外 2 盒中只有 2/3 已使用，最后一盒完全未使用。未使用蜡笔总数是多少？",
+          "answer": "前 2 盒每盒未使用 24*5/8=<<24*5/8=15>>15 支，共 15*2=<<15*2=30>>30。另 2 盒每盒已用 24*2/3=<<24*2/3=16>>16，未用 24-16=<<24-16=8>>8，共 8*2=<<8*2=16>>16。最后一盒 24 支未用。总共 30+16+24=<<30+16+24=70>>70。#### 70"
+        },
+        "fr": {
+          "question": "Madeline a 5 boîtes de 24 crayons. Dans 2 boîtes, 5/8 ne sont pas utilisés. Dans 2 autres, 2/3 sont utilisés. La dernière boîte n’est pas utilisée. Combien de crayons inutilisés ?",
+          "answer": "Dans les 2 premières, inutilisés par boîte : 24*5/8=<<24*5/8=15>>15, donc 15*2=<<15*2=30>>30. Dans les 2 autres, utilisés par boîte : 24*2/3=<<24*2/3=16>>16, donc inutilisés 24-16=<<24-16=8>>8, total 8*2=<<8*2=16>>16. Dernière boîte : 24. Total 30+16+24=<<30+16+24=70>>70. #### 70"
+        },
+        "ko": {
+          "question": "Madeline은 24개씩 든 크레용 상자 5개를 가지고 있습니다. 2상자에서는 5/8이 미사용이고, 다른 2상자에서는 2/3만 사용되었으며, 마지막 상자는 전혀 사용되지 않았습니다. 미사용 크레용은 몇 개입니까?",
+          "answer": "처음 2상자는 각 24*5/8=<<24*5/8=15>>15개 미사용, 총 15*2=<<15*2=30>>30개입니다. 다른 2상자는 각 24*2/3=<<24*2/3=16>>16개 사용, 미사용은 24-16=<<24-16=8>>8개씩, 총 8*2=<<8*2=16>>16개입니다. 마지막 상자 24개를 더하면 30+16+24=<<30+16+24=70>>70개입니다. #### 70"
+        },
+        "es": {
+          "question": "Madeline tiene 5 cajas de 24 crayones. En 2 cajas, 5/8 no se han usado. En otras 2, solo 2/3 se usaron. La última caja no se usó. ¿Cuántos crayones sin usar?",
+          "answer": "En las primeras 2 cajas, sin usar por caja: 24*5/8=<<24*5/8=15>>15, total 15*2=<<15*2=30>>30. En otras 2, usados por caja: 24*2/3=<<24*2/3=16>>16, sin usar 24-16=<<24-16=8>>8, total 8*2=<<8*2=16>>16. Última caja: 24. Total 30+16+24=<<30+16+24=70>>70. #### 70"
+        }
+      }
+    },
+    {
+      "index": 224,
+      "source": {
+        "question": "A library cabinet houses five ancient scrolls. The first scroll is 4080 years old. If each scroll is older than the last by half as many years as the last scroll’s age, how old is the fifth scroll?",
+        "answer": "The second scroll is 4080 + 4080 / 2 = 4000 + 2040 = <<4080+4080/2=6120>>6120 years old.\nThe third scroll is 6120 + 6120 / 2 = 6120 + 3060 = <<6120+6120/2=9180>>9180 years old.\nThe fourth scroll is 9180 + 9180 / 2 = 9180 + 4590 = <<9180+9180/2=13770>>13770 years old.\nThe fifth scroll is 13770 + 13770 / 2 = 13770 + 6885 = <<13770+13770/2=20655>>20655 years old.\n#### 20655"
+      },
+      "translations": {
+        "en": {
+          "question": "A library cabinet houses five ancient scrolls. The first scroll is 4080 years old. If each scroll is older than the last by half as many years as the last scroll’s age, how old is the fifth scroll?",
+          "answer": "The second scroll is 4080 + 4080 / 2 = 4000 + 2040 = <<4080+4080/2=6120>>6120 years old.\nThe third scroll is 6120 + 6120 / 2 = 6120 + 3060 = <<6120+6120/2=9180>>9180 years old.\nThe fourth scroll is 9180 + 9180 / 2 = 9180 + 4590 = <<9180+9180/2=13770>>13770 years old.\nThe fifth scroll is 13770 + 13770 / 2 = 13770 + 6885 = <<13770+13770/2=20655>>20655 years old.\n#### 20655"
+        },
+        "zh": {
+          "question": "一个图书馆的柜子里存放着五份古代卷轴。第一份卷轴有4080年的历史。如果每份卷轴比前一份老一半的年数，那么第五份卷轴是多少岁？",
+          "answer": "第二份卷轴是4080 + 4080 / 2 = 4000 + 2040 = <<4080+4080/2=6120>>6120岁。\n第三份卷轴是6120 + 6120 / 2 = 6120 + 3060 = <<6120+6120/2=9180>>9180岁。\n第四份卷轴是9180 + 9180 / 2 = 9180 + 4590 = <<9180+9180/2=13770>>13770岁。\n第五份卷轴是13770 + 13770 / 2 = 13770 + 6885 = <<13770+13770/2=20655>>20655岁。\n#### 20655"
+        },
+        "fr": {
+          "question": "Un coffre d'une bibliothèque contient cinq parchemins anciens. Le premier parchemin a 4080 ans. Si chaque parchemin est plus ancien que le précédent d'autant d'années que la moitié de l'âge du parchemin précédent, quel est l'âge du cinquième parchemin ?",
+          "answer": "Le deuxième parchemin a 4080 + 4080 / 2 = 4000 + 2040 = <<4080+4080/2=6120>>6120 ans.\nLe troisième parchemin a 6120 + 6120 / 2 = 6120 + 3060 = <<6120+6120/2=9180>>9180 ans.\nLe quatrième parchemin a 9180 + 9180 / 2 = 9180 + 4590 = <<9180+9180/2=13770>>13770 ans.\nLe cinquième parchemin a 13770 + 13770 / 2 = 13770 + 6885 = <<13770+13770/2=20655>>20655 ans.\n#### 20655"
+        },
+        "ko": {
+          "question": "도서관 서랍에는 오래된 서신이 5개 있다. 첫 번째 서신은 4080년 전에 만들어졌다. 각 서신이 이전 서신보다 이전 서신의 나이의 반만큼 더 오래되었을 때, 다섯 번째 서신의 나이는 얼마인가요?",
+          "answer": "두 번째 서신은 4080 + 4080 / 2 = 4000 + 2040 = <<4080+4080/2=6120>>6120년 전에 만들어졌다.\n세 번째 서신은 6120 + 6120 / 2 = 6120 + 3060 = <<6120+6120/2=9180>>9180년 전에 만들어졌다.\n네 번째 서신은 9180 + 9180 / 2 = 9180 + 4590 = <<9180+9180/2=13770>>13770년 전에 만들어졌다.\n다섯 번째 서신은 13770 + 13770 / 2 = 13770 + 6885 = <<13770+13770/2=20655>>20655년 전에 만들어졌다.\n#### 20655"
+        },
+        "es": {
+          "question": "Un gabinete de biblioteca alberga cinco pergaminos antiguos. El primer pergaminos tiene 4080 años. Si cada pergaminos es más antiguo que el anterior en la mitad de los años que tenga el último pergaminos, ¿cuántos años tiene el quinto pergaminos?",
+          "answer": "El segundo pergaminos tiene 4080 + 4080 / 2 = 4000 + 2040 = <<4080+4080/2=6120>>6120 años.\nEl tercer pergaminos tiene 6120 + 6120 / 2 = 6120 + 3060 = <<6120+6120/2=9180>>9180 años.\nEl cuarto pergaminos tiene 9180 + 9180 / 2 = 9180 + 4590 = <<9180+9180/2=13770>>13770 años.\nEl quinto pergaminos tiene 13770 + 13770 / 2 = 13770 + 6885 = <<13770+13770/2=20655>>20655 años.\n#### 20655"
+        }
+      }
+    },
+    {
+      "index": 228,
+      "source": {
+        "question": "A company has 200 employees.  60% of the employees drive to work.  Of the employees who don't drive to work, half take public transportation. How many more employees drive to work than take public transportation?",
+        "answer": "Drive to work:200(.60)=<<200*.60=120>>120\nDon't Drive to work:200-120=<<200-120=80>>80\nPublic Transportation:80(.50)=40 employees\n80-40=<<80-40=40>>40 employees\n#### 40"
+      },
+      "translations": {
+        "en": {
+          "question": "A company has 200 employees.  60% of the employees drive to work.  Of the employees who don't drive to work, half take public transportation. How many more employees drive to work than take public transportation?",
+          "answer": "Drive to work:200(.60)=<<200*.60=120>>120\nDon't Drive to work:200-120=<<200-120=80>>80\nPublic Transportation:80(.50)=40 employees\n80-40=<<80-40=40>>40 employees\n#### 40"
+        },
+        "zh": {
+          "question": "一家公司有200名员工。60%的员工开车上班。不开车的员工中，有一半乘坐公共交通。有多少名员工开车上班比乘坐公共交通多？",
+          "answer": "开车上班：200×0.60=<<200*0.60=120>>120\n不开车上班：200-120=<<200-120=80>>80\n乘坐公共交通：80×0.50=40名员工\n80-40=<<80-40=40>>40名员工\n#### 40"
+        },
+        "fr": {
+          "question": "Une entreprise a 200 employés. 60 % des employés conduisent au travail. Parmi les employés qui ne conduisent pas au travail, la moitié utilisent les transports en commun. Combien d'employés conduisent au travail de plus que ceux qui utilisent les transports en commun ?",
+          "answer": "Conduisent au travail : 200(.60)=<<200*.60=120>>120\nNe conduisent pas au travail : 200-120=<<200-120=80>>80\nTransports en commun : 80(.50)=40 employés\n80-40=<<80-40=40>>40 employés\n#### 40"
+        },
+        "ko": {
+          "question": "회사는 200명의 직원을 가지고 있습니다. 이 직원들의 60%가 차를 이용해 출근합니다. 차를 이용하지 않는 직원들 중 반은 대중교통을 이용합니다. 차를 이용하는 직원이 대중교통을 이용하는 직원보다 몇 명 더 많나요?",
+          "answer": "차를 이용: 200(.60)=<<200*.60=120>>120\n차를 이용하지 않음: 200-120=<<200-120=80>>80\n대중교통: 80(.50)=40 명\n80-40=<<80-40=40>>40 명\n#### 40"
+        },
+        "es": {
+          "question": "Una empresa tiene 200 empleados. El 60% de los empleados conduce al trabajo. De los empleados que no conducen al trabajo, la mitad toman transporte público. ¿Cuántos empleados más conducen al trabajo que toman transporte público?",
+          "answer": "Conducen al trabajo:200(.60)=<<200*.60=120>>120\nNo conducen al trabajo:200-120=<<200-120=80>>80\nTransporte público:80(.50)=40 empleados\n80-40=<<80-40=40>>40 empleados\n#### 40"
+        }
+      }
+    },
+    {
+      "index": 229,
+      "source": {
+        "question": "Jan buys 1000 feet of cable.  She splits it up into 25-foot sections.  She gives 1/4 of that to a friend.  She then puts half of the rest in storage. How much does she keep on hand?",
+        "answer": "She gets 1000/25=<<1000/25=40>>40 sections\nShe gives away 40/4=<<40/4=10>>10 sections\nSo she keeps 40-10=<<40-10=30>>30 sections\nShe keeps 30/2=<<30/2=15>>15 sections on hand\n#### 15"
+      },
+      "translations": {
+        "en": {
+          "question": "Jan buys 1000 feet of cable.  She splits it up into 25-foot sections.  She gives 1/4 of that to a friend.  She then puts half of the rest in storage. How much does she keep on hand?",
+          "answer": "She gets 1000/25=<<1000/25=40>>40 sections\nShe gives away 40/4=<<40/4=10>>10 sections\nSo she keeps 40-10=<<40-10=30>>30 sections\nShe keeps 30/2=<<30/2=15>>15 sections on hand\n#### 15"
+        },
+        "zh": {
+          "question": "简买了1000英尺的电缆。她将其分成25英尺一段。她把其中的1/4给了朋友。然后她把剩下的半数存入仓库。她最终保留了多少？",
+          "answer": "她得到1000/25=<<1000/25=40>>40段\n她送出了40/4=<<40/4=10>>10段\n所以她保留了40-10=<<40-10=30>>30段\n她保留了30/2=<<30/2=15>>15段在手中\n#### 15"
+        },
+        "fr": {
+          "question": "Jan achète 1000 pieds de câble. Elle le divise en sections de 25 pieds. Elle donne 1/4 de cela à un ami. Puis elle range la moitié du reste. Combien en garde-t-elle en stock ?",
+          "answer": "Elle obtient 1000/25=<<1000/25=40>>40 sections\nElle donne 40/4=<<40/4=10>>10 sections\nDonc elle conserve 40-10=<<40-10=30>>30 sections\nElle conserve 30/2=<<30/2=15>>15 sections en stock\n#### 15"
+        },
+        "ko": {
+          "question": "잔은 1000피트의 케이블을 구입한다. 그는 이를 25피트 단위로 나눈다. 친구에게 1/4을 준다. 그 후 나머지의 절반을 보관소에 넣는다. 그녀가 손에 들고 있는 것은 얼마인가요?",
+          "answer": "그녀는 1000/25=<<1000/25=40>>40개의 섹션을 얻는다\n친구에게 40/4=<<40/4=10>>10개의 섹션을 준다\n따라서 40-10=<<40-10=30>>30개의 섹션을 보유한다\n그녀는 30/2=<<30/2=15>>15개의 섹션을 손에 들고 있다\n#### 15"
+        },
+        "es": {
+          "question": "Jan compra 1000 pies de cable. Lo divide en secciones de 25 pies. Le da 1/4 de eso a un amigo. Luego coloca la mitad del resto en almacenaje. ¿Cuánto mantiene ella?",
+          "answer": "Ella obtiene 1000/25=<<1000/25=40>>40 secciones\nLe da 40/4=<<40/4=10>>10 secciones\nAsí que mantiene 40-10=<<40-10=30>>30 secciones\nMantiene 30/2=<<30/2=15>>15 secciones en mano\n#### 15"
+        }
+      }
+    },
+    {
+      "index": 232,
+      "source": {
+        "question": "Jolene and Phil have four children, each with the same birthday.  They gave birth to their first child exactly 15 years ago.  They gave birth to their second child exactly one year after the birth of their first child.  They gave birth to their third child on the fourth birthday of their second child. Two years after the birth of their third child, they gave birth to their fourth child.  How old, in years, is their fourth child?",
+        "answer": "Their 1st child was born 15 years ago, and therefore is <<15=15>>15 years old.\nTheir 2nd child was born 1 year after their 15-year-old child, and therefore is 15-1=<<15-1=14>>14 years old.\nTheir 3rd child was born 4 years after their 14-year-old child, and therefore is 14-4=10 years old.\nTheir 4th child was born 2 years after their 10-year-old child, and therefore is 10-2=8 years old.\n#### 8"
+      },
+      "translations": {
+        "en": {
+          "question": "Jolene and Phil have four children, each with the same birthday.  They gave birth to their first child exactly 15 years ago.  They gave birth to their second child exactly one year after the birth of their first child.  They gave birth to their third child on the fourth birthday of their second child. Two years after the birth of their third child, they gave birth to their fourth child.  How old, in years, is their fourth child?",
+          "answer": "Their 1st child was born 15 years ago, and therefore is <<15=15>>15 years old.\nTheir 2nd child was born 1 year after their 15-year-old child, and therefore is 15-1=<<15-1=14>>14 years old.\nTheir 3rd child was born 4 years after their 14-year-old child, and therefore is 14-4=10 years old.\nTheir 4th child was born 2 years after their 10-year-old child, and therefore is 10-2=8 years old.\n#### 8"
+        },
+        "zh": {
+          "question": "乔琳和菲尔有四个孩子，每个孩子的生日都相同。他们正好15年前生下了第一个孩子。他们在第一个孩子出生后一年生下了第二个孩子。在第二个孩子满四岁生日那天生下了第三个孩子。在第三个孩子出生后两年生下了第四个孩子。他们的第四个孩子现在多少岁？",
+          "answer": "他们的第一个孩子是15年前出生的，因此现在15岁。<<15=15>>\n他们的第二个孩子是在第一个15岁孩子出生后一年出生的，因此现在是15-1=<<15-1=14>>14岁。\n他们的第三个孩子是在第二个孩子满四岁生日那天出生的，因此现在是14-4=10岁。\n他们的第四个孩子是在第三个孩子出生后两年出生的，因此现在是10-2=8岁。\n#### 8"
+        },
+        "fr": {
+          "question": "Jolene et Phil ont quatre enfants, tous avec la même date de naissance. Ils ont donné naissance à leur premier enfant il y a exactement 15 ans. Ils ont donné naissance à leur deuxième enfant exactement un an après la naissance de leur premier enfant. Ils ont donné naissance à leur troisième enfant au quatrième anniversaire de leur deuxième enfant. Deux ans après la naissance de leur troisième enfant, ils ont donné naissance à leur quatrième enfant. Quel âge, en années, a leur quatrième enfant ?",
+          "answer": "Leur premier enfant est né il y a 15 ans, et est donc <<15=15>>15 ans. \nLeur deuxième enfant est né un an après leur enfant de 15 ans, et est donc 15-1=<<15-1=14>>14 ans. \nLeur troisième enfant est né 4 ans après leur enfant de 14 ans, et est donc 14-4=10 ans. \nLeur quatrième enfant est né 2 ans après leur enfant de 10 ans, et est donc 10-2=8 ans. \n#### 8"
+        },
+        "ko": {
+          "question": "조렌과 필은 네 명의 자녀를 가졌고, 모두 같은 생일을 가졌다. 그들은 첫 번째 자녀를 15년 전에 출생시켰다. 두 번째 자녀는 첫 번째 자녀가 태어난 후 한 해 뒤에 태어났다. 세 번째 자녀는 두 번째 자녀의 4번째 생일에 태어났다. 세 번째 자녀가 태어난 후 두 년 후에 네 번째 자녀를 출산했다. 그들의 네 번째 자녀는 몇 년 old인가요?",
+          "answer": "그들의 첫 번째 자녀는 15년 전에 태어났고, 따라서 15세이다. <<15=15>>15\n두 번째 자녀는 15세 자녀가 태어난 후 한 해 뒤에 태어났고, 따라서 15-1=<<15-1=14>>14세이다.\n세 번째 자녀는 14세 자녀가 태어난 후 4년 후에 태어났고, 따라서 14-4=10세이다.\n네 번째 자녀는 10세 자녀가 태어난 후 두 년 후에 태어났고, 따라서 10-2=8세이다.\n#### 8"
+        },
+        "es": {
+          "question": "Jolene y Phil tienen cuatro hijos, cada uno con la misma fecha de cumpleaños. Les dio a luz a su primer hijo hace exactamente 15 años. Les dio a luz a su segundo hijo exactamente un año después del nacimiento de su primer hijo. Les dio a luz a su tercer hijo en el cuarto cumpleaños de su segundo hijo. Dos años después del nacimiento de su tercer hijo, les dio a luz a su cuarto hijo. ¿Cuántos años tiene, en años, su cuarto hijo?",
+          "answer": "Su primer hijo nació hace 15 años, por lo tanto tiene <<15=15>>15 años.\nSu segundo hijo nació un año después de que su hijo de 15 años naciera, por lo tanto tiene 15-1=<<15-1=14>>14 años.\nSu tercer hijo nació 4 años después de que su hijo de 14 años naciera, por lo tanto tiene 14-4=10 años.\nSu cuarto hijo nació 2 años después de que su hijo de 10 años naciera, por lo tanto tiene 10-2=8 años.\n#### 8"
+        }
+      }
+    },
+    {
+      "index": 235,
+      "source": {
+        "question": "Max likes to collect model trains.  He asks for one for every birthday of his, and asks for two each Christmas.  Max always gets the gifts he asks for, and asks for these same gifts every year for 5 years.  At the end of the 5 years, his parents give him double the number of trains he already has.  How many trains does Max have now?",
+        "answer": "Max gets 1+2=<<1+2=3>>3 trains per year.\nHe repeats this for 5 years, meaning he gets 5*3 =<<5*3=15>>15 trains.\nWhen this number is doubled by his parents, it becomes 15*2= <<15*2=30>>30 trains.\nSince he already had 15 model trains, his total becomes 15+30= <<15+30=45>>45 trains.\n#### 45"
+      },
+      "translations": {
+        "en": {
+          "question": "Max likes to collect model trains.  He asks for one for every birthday of his, and asks for two each Christmas.  Max always gets the gifts he asks for, and asks for these same gifts every year for 5 years.  At the end of the 5 years, his parents give him double the number of trains he already has.  How many trains does Max have now?",
+          "answer": "Max gets 1+2=<<1+2=3>>3 trains per year.\nHe repeats this for 5 years, meaning he gets 5*3 =<<5*3=15>>15 trains.\nWhen this number is doubled by his parents, it becomes 15*2= <<15*2=30>>30 trains.\nSince he already had 15 model trains, his total becomes 15+30= <<15+30=45>>45 trains.\n#### 45"
+        },
+        "zh": {
+          "question": "马克喜欢收集模型火车。他每个生日都会要求一辆，圣诞节则要求两辆。马克总是得到他所要求的礼物，而且每年都会要求相同的礼物，持续5年。在5年结束时，他的父母给了他目前所拥有火车数量的两倍。现在马克有多少辆火车？",
+          "answer": "马克每年得到1+2=<<1+2=3>>3辆火车。\n他持续了5年，因此共得到5*3 =<<5*3=15>>15辆火车。\n当父母给他现有数量的两倍时，总数变为15*2= <<15*2=30>>30辆火车。\n由于他原本已有15辆模型火车，总数变为15+30= <<15+30=45>>45辆火车。\n#### 45"
+        },
+        "fr": {
+          "question": "Max aime collectionner des trains en miniature. Il demande un train pour chaque anniversaire et deux pour Noël. Max reçoit toujours les cadeaux qu'il demande, et il demande ces mêmes cadeaux chaque année pendant 5 ans. À la fin de ces 5 ans, ses parents lui donnent le double du nombre de trains qu'il a déjà. Combien de trains possède-t-il maintenant ?",
+          "answer": "Max reçoit 1+2=<<1+2=3>>3 trains par an.\nIl répète cela pendant 5 ans, ce qui signifie qu'il reçoit 5*3 =<<5*3=15>>15 trains.\nLorsque ce nombre est doublé par ses parents, il devient 15*2= <<15*2=30>>30 trains.\nPuisqu'il avait déjà 15 trains en miniature, son total devient 15+30= <<15+30=45>>45 trains.\n#### 45"
+        },
+        "ko": {
+          "question": "마크는 모형 철도 열차를 모으는 것을 좋아합니다. 그는 생일마다 하나를, 크리스마스마다 두 개를 요청합니다. 마크는 항상 원하는 선물들을 받고, 매년 동일한 선물들을 5년 동안 요청합니다. 5년 후에 부모님들이 그가 이미 가진 열차 수의 두 배를 주십니다. 마크는 지금까지 몇 개의 열차를 가지고 있나요?",
+          "answer": "마크는 매년 1+2=<<1+2=3>>3개의 열차를 받습니다.\n5년 동안 이 과정을 반복하므로, 5*3 =<<5*3=15>>15개의 열차를 받습니다.\n부모님들이 이 수를 두 배로 만들어 15*2= <<15*2=30>>30개의 열차가 됩니다.\n이미 15개의 모형 열차를 가지고 있었기 때문에, 총 수는 15+30= <<15+30=45>>45개의 열차가 됩니다.\n#### 45"
+        },
+        "es": {
+          "question": "Max le gusta recolectar trenes de modelo. Pide uno por cada cumpleaños y dos cada Navidad. Max siempre recibe los regalos que pide, y pide estos mismos regalos cada año durante 5 años. Al final de los 5 años, sus padres le dan el doble de trenes que ya tenía. ¿Cuántos trenes tiene Max ahora?",
+          "answer": "Max recibe 1+2=<<1+2=3>>3 trenes por año.\nRepite esto durante 5 años, lo que significa que recibe 5*3 =<<5*3=15>>15 trenes.\nCuando este número se duplica por sus padres, se convierte en 15*2= <<15*2=30>>30 trenes.\nComo ya tenía 15 trenes de modelo, su total se convierte en 15+30= <<15+30=45>>45 trenes.\n#### 45"
+        }
+      }
+    },
+    {
+      "index": 237,
+      "source": {
+        "question": "In April, Tank gathered 10 more Easter eggs than Emma in their first round of egg hunt. However, Emma gathered twice as many eggs as Tank in their second round of egg hunt, while Tank's total number of eggs in the second round was 20 less than the number she had gathered in the first round. If the total number of eggs in the pile they were collecting with 6 other people was 400 eggs, and Emma gathered 60 eggs in the second egg hunt round, find the number of eggs that the 6 other egg hunters collected?",
+        "answer": "Tank's total number of eggs in the second round was 60/2=<<60/2=30>>30 since Emma gathered twice as many eggs as Tank in their second round of egg hunt.\nThe total number of eggs that Emma and Tank gathered in the second round was 60+30=<<60+30=90>>90\nTank's total number of eggs in the second round was 20 less than the number she had gathered in the first round, meaning she had gathered 30+20=<<30+20=50>>50 eggs in the first round of egg hunt.\nTank gathered 10 more Easter eggs than Emma in their first round of egg hunt, meaning Emma collected 50-10=40 eggs\nThe total number of eggs Emma and Tank collected in the first round was 40+50=<<40+50=90>>90\nIn the two rounds, Emma and Tank gathered 90+90=<<90+90=180>>180 eggs\nIf the total number of eggs in the pile they were collecting with 6 other people was 400 eggs, the six other people gathered 400-180=<<400-180=220>>220 eggs\n#### 220"
+      },
+      "translations": {
+        "en": {
+          "question": "In April, Tank gathered 10 more Easter eggs than Emma in their first round of egg hunt. However, Emma gathered twice as many eggs as Tank in their second round of egg hunt, while Tank's total number of eggs in the second round was 20 less than the number she had gathered in the first round. If the total number of eggs in the pile they were collecting with 6 other people was 400 eggs, and Emma gathered 60 eggs in the second egg hunt round, find the number of eggs that the 6 other egg hunters collected?",
+          "answer": "Tank's total number of eggs in the second round was 60/2=<<60/2=30>>30 since Emma gathered twice as many eggs as Tank in their second round of egg hunt.\nThe total number of eggs that Emma and Tank gathered in the second round was 60+30=<<60+30=90>>90\nTank's total number of eggs in the second round was 20 less than the number she had gathered in the first round, meaning she had gathered 30+20=<<30+20=50>>50 eggs in the first round of egg hunt.\nTank gathered 10 more Easter eggs than Emma in their first round of egg hunt, meaning Emma collected 50-10=40 eggs\nThe total number of eggs Emma and Tank collected in the first round was 40+50=<<40+50=90>>90\nIn the two rounds, Emma and Tank gathered 90+90=<<90+90=180>>180 eggs\nIf the total number of eggs in the pile they were collecting with 6 other people was 400 eggs, the six other people gathered 400-180=<<400-180=220>>220 eggs\n#### 220"
+        },
+        "zh": {
+          "question": "四月，Tank在第一次寻蛋活动中比Emma多收集了10个蛋。然而，在第二次寻蛋活动中，Emma收集的蛋数是Tank的两倍，而Tank在第二次寻蛋活动中收集的蛋数比她第一次收集的少20个。如果他们和另外6个人一起收集的蛋总数为400个，且Emma在第二次寻蛋活动中收集了60个蛋，求另外6个寻蛋者收集的蛋数是多少？",
+          "answer": "Tank在第二次寻蛋活动中收集的蛋数为60/2=<<60/2=30>>30，因为在第二次寻蛋活动中Emma收集的蛋数是Tank的两倍。\nEmma和Tank在第二次寻蛋活动中总共收集了60+30=<<60+30=90>>90个蛋。\nTank在第二次寻蛋活动中收集的蛋数比她第一次少20个，因此她在第一次寻蛋活动中收集了30+20=<<30+20=50>>50个蛋。\nTank在第一次寻蛋活动中比Emma多收集了10个蛋，因此Emma收集了50-10=40个蛋。\nEmma和Tank在第一次寻蛋活动中总共收集了40+50=<<40+50=90>>90个蛋。\n在两个回合中，Emma和Tank总共收集了90+90=<<90+90=180>>180个蛋。\n如果他们和另外6个人一起收集的蛋总数为400个，那么另外6个人收集了400-180=<<400-180=220>>220个蛋。\n#### 220"
+        },
+        "fr": {
+          "question": "En avril, Tank a récolté 10 plus d'oeufs de Pâques que Emma lors de leur première manche de chasse aux œufs. Cependant, Emma a récolté deux fois plus d'oeufs que Tank lors de leur deuxième manche de chasse aux œufs, tandis que le total d'oeufs récoltés par Tank lors de la deuxième manche était de 20 de moins que celui qu'elle avait récolté lors de la première manche. Si le total d'oeufs dans la pile qu'ils collectaient avec 6 autres personnes était de 400 œufs, et que Emma a récolté 60 œufs lors de la deuxième manche de chasse aux œufs, quel est le nombre d'œufs que les 6 autres chasseurs d'œufs ont récoltés ?",
+          "answer": "Le total d'oeufs récoltés par Tank lors de la deuxième manche était de 60/2=<<60/2=30>>30 puisque Emma a récolté deux fois plus d'oeufs que Tank lors de leur deuxième manche de chasse aux œufs. \nLe total d'oeufs récoltés par Emma et Tank lors de la deuxième manche était de 60+30=<<60+30=90>>90\nLe total d'oeufs récoltés par Tank lors de la deuxième manche était de 20 de moins que celui qu'elle avait récolté lors de la première manche, ce qui signifie qu'elle a récolté 30+20=<<30+20=50>>50 œufs lors de la première manche de chasse aux œufs. \nTank a récolté 10 plus d'oeufs de Pâques que Emma lors de leur première manche de chasse aux œufs, ce qui signifie que Emma a récolté 50-10=40 œufs. \nLe total d'oeufs récoltés par Emma et Tank lors de la première manche était de 40+50=<<40+50=90>>90. \nAu cours des deux manches, Emma et Tank ont récolté 90+90=<<90+90=180>>180 œufs. \nSi le total d'oeufs dans la pile qu'ils collectaient avec 6 autres personnes était de 400 œufs, les six autres personnes ont récolté 400-180=<<400-180=220>>220 œufs. \n#### 220"
+        },
+        "ko": {
+          "question": "4월에 탱크는 에마보다 첫 번째 라운드에서 10개 더 많은 페스티벌 계란을 모았습니다. 그러나 에마는 두 번째 라운드에서 탱크보다 두 배 많은 계란을 모았고, 탱크의 두 번째 라운드 계란 수는 첫 번째 라운드에서 모은 수보다 20개 적었습니다. 만약 그들이 6명의 다른 사람들이 함께 모은 계란의 총 수가 400개였고, 에마는 두 번째 계란 라운드에서 60개의 계란을 모았다면, 6명의 다른 계란 수집가들이 모은 계란 수는 얼마인가요?",
+          "answer": "에마가 두 번째 라운드에서 탱크보다 두 배 많은 계란을 모았기 때문에, 탱크의 두 번째 라운드 계란 수는 60/2=<<60/2=30>>30입니다.\n에마와 탱크가 두 번째 라운드에서 모은 계란의 총 수는 60+30=<<60+30=90>>90입니다.\n탱크의 두 번째 라운드 계란 수는 첫 번째 라운드에서 모은 수보다 20개 적었기 때문에, 첫 번째 라운드에서 30+20=<<30+20=50>>50개의 계란을 모았습니다.\n탱크는 첫 번째 라운드에서 에마보다 10개 더 많은 계란을 모았기 때문에, 에마는 50-10=40개의 계란을 모았습니다.\n에마와 탱크가 첫 번째 라운드에서 모은 계란의 총 수는 40+50=<<40+50=90>>90입니다.\n두 라운드 동안 에마와 탱크가 모은 계란의 총 수는 90+90=<<90+90=180>>180입니다.\n그들이 6명의 다른 사람들이 함께 모은 계란의 총 수가 400개이므로, 6명의 다른 사람들이 모은 계란 수는 400-180=<<400-180=220>>220입니다.\n#### 220"
+        },
+        "es": {
+          "question": "En abril, Tank recogió 10 más huevos de Pascua que Emma en su primera ronda de búsqueda de huevos. Sin embargo, Emma recogió el doble de huevos que Tank en su segunda ronda de búsqueda de huevos, mientras que el total de huevos que Tank recogió en la segunda ronda fue 20 menos que los que había recogido en la primera ronda. Si el total de huevos en la pila que estaban recogiendo con 6 otras personas era de 400 huevos, y Emma recogió 60 huevos en la segunda ronda de búsqueda de huevos, ¿cuántos huevos recogieron los 6 otros buscadores de huevos?",
+          "answer": "El total de huevos que Tank recogió en la segunda ronda fue 60/2=<<60/2=30>>30 ya que Emma recogió el doble de huevos que Tank en su segunda ronda de búsqueda de huevos.\nEl total de huevos que Emma y Tank recogieron en la segunda ronda fue 60+30=<<60+30=90>>90\nEl total de huevos que Tank recogió en la segunda ronda fue 20 menos que los que había recogido en la primera ronda, lo que significa que recogió 30+20=<<30+20=50>>50 huevos en la primera ronda de búsqueda de huevos.\nTank recogió 10 más huevos de Pascua que Emma en su primera ronda de búsqueda de huevos, lo que significa que Emma recogió 50-10=40 huevos\nEl total de huevos que Emma y Tank recogieron en la primera ronda fue 40+50=<<40+50=90>>90\nEn las dos rondas, Emma y Tank recogieron 90+90=<<90+90=180>>180 huevos\nSi el total de huevos en la pila que estaban recogiendo con 6 otras personas era de 400 huevos, los seis otros personas recogieron 400-180=<<400-180=220>>220 huevos\n#### 220"
+        }
+      }
+    },
+    {
+      "index": 261,
+      "source": {
+        "question": "You can buy 4 apples or 1 watermelon for the same price. You bought 36 fruits evenly split between oranges, apples and watermelons, and the price of 1 orange is $0.50. How much does 1 apple cost if your total bill was $66?",
+        "answer": "If 36 fruits were evenly split between 3 types of fruits, then I bought 36/3 = <<36/3=12>>12 units of each fruit\nIf 1 orange costs $0.50 then 12 oranges will cost $0.50 * 12 = $<<0.5*12=6>>6\nIf my total bill was $66 and I spent $6 on oranges then I spent $66 - $6 = $<<66-6=60>>60 on the other 2 fruit types.\nAssuming the price of watermelon is W, and knowing that you can buy 4 apples for the same price and that the price of one apple is A, then 1W=4A\nIf we know we bought 12 watermelons and 12 apples for $60, then we know that $60 = 12W + 12A\nKnowing that 1W=4A, then we can convert the above to $60 = 12(4A) + 12A\n$60 = 48A + 12A\n$60 = <<60=60>>60A\nThen we know the price of one apple (A) is $60/60= $<<60/60=1>>1\n#### 1"
+      },
+      "translations": {
+        "en": {
+          "question": "You can buy 4 apples or 1 watermelon for the same price. You bought 36 fruits evenly split between oranges, apples and watermelons, and the price of 1 orange is $0.50. How much does 1 apple cost if your total bill was $66?",
+          "answer": "If 36 fruits were evenly split between 3 types of fruits, then I bought 36/3 = <<36/3=12>>12 units of each fruit\nIf 1 orange costs $0.50 then 12 oranges will cost $0.50 * 12 = $<<0.5*12=6>>6\nIf my total bill was $66 and I spent $6 on oranges then I spent $66 - $6 = $<<66-6=60>>60 on the other 2 fruit types.\nAssuming the price of watermelon is W, and knowing that you can buy 4 apples for the same price and that the price of one apple is A, then 1W=4A\nIf we know we bought 12 watermelons and 12 apples for $60, then we know that $60 = 12W + 12A\nKnowing that 1W=4A, then we can convert the above to $60 = 12(4A) + 12A\n$60 = 48A + 12A\n$60 = <<60=60>>60A\nThen we know the price of one apple (A) is $60/60= $<<60/60=1>>1\n#### 1"
+        },
+        "zh": {
+          "question": "你可以用同样的价格买4个苹果或1个西瓜。你买了36个水果，其中橙子、苹果和西瓜的数量均等，且每个橙子的价格是0.50美元。如果总账单是66美元，那么一个苹果的价格是多少？",
+          "answer": "如果36个水果均分为3种水果，那么我买了36/3 = <<36/3=12>>12个每种水果\n如果每个橙子是0.50美元，那么12个橙子将花费0.50 * 12 = $<<0.5*12=6>>6\n如果总账单是66美元，而我在橙子上花了6美元，那么我在其他两种水果上花了66 - 6 = $<<66-6=60>>60。\n假设西瓜的价格是W，已知你可以用4个苹果的价格买1个西瓜，且每个苹果的价格是A，那么1W=4A\n如果我知道买了12个西瓜和12个苹果，总共花费了60美元，那么60 = 12W + 12A\n已知1W=4A，我们可以将上述等式转换为60 = 12(4A) + 12A\n60 = 48A + 12A\n60 = <<60=60>>60A\n因此，一个苹果（A）的价格是60/60 = $<<60/60=1>>1\n#### 1"
+        },
+        "fr": {
+          "question": "Vous pouvez acheter 4 pommes ou 1 melon pour le même prix. Vous avez acheté 36 fruits, répartis équitablement entre des oranges, des pommes et des melons, et le prix d'une orange est de 0,50 $. Combien coûte une pomme si votre facture totale était de 66 $ ?",
+          "answer": "Si 36 fruits étaient répartis équitablement entre 3 types de fruits, alors j'ai acheté 36/3 = <<36/3=12>>12 unités de chaque fruit\nSi un orange coûte 0,50 $, alors 12 oranges coûtent 0,50 * 12 = $<<0,5*12=6>>6\nSi mon paiement total était de 66 $ et que j'ai dépensé 6 $ pour des oranges, alors j'ai dépensé 66 - 6 = $<<66-6=60>>60 pour les deux autres types de fruits.\nEn supposant que le prix d'un melon est W, et en sachant que vous pouvez acheter 4 pommes pour le même prix et que le prix d'une pomme est A, alors 1W=4A\nSi on sait que j'ai acheté 12 melons et 12 pommes pour 60 $, alors on sait que 60 $ = 12W + 12A\nEn sachant que 1W=4A, on peut convertir cela en 60 $ = 12(4A) + 12A\n60 $ = 48A + 12A\n60 $ = <<60=60>>60A\nOn sait alors que le prix d'une pomme (A) est de 60/60 = $<<60/60=1>>1\n#### 1"
+        },
+        "ko": {
+          "question": "같은 가격으로 4개의 사과나 1개의 물melon을 살 수 있습니다. 당신은 오렌지, 사과, 물melon을 동일하게 나누어 36개의 과일을 구입했고, 1개의 오렌지는 $0.50입니다. 당신의 총 결제 금액이 $66이면 1개의 사과는 얼마인가요?",
+          "answer": "36개의 과일이 3가지 종류로 동일하게 나누어졌으므로, 각 과일은 36/3 = <<36/3=12>>12개를 구입했습니다.\n1개의 오렌지가 $0.50이므로, 12개의 오렌지는 $0.50 * 12 = $<<0.5*12=6>>6입니다.\n총 결제 금액이 $66이었고 오렌지를 $6에 썼다면, 나머지 2가지 과일에 대해 $66 - $6 = $<<66-6=60>>60를 지불했습니다.\n물melon의 가격이 W이고, 4개의 사과를 같은 가격으로 살 수 있고, 사과의 가격이 A라면, 1W=4A입니다.\n12개의 물melon과 12개의 사과를 $60에 구입했으므로, $60 = 12W + 12A입니다.\n1W=4A라는 것을 알고 있으므로 위 식을 $60 = 12(4A) + 12A로 변환할 수 있습니다.\n$60 = 48A + 12A\n$60 = <<60=60>>60A\n따라서 사과의 가격(A)은 $60/60 = $<<60/60=1>>1입니다.\n#### 1"
+        },
+        "es": {
+          "question": "Puedes comprar 4 manzanas o 1 sandía por el mismo precio. Compraste 36 frutas divididas equitativamente entre naranjas, manzanas y sandías, y el precio de 1 naranja es de $0.50. ¿Cuánto cuesta 1 manzana si tu factura total fue de $66?",
+          "answer": "Si 36 frutas se dividieron equitativamente entre 3 tipos de frutas, entonces compré 36/3 = <<36/3=12>>12 unidades de cada fruta\nSi 1 naranja cuesta $0.50 entonces 12 naranjas costarán $0.50 * 12 = $<<0.5*12=6>>6\nSi mi factura total fue de $66 y gasté $6 en naranjas, entonces gasté $66 - $6 = $<<66-6=60>>60 en los otros 2 tipos de frutas.\nSuponiendo que el precio de la sandía es W, y sabiendo que puedes comprar 4 manzanas por el mismo precio y que el precio de una manzana es A, entonces 1W=4A\nSi sabemos que compré 12 sandías y 12 manzanas por $60, entonces sabemos que $60 = 12W + 12A\nSabiendo que 1W=4A, entonces podemos convertir lo anterior en $60 = 12(4A) + 12A\n$60 = 48A + 12A\n$60 = <<60=60>>60A\nEntonces sabemos que el precio de una manzana (A) es $60/60 = $<<60/60=1>>1\n#### 1"
+        }
+      }
+    },
+    {
+      "index": 282,
+      "source": {
+        "question": "Riku has 25 times more stickers than Kristoff. If Kristoff has 85 stickers, how many stickers does Riku have?",
+        "answer": "If Kristoff has 85 stickers, Riku has 25 * 85 stickers = <<85*25=2125>>2125 more stickers.\nThe total number of stickers Riku has is 2125 stickers + 85 stickers = <<2125+85=2210>>2210 stickers\n#### 2210"
+      },
+      "translations": {
+        "en": {
+          "question": "Riku has 25 times more stickers than Kristoff. If Kristoff has 85 stickers, how many stickers does Riku have?",
+          "answer": "If Kristoff has 85 stickers, Riku has 25 * 85 stickers = <<85*25=2125>>2125 more stickers.\nThe total number of stickers Riku has is 2125 stickers + 85 stickers = <<2125+85=2210>>2210 stickers\n#### 2210"
+        },
+        "zh": {
+          "question": "Riku的贴纸是Kristoff的25倍。如果Kristoff有85张贴纸，Riku有多少张贴纸？",
+          "answer": "如果Kristoff有85张贴纸，Riku有25 * 85张贴纸 = <<85*25=2125>>2125张更多的贴纸。Riku总共有的贴纸数量是2125张贴纸 + 85张贴纸 = <<2125+85=2210>>2210张贴纸\n#### 2210"
+        },
+        "fr": {
+          "question": "Riku a 25 fois plus de stickers que Kristoff. Si Kristoff a 85 stickers, combien de stickers a Riku ?",
+          "answer": "Si Kristoff a 85 stickers, Riku en a 25 * 85 stickers = <<85*25=2125>>2125 de plus. Le nombre total de stickers que Riku possède est de 2125 stickers + 85 stickers = <<2125+85=2210>>2210 stickers\n#### 2210"
+        },
+        "ko": {
+          "question": "리쿠는 크리스토프보다 25배 더 많은 스티커를 가지고 있습니다. 크리스토프가 85개의 스티커를 가지고 있다면, 리쿠는 몇 개의 스티커를 가지고 있나요?",
+          "answer": "크리스토프가 85개의 스티커를 가지고 있다면, 리쿠는 25 * 85개의 스티커를 가지고 있습니다 = <<85*25=2125>>2125개 더 많은 스티커를 가지고 있습니다. 리쿠가 가진 스티커의 총 수는 2125개의 스티커 + 85개의 스티커 = <<2125+85=2210>>2210개의 스티커입니다.\n#### 2210"
+        },
+        "es": {
+          "question": "Riku tiene 25 veces más pegatinas que Kristoff. Si Kristoff tiene 85 pegatinas, ¿cuántas pegatinas tiene Riku?",
+          "answer": "Si Kristoff tiene 85 pegatinas, Riku tiene 25 * 85 pegatinas = <<85*25=2125>>2125 más pegatinas. El número total de pegatinas que tiene Riku es 2125 pegatinas + 85 pegatinas = <<2125+85=2210>>2210 pegatinas\n#### 2210"
+        }
+      }
+    },
+    {
+      "index": 289,
+      "source": {
+        "question": "Jim collects model cars, and he has 301 models total.  Jim has 4 times as many Buicks as Fords, and 3 more than twice the number of Fords than Chevys.  How many Buicks does Jim have?",
+        "answer": "Let x represent the number of Chevys\nFords:3+2x\nBuicks:4(3+2x)=12+8x\nTotal:x+3+2x+12+8x=301\n11x+15=301\n11x=286\nx=<<26=26>>26\nBuicks:12+8(26)=220\n#### 220"
+      },
+      "translations": {
+        "en": {
+          "question": "Jim collects model cars, and he has 301 models total.  Jim has 4 times as many Buicks as Fords, and 3 more than twice the number of Fords than Chevys.  How many Buicks does Jim have?",
+          "answer": "Let x represent the number of Chevys\nFords:3+2x\nBuicks:4(3+2x)=12+8x\nTotal:x+3+2x+12+8x=301\n11x+15=301\n11x=286\nx=<<26=26>>26\nBuicks:12+8(26)=220\n#### 220"
+        },
+        "zh": {
+          "question": "吉姆收集模型车，他总共有301辆模型车。吉姆的别克车是福特车的4倍，别克车比雪佛兰车多出两倍再加3辆。吉姆有多少辆别克车？",
+          "answer": "设x表示雪佛兰车的数量\n福特车：3+2x\n别克车：4(3+2x)=12+8x\n总数：x+3+2x+12+8x=301\n11x+15=301\n11x=286\nx=<<26=26>>26\n别克车：12+8(26)=220\n#### 220"
+        },
+        "fr": {
+          "question": "Jim collectionne des voitures de modèle, et il en a au total 301. Jim a 4 fois plus de Buicks que de Fords, et 3 de plus que le double du nombre de Fords par rapport aux Chevys. Combien de Buicks Jim a-t-il ?",
+          "answer": "Soit x le nombre de Chevys\nFords : 3 + 2x\nBuicks : 4(3 + 2x) = 12 + 8x\nTotal : x + 3 + 2x + 12 + 8x = 301\n11x + 15 = 301\n11x = 286\nx = <<26 = 26>>26\nBuicks : 12 + 8(26) = 220\n#### 220"
+        },
+        "ko": {
+          "question": "짐은 모형 자동차를 수집하며, 총 301개의 모형을 가지고 있습니다. 짐은 부이크가 포드보다 4배 많고, 포드보다 두 배 이상 3개 더 많은 체비를 가지고 있습니다. 짐이 가진 부이크의 수는 얼마입니까?",
+          "answer": "x를 체비의 수로 나타냅니다\n포드: 3+2x\n부이크: 4(3+2x)=12+8x\n총 수: x+3+2x+12+8x=301\n11x+15=301\n11x=286\nx=<<26=26>>26\n부이크: 12+8(26)=220\n#### 220"
+        },
+        "es": {
+          "question": "Jim reúne coches de escala, y tiene 301 modelos en total. Jim tiene 4 veces más Buicks que Fords, y 3 más que el doble del número de Fords que Chevys. ¿Cuántos Buicks tiene Jim?",
+          "answer": "Sea x el número de Chevys\nFords:3+2x\nBuicks:4(3+2x)=12+8x\nTotal:x+3+2x+12+8x=301\n11x+15=301\n11x=286\nx=<<26=26>>26\nBuicks:12+8(26)=220\n#### 220"
+        }
+      }
+    },
+    {
+      "index": 301,
+      "source": {
+        "question": "240 sixth-grade students were asked about the number of novels they read per month. 1/6 of students read three or more novels, 35% of students read two novels, 5/12 of students read one novel, and the rest of the students do not read anything. Calculate the number of students who do not read novels.",
+        "answer": "1/6 * 240 students = <<1/6*240=40>>40 students. So 40 students read three or more novels.\n35/100 * 240 students = <<35/100*240=84>>84 students. So 84 students read two novels.\n5/12 * 240 students = <<5/12*240=100>>100 students. So 100 students read a novel.\n240 students – (40 students + 84 students + 100 students) = 240 students – 224 students = <<240-(40+84+100)=16>>16 students. So 16 students don't read novels.\n#### 16"
+      },
+      "translations": {
+        "en": {
+          "question": "240 sixth-grade students were asked about the number of novels they read per month. 1/6 of students read three or more novels, 35% of students read two novels, 5/12 of students read one novel, and the rest of the students do not read anything. Calculate the number of students who do not read novels.",
+          "answer": "1/6 * 240 students = <<1/6*240=40>>40 students. So 40 students read three or more novels.\n35/100 * 240 students = <<35/100*240=84>>84 students. So 84 students read two novels.\n5/12 * 240 students = <<5/12*240=100>>100 students. So 100 students read a novel.\n240 students – (40 students + 84 students + 100 students) = 240 students – 224 students = <<240-(40+84+100)=16>>16 students. So 16 students don't read novels.\n#### 16"
+        },
+        "zh": {
+          "question": "240名六年级学生被询问了他们每月阅读的小说数量。1/6的学生读了三本或更多的小说，35%的学生读了两本小说，5/12的学生读了一本小说，其余的学生则不读小说。计算不读小说的学生人数。",
+          "answer": "1/6 * 240名学生 = <<1/6*240=40>>40名学生。因此有40名学生读了三本或更多的小说。\n35/100 * 240名学生 = <<35/100*240=84>>84名学生。因此有84名学生读了两本小说。\n5/12 * 240名学生 = <<5/12*240=100>>100名学生。因此有100名学生读了一本小说。\n240名学生 – (40名学生 + 84名学生 + 100名学生) = 240名学生 – 224名学生 = <<240-(40+84+100)=16>>16名学生。因此有16名学生不读小说。\n#### 16"
+        },
+        "fr": {
+          "question": "240 élèves de sixième ont été interrogés sur le nombre de romans qu'ils lisent par mois. 1/6 des élèves lisent trois ou plus de romans, 35 % des élèves lisent deux romans, 5/12 des élèves lisent un roman, et le reste ne lit rien. Calculer le nombre d'élèves qui ne lisent pas de romans.",
+          "answer": "1/6 * 240 élèves = <<1/6*240=40>>40 élèves. Donc 40 élèves lisent trois ou plus de romans.\n35/100 * 240 élèves = <<35/100*240=84>>84 élèves. Donc 84 élèves lisent deux romans.\n5/12 * 240 élèves = <<5/12*240=100>>100 élèves. Donc 100 élèves lisent un roman.\n240 élèves – (40 élèves + 84 élèves + 100 élèves) = 240 élèves – 224 élèves = <<240-(40+84+100)=16>>16 élèves. Donc 16 élèves ne lisent pas de romans.\n#### 16"
+        },
+        "ko": {
+          "question": "240명의 6학년 학생이 매월 몇 권의 소설을 읽는지에 대해 묻어보았습니다. 학생들의 1/6은 3권 이상의 소설을 읽고, 학생들의 35%는 2권의 소설을 읽으며, 학생들의 5/12은 1권의 소설을 읽고, 나머지는 아무 소설도 읽지 않습니다. 소설을 읽지 않는 학생의 수를 구하세요.",
+          "answer": "240명 학생의 1/6 = <<1/6*240=40>>40명 학생이 3권 이상의 소설을 읽습니다.\n240명 학생의 35/100 = <<35/100*240=84>>84명 학생이 2권의 소설을 읽습니다.\n240명 학생의 5/12 = <<5/12*240=100>>100명 학생이 1권의 소설을 읽습니다.\n240명 학생 – (40명 학생 + 84명 학생 + 100명 학생) = 240명 학생 – 224명 학생 = <<240-(40+84+100)=16>>16명 학생이 소설을 읽지 않습니다.\n#### 16"
+        },
+        "es": {
+          "question": "240 estudiantes de sexto grado fueron consultados sobre el número de novelas que leen al mes. 1/6 de los estudiantes leyeron tres o más novelas, el 35% leyeron dos novelas, 5/12 de los estudiantes leyeron una novela, y el resto no leyeron nada. Calcule el número de estudiantes que no leen novelas.",
+          "answer": "1/6 * 240 estudiantes = <<1/6*240=40>>40 estudiantes. Por lo tanto, 40 estudiantes leyeron tres o más novelas.\n35/100 * 240 estudiantes = <<35/100*240=84>>84 estudiantes. Por lo tanto, 84 estudiantes leyeron dos novelas.\n5/12 * 240 estudiantes = <<5/12*240=100>>100 estudiantes. Por lo tanto, 100 estudiantes leyeron una novela.\n240 estudiantes – (40 estudiantes + 84 estudiantes + 100 estudiantes) = 240 estudiantes – 224 estudiantes = <<240-(40+84+100)=16>>16 estudiantes. Por lo tanto, 16 estudiantes no leen novelas.\n#### 16"
+        }
+      }
+    },
+    {
+      "index": 303,
+      "source": {
+        "question": "Tommy is making 12 loaves of bread. He needs 4 pounds of flour per loaf. A 10-pound bag of flour costs $10 and a 12-pound bag costs $13. When he is done making his bread, he has no use for flour and so he will throw away whatever is left. How much does he spend on flour if he buys the cheapest flour to get enough?",
+        "answer": "He needs 48 pounds of flour because 12 x 4 = <<12*4=48>>48\nHe needs 4.8 bags of 10 pound bags because 48 / 10 = <<48/10=4.8>>4.8\nHe therefore needs to buy 5 bags of flour because 4 < 4.8 < 5\nHe spends $50 if he buys this flour because 5 x 10 = <<5*10=50>>50\nHe needs 4 bags of the 12-pound flour because 48 / 12 = <<48/12=4>>4\nHe would spend $52 on the 12-pound bags because 4 x 13 = 52\nHe spends $50 if he buys the cheapest flour because 50 < 52\n#### 50"
+      },
+      "translations": {
+        "en": {
+          "question": "Tommy is making 12 loaves of bread. He needs 4 pounds of flour per loaf. A 10-pound bag of flour costs $10 and a 12-pound bag costs $13. When he is done making his bread, he has no use for flour and so he will throw away whatever is left. How much does he spend on flour if he buys the cheapest flour to get enough?",
+          "answer": "He needs 48 pounds of flour because 12 x 4 = <<12*4=48>>48\nHe needs 4.8 bags of 10 pound bags because 48 / 10 = <<48/10=4.8>>4.8\nHe therefore needs to buy 5 bags of flour because 4 < 4.8 < 5\nHe spends $50 if he buys this flour because 5 x 10 = <<5*10=50>>50\nHe needs 4 bags of the 12-pound flour because 48 / 12 = <<48/12=4>>4\nHe would spend $52 on the 12-pound bags because 4 x 13 = 52\nHe spends $50 if he buys the cheapest flour because 50 < 52\n#### 50"
+        },
+        "zh": {
+          "question": "汤米正在制作12个面包。每个面包需要4磅面粉。10磅一袋面粉售价10美元，12磅一袋面粉售价13美元。当他完成面包制作后，他不会再使用面粉，因此会把剩余的面粉扔掉。如果他购买最便宜的面粉来获得足够的量，他需要花多少钱？",
+          "answer": "他需要48磅面粉，因为12 x 4 = <<12*4=48>>48\n他需要4.8袋10磅的面粉，因为48 / 10 = <<48/10=4.8>>4.8\n因此他需要购买5袋面粉，因为4 < 4.8 < 5\n如果他购买这种面粉，他会花费50美元，因为5 x 10 = <<5*10=50>>50\n他需要4袋12磅的面粉，因为48 / 12 = <<48/12=4>>4\n如果购买12磅的面粉，他会花费52美元，因为4 x 13 = 52\n他花费50美元购买最便宜的面粉，因为50 < 52\n#### 50"
+        },
+        "fr": {
+          "question": "Tommy fait 12 pains de pain. Il a besoin de 4 livres de farine par pain. Un sac de 10 livres de farine coûte 10 $ et un sac de 12 livres coûte 13 $. Lorsqu'il aura terminé de faire son pain, il n'aura pas besoin de farine et donc il jetera ce qui restera. Combien dépense-t-il de farine s'il achète la farine la moins chère pour en avoir assez ?",
+          "answer": "Il a besoin de 48 livres de farine parce que 12 x 4 = <<12*4=48>>48\nIl a besoin de 4,8 sacs de sacs de 10 livres parce que 48 / 10 = <<48/10=4.8>>4.8\nIl doit donc acheter 5 sacs de farine parce que 4 < 4,8 < 5\nIl dépense 50 $ s'il achète cette farine parce que 5 x 10 = <<5*10=50>>50\nIl a besoin de 4 sacs de farine de 12 livres parce que 48 / 12 = <<48/12=4>>4\nIl dépenserait 52 $ pour les sacs de 12 livres parce que 4 x 13 = 52\nIl dépense 50 $ s'il achète la farine la moins chère parce que 50 < 52\n#### 50"
+        },
+        "ko": {
+          "question": "토미는 12개의 빵을 만들고 있습니다. 한 빵당 4파운드의 밀가루가 필요합니다. 10파운드의 밀가루는 10달러이고, 12파운드의 밀가루는 13달러입니다. 빵을 만들고 나면 밀가루를 더 사용하지 않기 때문에 남은 밀가루는 버립니다. 충분한 밀가루를 얻기 위해 가장 저렴한 밀가루를 구입할 경우 얼마를 지출해야 할까요?",
+          "answer": "그는 48파운드의 밀가루가 필요합니다. 12 x 4 = <<12*4=48>>48\n10파운드 밀가루 4.8개가 필요합니다. 48 / 10 = <<48/10=4.8>>4.8\n따라서 5개의 밀가루를 구입해야 합니다. 4 < 4.8 < 5\n그가 이 밀가루를 구입하면 50달러를 지출합니다. 5 x 10 = <<5*10=50>>50\n12파운드 밀가루 4개가 필요합니다. 48 / 12 = <<48/12=4>>4\n12파운드 밀가루를 구입하면 52달러를 지출합니다. 4 x 13 = 52\n가장 저렴한 밀가루를 구입하면 50달러를 지출합니다. 50 < 52\n#### 50"
+        },
+        "es": {
+          "question": "Tommy está haciendo 12 panes de pan. Necesita 4 libras de harina por pan. Una bolsa de 10 libras de harina cuesta $10 y una bolsa de 12 libras cuesta $13. Cuando termine de hacer su pan, no tendrá uso para la harina y por lo tanto la tirará. ¿Cuánto gasta en harina si compra la harina más barata para tener suficiente?",
+          "answer": "Necesita 48 libras de harina porque 12 x 4 = <<12*4=48>>48\nNecesita 4.8 bolsas de bolsas de 10 libras porque 48 / 10 = <<48/10=4.8>>4.8\nPor lo tanto necesita comprar 5 bolsas de harina porque 4 < 4.8 < 5\nGasta $50 si compra esta harina porque 5 x 10 = <<5*10=50>>50\nNecesita 4 bolsas de harina de 12 libras porque 48 / 12 = <<48/12=4>>4\nGastaría $52 en las bolsas de 12 libras porque 4 x 13 = 52\nGasta $50 si compra la harina más barata porque 50 < 52\n#### 50"
+        }
+      }
+    },
+    {
+      "index": 304,
+      "source": {
+        "question": "Cary is an engineer in charge of designing an irrigation system for three farmers. Farmer Bob grows 3 acres of corn, 9 acres of cotton, and 12 acres of beans. Farmer Brenda grows 6 acres of corn, 7 acres of cotton, and 14 acres of beans. Farmer Bernie grows 2 acres of corn and 12 acres of cotton. If corn takes 20 gallons of water an acre, cotton takes 80 gallons of water an acre, and beans take twice as much water as corn, what percentage of the total water used will go to Farmer Bob's farm?",
+        "answer": "First figure out how much water beans take by multiplying the water use for corn by 2: 20 gallons/acre * 2 = <<20*2=40>>40 gallons/acre\nNext, calculate Bob's water use by multiplying each plant's water use per acre by the number of acres he planted, then adding up the total water use for all three crops: 3 * 20 + 9 * 80 + 12 * 40 = <<3*20+9*80+12*40=1260>>1260\nNow do the same thing for Brenda: 6 * 20 + 7 * 80 + 14 * 40 = <<6*20+7*80+14*40=1240>>1240\nAnd do the same thing for Bernie: 2 * 20 + 12 * 80 = 1000\nNow add up each farmer's water use to find the total water use: 1260 + 1240 + 1000 = <<1260+1240+1000=3500>>3500\nNow divide Bob's water use by the total water use and multiply by 100 to find what percentage of the water he used: 1260 / 3500 * 100 = <<1260/3500*100=36>>36%\n#### 36"
+      },
+      "translations": {
+        "en": {
+          "question": "Cary is an engineer in charge of designing an irrigation system for three farmers. Farmer Bob grows 3 acres of corn, 9 acres of cotton, and 12 acres of beans. Farmer Brenda grows 6 acres of corn, 7 acres of cotton, and 14 acres of beans. Farmer Bernie grows 2 acres of corn and 12 acres of cotton. If corn takes 20 gallons of water an acre, cotton takes 80 gallons of water an acre, and beans take twice as much water as corn, what percentage of the total water used will go to Farmer Bob's farm?",
+          "answer": "First figure out how much water beans take by multiplying the water use for corn by 2: 20 gallons/acre * 2 = <<20*2=40>>40 gallons/acre\nNext, calculate Bob's water use by multiplying each plant's water use per acre by the number of acres he planted, then adding up the total water use for all three crops: 3 * 20 + 9 * 80 + 12 * 40 = <<3*20+9*80+12*40=1260>>1260\nNow do the same thing for Brenda: 6 * 20 + 7 * 80 + 14 * 40 = <<6*20+7*80+14*40=1240>>1240\nAnd do the same thing for Bernie: 2 * 20 + 12 * 80 = 1000\nNow add up each farmer's water use to find the total water use: 1260 + 1240 + 1000 = <<1260+1240+1000=3500>>3500\nNow divide Bob's water use by the total water use and multiply by 100 to find what percentage of the water he used: 1260 / 3500 * 100 = <<1260/3500*100=36>>36%\n#### 36"
+        },
+        "zh": {
+          "question": "卡瑞是负责为三位农民设计灌溉系统的工程师。鲍勃农民种植3英亩玉米，9英亩棉花，和12英亩豆类。布伦达农民种植6英亩玉米，7英亩棉花，和14英亩豆类。伯尼农民种植2英亩玉米和12英亩棉花。如果每英亩玉米需要20加仑水，每英亩棉花需要80加仑水，而豆类需要的水量是玉米的两倍，那么用于鲍勃农场的水占总用水量的百分之几？",
+          "answer": "首先通过将玉米的用水量乘以2来计算豆类的用水量：20加仑/英亩 * 2 = <<20*2=40>>40加仑/英亩\n接着计算鲍勃的用水量，将每种作物每英亩的用水量乘以他种植的英亩数，然后将三种作物的用水量相加：3 * 20 + 9 * 80 + 12 * 40 = <<3*20+9*80+12*40=1260>>1260\n然后计算布伦达的用水量：6 * 20 + 7 * 80 + 14 * 40 = <<6*20+7*80+14*40=1240>>1240\n再计算伯尼的用水量：2 * 20 + 12 * 80 = 1000\n将每位农民的用水量相加以得到总用水量：1260 + 1240 + 1000 = <<1260+1240+1000=3500>>3500\n然后将鲍勃的用水量除以总用水量并乘以100，以计算他所用用水量的百分比：1260 / 3500 * 100 = <<1260/3500*100=36>>36%\n#### 36"
+        },
+        "fr": {
+          "question": "Cary est ingénieur en charge de concevoir un système d'irrigation pour trois agriculteurs. Le fermier Bob cultive 3 acres de maïs, 9 acres de coton et 12 acres de haricots. La fermière Brenda cultive 6 acres de maïs, 7 acres de coton et 14 acres de haricots. Le fermier Bernie cultive 2 acres de maïs et 12 acres de coton. Si le maïs nécessite 20 gallons d'eau par acre, le coton nécessite 80 gallons d'eau par acre, et les haricots nécessitent deux fois plus d'eau que le maïs, quel pourcentage de l'eau totale est utilisé par la ferme de Bob ?",
+          "answer": "D'abord, déterminez la quantité d'eau nécessaire aux haricots en multipliant l'utilisation d'eau du maïs par 2 : 20 gallons/acre * 2 = <<20*2=40>>40 gallons/acre\nEnsuite, calculez l'utilisation d'eau de Bob en multipliant l'utilisation d'eau par acre de chaque culture par le nombre d'acres qu'il a plantés, puis en ajoutant le total d'eau utilisée pour toutes les trois cultures : 3 * 20 + 9 * 80 + 12 * 40 = <<3*20+9*80+12*40=1260>>1260\nFaites la même chose pour Brenda : 6 * 20 + 7 * 80 + 14 * 40 = <<6*20+7*80+14*40=1240>>1240\nFaites la même chose pour Bernie : 2 * 20 + 12 * 80 = 1000\nAjoutez maintenant l'utilisation d'eau de chaque fermier pour trouver l'utilisation d'eau totale : 1260 + 1240 + 1000 = <<1260+1240+1000=3500>>3500\nDivisez maintenant l'utilisation d'eau de Bob par l'utilisation d'eau totale et multipliez par 100 pour trouver quel pourcentage d'eau il a utilisé : 1260 / 3500 * 100 = <<1260/3500*100=36>>36%\n#### 36"
+        },
+        "ko": {
+          "question": "Cary는 세 농부에게 농업 시스템을 설계하는 엔지니어입니다. 농부 보브는 코너 3마일, 코튼 9마일, 빅 12마일을 재배합니다. 농부 브렌다는 코너 6마일, 코튼 7마일, 빅 14마일을 재배합니다. 농부 베르니는 코너 2마일과 코튼 12마일을 재배합니다. 코너는 1마일당 20가루의 물을 필요로 하며, 코튼은 1마일당 80가루의 물을 필요로 하며, 빅은 코너보다 두 배의 물을 필요로 합니다. 코너는 총 물 사용량의 몇 퍼센트를 농부 보브의 농장에 사용할까요?",
+          "answer": "먼저 빅이 필요로 하는 물의 양을 코너의 물 사용량을 2배로 곱하여 구합니다: 20가루/마일 * 2 = <<20*2=40>>40가루/마일\n다음으로 보브의 물 사용량을 계산합니다. 각 작물당 1마일당 물 사용량을 그가 재배한 마일 수로 곱한 후 세 작물의 총 물 사용량을 더합니다: 3 * 20 + 9 * 80 + 12 * 40 = <<3*20+9*80+12*40=1260>>1260\n이제 브렌다의 물 사용량을 동일한 방식으로 계산합니다: 6 * 20 + 7 * 80 + 14 * 40 = <<6*20+7*80+14*40=1240>>1240\n베르니의 물 사용량도 동일한 방식으로 계산합니다: 2 * 20 + 12 * 80 = 1000\n각 농부의 물 사용량을 더하여 총 물 사용량을 구합니다: 1260 + 1240 + 1000 = <<1260+1240+1000=3500>>3500\n이제 보브의 물 사용량을 총 물 사용량으로 나누고 100을 곱하여 그가 사용한 물의 백분율을 구합니다: 1260 / 3500 * 100 = <<1260/3500*100=36>>36%\n#### 36"
+        },
+        "es": {
+          "question": "Cary es ingeniero encargado de diseñar un sistema de riego para tres agricultores. El granjero Bob cultiva 3 acres de maíz, 9 acres de algodón y 12 acres de frijoles. La granjera Brenda cultiva 6 acres de maíz, 7 acres de algodón y 14 acres de frijoles. El granjero Bernie cultiva 2 acres de maíz y 12 acres de algodón. Si el maíz requiere 20 galones de agua por acre, el algodón requiere 80 galones de agua por acre, y los frijoles requieren el doble de agua que el maíz, ¿qué porcentaje del agua total se utilizará en la finca de Bob?",
+          "answer": "Primero determina cuánto agua requieren los frijoles multiplicando el consumo de agua del maíz por 2: 20 galones/acre * 2 = <<20*2=40>>40 galones/acre\nLuego, calcula el consumo de agua de Bob multiplicando el consumo de agua por acre de cada cultivo por el número de acres que plantó, y sumando el total de agua utilizada para todos los tres cultivos: 3 * 20 + 9 * 80 + 12 * 40 = <<3*20+9*80+12*40=1260>>1260\nAhora haz lo mismo para Brenda: 6 * 20 + 7 * 80 + 14 * 40 = <<6*20+7*80+14*40=1240>>1240\nY haz lo mismo para Bernie: 2 * 20 + 12 * 80 = 1000\nAhora suma el consumo de agua de cada granjero para encontrar el consumo total de agua: 1260 + 1240 + 1000 = <<1260+1240+1000=3500>>3500\nAhora divide el consumo de agua de Bob entre el consumo total de agua y multiplica por 100 para encontrar qué porcentaje de agua utilizó: 1260 / 3500 * 100 = <<1260/3500*100=36>>36%\n#### 36"
+        }
+      }
+    },
+    {
+      "index": 321,
+      "source": {
+        "question": "Five months ago, Mike earned 10 times more money than Fred. If his salary has increased by 40 percent now, and Fred's salary then was $1000, calculate Mike's salary now.",
+        "answer": "Five months ago, Mike earned ten times more money than Fred, and since Fred earned $1000, Mike earned 10*1000 = $<<10*1000=10000>>10000 more than Fred.\nThe total amount of money that Mike earned five months ago is $10000+$1000 = $<<10000+1000=11000>>11000\nMikes salary has increased by 40/100*$11000 = $<<40/100*11000=4400>>4400\nMike's current salary is $11000 +$4400 = $<<11000+4400=15400>>15400\n#### 15400"
+      },
+      "translations": {
+        "en": {
+          "question": "Five months ago, Mike earned 10 times more money than Fred. If his salary has increased by 40 percent now, and Fred's salary then was $1000, calculate Mike's salary now.",
+          "answer": "Five months ago, Mike earned ten times more money than Fred, and since Fred earned $1000, Mike earned 10*1000 = $<<10*1000=10000>>10000 more than Fred.\nThe total amount of money that Mike earned five months ago is $10000+$1000 = $<<10000+1000=11000>>11000\nMikes salary has increased by 40/100*$11000 = $<<40/100*11000=4400>>4400\nMike's current salary is $11000 +$4400 = $<<11000+4400=15400>>15400\n#### 15400"
+        },
+        "zh": {
+          "question": "五个月前，迈克的收入是弗雷德的10倍。如果他的工资现在增加了40%，而五个月前弗雷德的工资是1000美元，计算迈克现在的工资。",
+          "answer": "五个月前，迈克的收入是弗雷德的10倍，由于弗雷德赚了1000美元，因此迈克赚了10*1000 = $<<10*1000=10000>>10000多于弗雷德。\n五个月前迈克的总收入是10000 + 1000 = $<<10000+1000=11000>>11000\n迈克的工资增加了40/100 * 11000 = $<<40/100*11000=4400>>4400\n迈克现在的工资是11000 + 4400 = $<<11000+4400=15400>>15400\n#### 15400"
+        },
+        "fr": {
+          "question": "Il y a cinq mois, Mike gagnait dix fois plus d'argent que Fred. Si son salaire a augmenté de 40 pour cent maintenant, et que son salaire alors était de 1000 $, calculez le salaire actuel de Mike.",
+          "answer": "Il y a cinq mois, Mike gagnait dix fois plus d'argent que Fred, et puisque Fred gagnait 1000 $, Mike gagnait 10*1000 = $<<10*1000=10000>>10000 de plus que Fred.\nLe montant total d'argent que Mike gagnait il y a cinq mois est de 10000 $ + 1000 $ = $<<10000+1000=11000>>11000\nLe salaire de Mike a augmenté de 40/100*11000 = $<<40/100*11000=4400>>4400\nLe salaire actuel de Mike est de 11000 $ + 4400 $ = $<<11000+4400=15400>>15400\n#### 15400"
+        },
+        "ko": {
+          "question": "5개월 전에 마이크는 프ред보다 10배 더 많은 돈을 벌었습니다. 현재 마이크의 급여가 40% 증가했고, 프ред의 급여는 1000달러였습니다. 마이크의 현재 급여를 계산하세요.",
+          "answer": "5개월 전 마이크는 프ред보다 10배 더 많은 돈을 벌었고, 프ред이 1000달러를 벌었기 때문에 마이크는 10*1000 = $<<10*1000=10000>>10000 더 벌었습니다. 마이크가 5개월 전에 벌었던 총 금액은 $10000+$1000 = $<<10000+1000=11000>>11000입니다. 마이크의 급여는 40/100*$11000 = $<<40/100*11000=4400>>4400 증가했습니다. 마이크의 현재 급여는 $11000 + $4400 = $<<11000+4400=15400>>15400입니다. #### 15400"
+        },
+        "es": {
+          "question": "Hace cinco meses, Mike ganaba 10 veces más dinero que Fred. Si su salario ha aumentado un 40 por ciento ahora, y el salario de Fred entonces era de $1000, calcule el salario actual de Mike.",
+          "answer": "Hace cinco meses, Mike ganaba diez veces más dinero que Fred, y como Fred ganaba $1000, Mike ganaba 10*1000 = $<<10*1000=10000>>10000 más que Fred.\nLa cantidad total de dinero que Mike ganaba hace cinco meses es de $10000+$1000 = $<<10000+1000=11000>>11000\nEl salario de Mike ha aumentado en 40/100*$11000 = $<<40/100*11000=4400>>4400\nEl salario actual de Mike es de $11000 + $4400 = $<<11000+4400=15400>>15400\n#### 15400"
+        }
+      }
+    },
+    {
+      "index": 328,
+      "source": {
+        "question": "A used car lot has 24 cars and motorcycles (in total) for sale. A third of the vehicles are motorcycles, and a quarter of the cars have a spare tire included. How many tires are on the used car lot’s vehicles in all?",
+        "answer": "The used car lot has 24 / 3 = <<24/3=8>>8 motorcycles with 2 tires each.\nThe lot has 24 - 8 = <<24-8=16>>16 cars for sale\nThere are 16 / 4 = 4 cars with a spare tire with 5 tires each.\nThe lot has 16 - 4 = <<16-4=12>>12 cars with 4 tires each.\nThus, the used car lot’s vehicles have 8 * 2 + 4 * 5 + 12 * 4 = 16 + 20 + 48 = <<8*2+4*5+12*4=84>>84 tires in all.\n#### 84"
+      },
+      "translations": {
+        "en": {
+          "question": "A used car lot has 24 cars and motorcycles (in total) for sale. A third of the vehicles are motorcycles, and a quarter of the cars have a spare tire included. How many tires are on the used car lot’s vehicles in all?",
+          "answer": "The used car lot has 24 / 3 = <<24/3=8>>8 motorcycles with 2 tires each.\nThe lot has 24 - 8 = <<24-8=16>>16 cars for sale\nThere are 16 / 4 = 4 cars with a spare tire with 5 tires each.\nThe lot has 16 - 4 = <<16-4=12>>12 cars with 4 tires each.\nThus, the used car lot’s vehicles have 8 * 2 + 4 * 5 + 12 * 4 = 16 + 20 + 48 = <<8*2+4*5+12*4=84>>84 tires in all.\n#### 84"
+        },
+        "zh": {
+          "question": "一个二手车摊位共有24辆汽车和摩托车。其中三分之一是摩托车，四分之一的汽车配有备胎。这些车辆上共有多少个轮胎？",
+          "answer": "该二手车摊位有 24 / 3 = <<24/3=8>>8 辆摩托车，每辆有2个轮胎。\n摊位上有 24 - 8 = <<24-8=16>>16 辆汽车。\n有 16 / 4 = 4 辆汽车配有备胎，每辆有5个轮胎。\n摊位上有 16 - 4 = <<16-4=12>>12 辆汽车，每辆有4个轮胎。\n因此，该二手车摊位的车辆共有 8 * 2 + 4 * 5 + 12 * 4 = 16 + 20 + 48 = <<8*2+4*5+12*4=84>>84 个轮胎。\n#### 84"
+        },
+        "fr": {
+          "question": "Un garage de voitures d'occasion a 24 voitures et motos au total à vendre. Un tiers des véhicules sont des motos, et un quart des voitures incluent un pneu de rechange. Combien de pneus y a-t-il sur tous les véhicules du garage de voitures d'occasion ?",
+          "answer": "Le garage de voitures d'occasion a 24 / 3 = <<24/3=8>>8 motos avec 2 pneus chacune.\nLe garage a 24 - 8 = <<24-8=16>>16 voitures en vente.\nIl y a 16 / 4 = 4 voitures avec un pneu de rechange, avec 5 pneus chacune.\nLe garage a 16 - 4 = <<16-4=12>>12 voitures avec 4 pneus chacune.\nAinsi, les véhicules du garage de voitures d'occasion ont 8 * 2 + 4 * 5 + 12 * 4 = 16 + 20 + 48 = <<8*2+4*5+12*4=84>>84 pneus au total.\n#### 84"
+        },
+        "ko": {
+          "question": "사용 중인 자동차 경매장은 총 24대의 자동차와 오토바이를 판매하고 있습니다. 차량의 1/3은 오토바이이며, 자동차의 1/4는 추가 타이어를 포함하고 있습니다. 경매장의 차량 전체에 있는 타이어의 수는 몇 개인가요?",
+          "answer": "사용 중인 자동차 경매장은 24 / 3 = <<24/3=8>>8대의 오토바이를 가지고 있으며, 각 오토바이는 2개의 타이어를 가집니다.\n경매장은 24 - 8 = <<24-8=16>>16대의 자동차를 판매합니다.\n추가 타이어를 가진 자동차는 16 / 4 = 4대이며, 각 자동차는 5개의 타이어를 가집니다.\n경매장은 16 - 4 = <<16-4=12>>12대의 자동차를 4개의 타이어로 가집니다.\n따라서 사용 중인 자동차 경매장의 차량은 8 * 2 + 4 * 5 + 12 * 4 = 16 + 20 + 48 = <<8*2+4*5+12*4=84>>84개의 타이어를 모두 가집니다.\n#### 84"
+        },
+        "es": {
+          "question": "Un lote de autos usados tiene 24 autos y motocicletas (en total) para vender. Un tercio de los vehículos son motocicletas, y un cuarto de los autos incluyen un neumático de repuesto. ¿Cuántos neumáticos hay en total en los vehículos del lote de autos usados?",
+          "answer": "El lote de autos usados tiene 24 / 3 = <<24/3=8>>8 motocicletas con 2 neumáticos cada una.\nEl lote tiene 24 - 8 = <<24-8=16>>16 autos para vender\nHay 16 / 4 = 4 autos con un neumático de repuesto con 5 neumáticos cada uno.\nEl lote tiene 16 - 4 = <<16-4=12>>12 autos con 4 neumáticos cada uno.\nPor lo tanto, los vehículos del lote de autos usados tienen 8 * 2 + 4 * 5 + 12 * 4 = 16 + 20 + 48 = <<8*2+4*5+12*4=84>>84 neumáticos en total.\n#### 84"
+        }
+      }
+    },
+    {
+      "index": 340,
+      "source": {
+        "question": "Tom needs to lower a rope down 6 stories.   One story is 10 feet.  The only rope being sold is 20 feet long but you lose 25% when lashing them together.  How many pieces of rope will he need to buy?",
+        "answer": "He needs 10*6=<<10*6=60>>60 feet\nHe loses 20*.25=<<20*.25=5>>5 feet each time\nSo he gets 20-5=<<20-5=15>>15 feet from each piece\nThat means he needs 60/15=<<60/15=4>>4 pieces of rope\n#### 4"
+      },
+      "translations": {
+        "en": {
+          "question": "Tom needs to lower a rope down 6 stories.   One story is 10 feet.  The only rope being sold is 20 feet long but you lose 25% when lashing them together.  How many pieces of rope will he need to buy?",
+          "answer": "He needs 10*6=<<10*6=60>>60 feet\nHe loses 20*.25=<<20*.25=5>>5 feet each time\nSo he gets 20-5=<<20-5=15>>15 feet from each piece\nThat means he needs 60/15=<<60/15=4>>4 pieces of rope\n#### 4"
+        },
+        "zh": {
+          "question": "汤姆需要将一根绳子放下6层楼。一层楼是10英尺。唯一可购买的绳子长度是20英尺，但将它们连接时会损失25%。他需要购买多少段绳子？",
+          "answer": "他需要10*6=<<10*6=60>>60英尺\n每次连接会损失20*.25=<<20*.25=5>>5英尺\n因此每段绳子实际得到20-5=<<20-5=15>>15英尺\n这意味着他需要60/15=<<60/15=4>>4段绳子\n#### 4"
+        },
+        "fr": {
+          "question": "Tom a besoin de descendre une corde de 6 étages. Un étage mesure 10 pieds. La seule corde disponible est de 20 pieds de long, mais on perd 25 % lorsqu'on les joint. Combien de morceaux de corde doit-il acheter ?",
+          "answer": "Il a besoin de 10*6=<<10*6=60>>60 pieds\nIl perd 20*.25=<<20*.25=5>>5 pieds chaque fois\nIl obtient donc 20-5=<<20-5=15>>15 pieds par morceau\nCela signifie qu'il a besoin de 60/15=<<60/15=4>>4 morceaux de corde\n#### 4"
+        },
+        "ko": {
+          "question": "토마는 6층 아래로 끝까지 끝내야 하는 천을 내려야 합니다. 한 층은 10피트입니다. 판매되는 천은 모두 20피트 길이지만, 연결할 때 25%가 손실됩니다. 몇 조각의 천을 사야 할까요?",
+          "answer": "그는 10*6=<<10*6=60>>60피트를 필요로 합니다\n각 연결 시 20*.25=<<20*.25=5>>5피트가 손실됩니다\n따라서 각 조각에서 20-5=<<20-5=15>>15피트를 얻습니다\n즉, 60/15=<<60/15=4>>4조각의 천이 필요합니다\n#### 4"
+        },
+        "es": {
+          "question": "Tom necesita bajar una cuerda 6 pisos. Un piso mide 10 pies. La única cuerda disponible mide 20 pies, pero se pierde un 25% al unirlas. ¿Cuántas piezas de cuerda necesita comprar?",
+          "answer": "Necesita 10*6=<<10*6=60>>60 pies\nPerde 20*.25=<<20*.25=5>>5 pies cada vez\nAsí que obtiene 20-5=<<20-5=15>>15 pies de cada pieza\nEso significa que necesita 60/15=<<60/15=4>>4 piezas de cuerda\n#### 4"
+        }
+      }
+    },
+    {
+      "index": 356,
+      "source": {
+        "question": "Students at Highridge High earn 2 points for each correct answer during a quiz bowl If a student correctly answers all the questions in a round, the student is awarded an additional 4 point bonus. They played a total of five rounds each consisting of five questions. If James only missed one question, how many points did he get?",
+        "answer": "If James only missed one question in all five rounds of five questions, he correctly answered 5 * 5 - 1 = <<5*5-1=24>>24 questions\nBefore the bonus, James earned 24 correct answers * 2 points/answer = <<24*2=48>>48 points.\nSince missing one question would only disqualify him from receiving a bonus in one round, he would earn a bonus for 5-1=<<5-1=4>>4 rounds.\nHe should expect a bonus of 4 rounds* 4 points/round= <<4*4=16>>16 points.\nIncluding his bonus, James scored a total of 48 + 16 = <<48+16=64>>64 points.\n#### 66"
+      },
+      "translations": {
+        "en": {
+          "question": "Students at Highridge High earn 2 points for each correct answer during a quiz bowl If a student correctly answers all the questions in a round, the student is awarded an additional 4 point bonus. They played a total of five rounds each consisting of five questions. If James only missed one question, how many points did he get?",
+          "answer": "If James only missed one question in all five rounds of five questions, he correctly answered 5 * 5 - 1 = <<5*5-1=24>>24 questions\nBefore the bonus, James earned 24 correct answers * 2 points/answer = <<24*2=48>>48 points.\nSince missing one question would only disqualify him from receiving a bonus in one round, he would earn a bonus for 5-1=<<5-1=4>>4 rounds.\nHe should expect a bonus of 4 rounds* 4 points/round= <<4*4=16>>16 points.\nIncluding his bonus, James scored a total of 48 + 16 = <<48+16=64>>64 points.\n#### 66"
+        },
+        "zh": {
+          "question": "Highridge高中学生在问答比赛中每答对一题得2分。如果学生在一轮比赛中全部答对，将额外获得4分奖励。他们一共进行了五轮比赛，每轮有五道题。如果詹姆斯只错了一道题，他得了多少分？",
+          "answer": "詹姆斯在五轮五题比赛中只错了一题，因此他正确回答了5 * 5 - 1 = <<5*5-1=24>>24题\n在奖励之前，詹姆斯因24道题正确回答获得了24 * 2 = <<24*2=48>>48分。\n由于只错一道题只会使他失去一轮的奖励资格，因此他获得了5-1=<<5-1=4>>4轮的奖励。\n他总共获得了4轮 * 4分/轮 = <<4*4=16>>16分的奖励。\n加上奖励，詹姆斯的总得分为48 + 16 = <<48+16=64>>64分。\n#### 66"
+        },
+        "fr": {
+          "question": "Les élèves de Highridge High obtiennent 2 points pour chaque réponse correcte lors d'un quiz. Si un élève répond correctement à toutes les questions d'un tour, il reçoit une prime supplémentaire de 4 points. Ils ont joué un total de cinq tours, chacun comprenant cinq questions. Si James a manqué une seule question, combien de points a-t-il obtenus ?",
+          "answer": "Si James a manqué une seule question parmi les cinq tours de cinq questions, il a répondu correctement 5 * 5 - 1 = <<5*5-1=24>>24 questions\nAvant la prime, James a obtenu 24 réponses correctes * 2 points/réponse = <<24*2=48>>48 points.\nPuisque manquer une seule question lui empêche de recevoir la prime dans un seul tour, il reçoit une prime pour 5-1=<<5-1=4>>4 tours.\nIl devrait obtenir une prime de 4 tours * 4 points/tour = <<4*4=16>>16 points.\nEn incluant la prime, James a obtenu au total 48 + 16 = <<48+16=64>>64 points.\n#### 66"
+        },
+        "ko": {
+          "question": "고리지 고등학교 학생들은 퀴즈볼에서 각 정답에 2점을 얻습니다. 한 라운드에서 모든 문제를 맞춘 학생에게는 추가로 4점 보너스를 주습니다. 학생들은 총 다섯 라운드를 진행했으며, 각 라운드에는 다섯 개의 문제がありました. 제임스는 한 문제만 놓쳤습니다. 그는 몇 점을 받았나요?",
+          "answer": "제임스가 다섯 라운드의 다섯 개 문제 중 한 문제만 놓쳤다면, 그는 5 * 5 - 1 = <<5*5-1=24>>24개의 문제를 맞췄습니다.\n보너스 전에 제임스는 24개의 정답 * 2점/정답 = <<24*2=48>>48점 얻었습니다.\n하나의 문제를 놓쳤기 때문에 보너스를 받을 수 있는 라운드는 5-1=<<5-1=4>>4라운드입니다.\n그는 4라운드 * 4점/라운드 = <<4*4=16>>16점의 보너스를 받습니다.\n보너스를 포함하면 제임스는 총 48 + 16 = <<48+16=64>>64점을 받습니다.\n#### 66"
+        },
+        "es": {
+          "question": "Los estudiantes de Highridge High obtienen 2 puntos por cada respuesta correcta durante una competencia de preguntas. Si un estudiante responde correctamente todas las preguntas de una ronda, recibe un bono adicional de 4 puntos. Jugaron un total de cinco rondas, cada una compuesta por cinco preguntas. Si James solo falló una pregunta, ¿cuántos puntos obtuvo?",
+          "answer": "Si James solo falló una pregunta en todas las cinco rondas de cinco preguntas, respondió correctamente 5 * 5 - 1 = <<5*5-1=24>>24 preguntas\nAntes del bono, James obtuvo 24 respuestas correctas * 2 puntos/respuesta = <<24*2=48>>48 puntos.\nComo fallar una pregunta solo le descalifica para recibir un bono en una ronda, recibirá un bono en 5-1=<<5-1=4>>4 rondas.\nDebería esperar un bono de 4 rondas * 4 puntos/ronda = <<4*4=16>>16 puntos.\nIncluyendo su bono, James obtuvo un total de 48 + 16 = <<48+16=64>>64 puntos.\n#### 66"
+        }
+      }
+    },
+    {
+      "index": 358,
+      "source": {
+        "question": "Carl has a jar full of marbles. He takes out 12 marbles to play a game with, but he accidentally drops them and 1/2 the marbles get lost. So Carl takes out 10 more marbles. While he is playing his game his mother comes home with another bag of marbles for him, which has 25 marbles in it. If Carl can't find his lost marbles, then how many marbles is he going to put in the jar after he plays his game, from both his original marbles and the new ones?",
+        "answer": "Carl starts with 12 marbles to play with but loses 1/2, 12 / 2 = <<12/2=6>>6 marbles Carl didn't lose.\nCarl takes out 10 more marbles, 6 + 10 = <<6+10=16>>16 marbles.\nThen Carl's mother brings him 25 new marbles to add to the 16 he has out of his jar, 25 + 16 = <<25+16=41>>41 marbles that Carl is going to put in his jar after he plays his marbles game.\n#### 41"
+      },
+      "translations": {
+        "en": {
+          "question": "Carl has a jar full of marbles. He takes out 12 marbles to play a game with, but he accidentally drops them and 1/2 the marbles get lost. So Carl takes out 10 more marbles. While he is playing his game his mother comes home with another bag of marbles for him, which has 25 marbles in it. If Carl can't find his lost marbles, then how many marbles is he going to put in the jar after he plays his game, from both his original marbles and the new ones?",
+          "answer": "Carl starts with 12 marbles to play with but loses 1/2, 12 / 2 = <<12/2=6>>6 marbles Carl didn't lose.\nCarl takes out 10 more marbles, 6 + 10 = <<6+10=16>>16 marbles.\nThen Carl's mother brings him 25 new marbles to add to the 16 he has out of his jar, 25 + 16 = <<25+16=41>>41 marbles that Carl is going to put in his jar after he plays his marbles game.\n#### 41"
+        },
+        "zh": {
+          "question": "卡尔有一个装满弹珠的罐子。他拿出12个弹珠来玩一个游戏，但不小心弄丢了，其中一半的弹珠丢失了。于是卡尔又拿出了10个弹珠。在玩游戏时，他的母亲回家带了另一袋弹珠给他，里面有25个弹珠。如果卡尔找不到他丢失的弹珠，那么他玩完游戏后，会把原来和新得到的弹珠一共多少个放回罐子里？",
+          "answer": "卡尔最初有12个弹珠来玩，但丢失了一半，12 / 2 = <<12/2=6>>6个弹珠没有丢失。\n卡尔又拿出了10个弹珠，6 + 10 = <<6+10=16>>16个弹珠。\n然后卡尔的母亲带了25个新弹珠给他，加入他已拿出的16个弹珠，25 + 16 = <<25+16=41>>41个弹珠，卡尔在玩完游戏后会把这些弹珠放回罐子里。\n#### 41"
+        },
+        "fr": {
+          "question": "Carl a un récipient plein de billes. Il en enlève 12 pour jouer à un jeu, mais il les perd par accident et 1/2 des billes sont perdues. Alors Carl en enlève 10 de plus. Pendant qu'il joue à son jeu, sa mère rentre chez lui avec un autre sac de billes pour lui, qui en contient 25. Si Carl ne peut pas retrouver ses billes perdues, combien de billes va-t-il mettre dans le récipient après avoir joué à son jeu, à partir de ses billes d'origine et des nouvelles ones ?",
+          "answer": "Carl commence avec 12 billes pour jouer, mais en perd 1/2, 12 / 2 = <<12/2=6>>6 billes Carl n'a pas perdu.\nCarl en enlève 10 de plus, 6 + 10 = <<6+10=16>>16 billes.\nPuis sa mère lui apporte 25 nouvelles billes à ajouter aux 16 qu'il a enlevées de son récipient, 25 + 16 = <<25+16=41>>41 billes que Carl va mettre dans son récipient après avoir joué à son jeu.\n#### 41"
+        },
+        "ko": {
+          "question": "카르는 마블이 가득 찬 병을 가지고 있습니다. 그는 12개의 마블을 빼서 게임을 하기 위해 사용하지만, 실수로 떨어뜨리고 마블의 절반을 잃어버립니다. 그래서 카르는 또 10개 더 마블을 빼냅니다. 게임을 하고 있을 때 어머니가 마블을 더 가져오며, 그 안에는 25개의 마블이 있습니다. 카르가 잃어버린 마블을 찾지 못한다면, 게임을 마치고 병에 넣을 마블의 수는 몇 개인가요? 그의 원래 마블과 새로 받은 마블을 포함하여요?",
+          "answer": "카르는 게임을 하기 위해 처음 12개의 마블을 빼내지만, 절반을 잃어버리므로, 12 / 2 = <<12/2=6>>6개의 마블이 잃어버렸습니다.\n카르는 또 10개 더 마블을 빼냅니다. 6 + 10 = <<6+10=16>>16개의 마블이 됩니다.\n그리고 카르의 어머니가 25개의 새로운 마블을 가져오며, 그를 가지고 있는 병에서 16개를 더 추가합니다. 25 + 16 = <<25+16=41>>41개의 마블이 카르가 게임을 마치고 병에 넣을 마블의 수입니다.\n#### 41"
+        },
+        "es": {
+          "question": "Carl tiene una jarra llena de bolas de goma. El saca 12 bolas de goma para jugar un juego, pero se las pierde por accidente y se pierden 1/2 de las bolas. Entonces Carl saca 10 más bolas. Mientras juega, su madre regresa con otra bolsa de bolas para él, que tiene 25 bolas. Si Carl no puede encontrar las bolas que se perdieron, ¿cuántas bolas va a poner en la jarra después de jugar, de sus bolas originales y las nuevas?",
+          "answer": "Carl comienza con 12 bolas para jugar, pero pierde 1/2, 12 / 2 = <<12/2=6>>6 bolas que Carl no perdió.\nCarl saca 10 más bolas, 6 + 10 = <<6+10=16>>16 bolas.\nLuego, la madre de Carl le trae 25 bolas nuevas para añadir a las 16 que ya tiene fuera de su jarra, 25 + 16 = <<25+16=41>>41 bolas que Carl va a poner en su jarra después de jugar con las bolas.\n#### 41"
+        }
+      }
+    },
+    {
+      "index": 362,
+      "source": {
+        "question": "Karen’s work tote bag is twice the weight of her husband Kevin’s briefcase when the briefcase is empty. When Kevin puts his laptop and work papers in his briefcase, it is twice the weight of Karen’s tote. Kevin’s work papers are a sixth of the weight of the contents of his full briefcase. If Karen’s tote weighs 8 pounds, how many more pounds does Kevin’s laptop weigh than Karen’s tote?",
+        "answer": "Kevin’s full briefcase is 2 * 8 = <<2*8=16>>16 pounds.\nHis empty briefcase is 8 / 2 = <<8/2=4>>4 pounds.\nThe contents of his briefcase weigh 16 - 4 = <<16-4=12>>12 pounds.\nHis work papers weigh 12 / 6 = <<12/6=2>>2 pounds.\nThus, his laptop weighs 12 - 2 = <<12-2=10>>10 pounds.\nTherefore, Kevin’s laptop weighs 10 - 8 = <<10-8=2>>2 pounds more than Karen’s tote.\n#### 2"
+      },
+      "translations": {
+        "en": {
+          "question": "Karen’s work tote bag is twice the weight of her husband Kevin’s briefcase when the briefcase is empty. When Kevin puts his laptop and work papers in his briefcase, it is twice the weight of Karen’s tote. Kevin’s work papers are a sixth of the weight of the contents of his full briefcase. If Karen’s tote weighs 8 pounds, how many more pounds does Kevin’s laptop weigh than Karen’s tote?",
+          "answer": "Kevin’s full briefcase is 2 * 8 = <<2*8=16>>16 pounds.\nHis empty briefcase is 8 / 2 = <<8/2=4>>4 pounds.\nThe contents of his briefcase weigh 16 - 4 = <<16-4=12>>12 pounds.\nHis work papers weigh 12 / 6 = <<12/6=2>>2 pounds.\nThus, his laptop weighs 12 - 2 = <<12-2=10>>10 pounds.\nTherefore, Kevin’s laptop weighs 10 - 8 = <<10-8=2>>2 pounds more than Karen’s tote.\n#### 2"
+        },
+        "zh": {
+          "question": "凯伦的工作手提包重量是她丈夫凯文空的公文包的两倍。当凯文把他的笔记本电脑和工作文件放进公文包时，公文包的重量是凯伦手提包的两倍。凯文的工作文件重量等于他满载公文包内物品重量的六分之一。如果凯伦的手提包重8磅，那么凯文的笔记本电脑比凯伦的手提包重多少磅？",
+          "answer": "凯文的满载公文包重2 * 8 = <<2*8=16>>16磅。\n他的空公文包重8 / 2 = <<8/2=4>>4磅。\n公文包内的物品重量为16 - 4 = <<16-4=12>>12磅。\n他的工作文件重12 / 6 = <<12/6=2>>2磅。\n因此，他的笔记本电脑重12 - 2 = <<12-2=10>>10磅。\n因此，凯文的笔记本电脑比凯伦的手提包重10 - 8 = <<10-8=2>>2磅。\n#### 2"
+        },
+        "fr": {
+          "question": "Le sac de travail de Karen pèse deux fois plus que le sac à dos de son mari Kevin lorsqu'il est vide. Lorsque Kevin y met son ordinateur et ses papiers de travail, il pèse deux fois plus que le sac de Karen. Les papiers de travail de Kevin pèsent un sixième du poids des contenus de son sac complet. Si le sac de Karen pèse 8 livres, combien de livres le laptop de Kevin pèse-t-il de plus que le sac de Karen ?",
+          "answer": "Le sac complet de Kevin pèse 2 * 8 = <<2*8=16>>16 livres.\nSon sac vide pèse 8 / 2 = <<8/2=4>>4 livres.\nLes contenus de son sac pèsent 16 - 4 = <<16-4=12>>12 livres.\nSes papiers de travail pèsent 12 / 6 = <<12/6=2>>2 livres.\nAinsi, son ordinateur pèse 12 - 2 = <<12-2=10>>10 livres.\nPar conséquent, le laptop de Kevin pèse 10 - 8 = <<10-8=2>>2 livres de plus que le sac de Karen.\n#### 2"
+        },
+        "ko": {
+          "question": "케렌의 작업 토트백이 키븐의 비어 있는 브리프케이스의 무게의 두 배일 때, 키븐이 랩톱과 업무 서류를 브리프케이스에 넣으면 그 무게는 케렌의 토트백의 두 배가 됩니다. 키븐의 업무 서류는 그 브리프케이스가 가득 차 있을 때의 내용물의 1/6입니다. 케렌의 토트백이 8파운드일 때, 키븐의 랩톱이 케렌의 토트백보다 몇 파운드 더 무겁습니까?",
+          "answer": "키븐의 가득 차 있는 브리프케이스는 2 * 8 = <<2*8=16>>16파운드입니다.\n그의 비어 있는 브리프케이스는 8 / 2 = <<8/2=4>>4파운드입니다.\n그의 브리프케이스의 내용물은 16 - 4 = <<16-4=12>>12파운드입니다.\n그의 업무 서류는 12 / 6 = <<12/6=2>>2파운드입니다.\n따라서 그의 랩톱은 12 - 2 = <<12-2=10>>10파운드입니다.\n따라서 키븐의 랩톱은 케렌의 토트백보다 10 - 8 = <<10-8=2>>2파운드 더 무겁습니다.\n#### 2"
+        },
+        "es": {
+          "question": "La bolsa de trabajo de Karen pesa el doble que el maletín de su marido Kevin cuando el maletín está vacío. Cuando Kevin coloca su portátil y sus documentos de trabajo en su maletín, este pesa el doble que la bolsa de Karen. Los documentos de trabajo de Kevin pesan un sexto del peso de los contenidos de su maletín completo. Si la bolsa de Karen pesa 8 libras, ¿cuántas libras más pesa el portátil de Kevin que la bolsa de Karen?",
+          "answer": "El maletín completo de Kevin pesa 2 * 8 = <<2*8=16>>16 libras.\nSu maletín vacío pesa 8 / 2 = <<8/2=4>>4 libras.\nLos contenidos de su maletín pesan 16 - 4 = <<16-4=12>>12 libras.\nSus documentos de trabajo pesan 12 / 6 = <<12/6=2>>2 libras.\nPor lo tanto, su portátil pesa 12 - 2 = <<12-2=10>>10 libras.\nAsí, el portátil de Kevin pesa 10 - 8 = <<10-8=2>>2 libras más que la bolsa de Karen.\n#### 2"
+        }
+      }
+    },
+    {
+      "index": 365,
+      "source": {
+        "question": "In a race, there are eight runners. The first five runners finish the race in 8 hours, while the rest of the runners finish the race 2 hours later. Calculate the total time the eight runners took to finish the race.",
+        "answer": "The first five runners took a combined total of 5*8 = <<5*8=40>>40 hours to finish the race.\nThe number of runners who finished the race 2 hours later after the first five is 8-5 = <<8-5=3>>3\nThe 3 runners who finished the race 2 hours later took a total of 8+2 =<<8+2=10>>10 hours to run the race.\nTogether, the three runners who finished the race in 10 hours took a total of 10*3 = <<10*3=30>>30 hours.\nAll eight runners took 30+40 = 70 hours altogether to finish the race.\n#### 70"
+      },
+      "translations": {
+        "en": {
+          "question": "In a race, there are eight runners. The first five runners finish the race in 8 hours, while the rest of the runners finish the race 2 hours later. Calculate the total time the eight runners took to finish the race.",
+          "answer": "The first five runners took a combined total of 5*8 = <<5*8=40>>40 hours to finish the race.\nThe number of runners who finished the race 2 hours later after the first five is 8-5 = <<8-5=3>>3\nThe 3 runners who finished the race 2 hours later took a total of 8+2 =<<8+2=10>>10 hours to run the race.\nTogether, the three runners who finished the race in 10 hours took a total of 10*3 = <<10*3=30>>30 hours.\nAll eight runners took 30+40 = 70 hours altogether to finish the race.\n#### 70"
+        },
+        "zh": {
+          "question": "在一场比赛中，有八名选手。前五名选手用8小时完成比赛，其余选手比他们晚2小时完成。计算这八名选手完成比赛的总时间。",
+          "answer": "前五名选手完成比赛的总时间为5*8 = <<5*8=40>>40小时。\n在前五名选手之后，有8-5 = <<8-5=3>>3名选手比他们晚2小时完成比赛。\n这3名选手比前五名晚2小时完成比赛，他们总共用时8+2 =<<8+2=10>>10小时完成比赛。\n这3名选手总共用时10*3 = <<10*3=30>>30小时。\n所有八名选手完成比赛的总时间为30+40 = 70小时。\n#### 70"
+        },
+        "fr": {
+          "question": "Dans une course, il y a huit coureurs. Les cinq premiers coureurs terminent la course en 8 heures, tandis que les autres terminent la course 2 heures plus tard. Calculez le temps total que les huit coureurs ont mis pour finir la course.",
+          "answer": "Les cinq premiers coureurs ont mis au total 5*8 = <<5*8=40>>40 heures pour finir la course.\nLe nombre de coureurs qui ont terminé la course 2 heures après les cinq premiers est 8-5 = <<8-5=3>>3\nLes trois coureurs qui ont terminé la course 2 heures plus tard ont mis au total 8+2 = <<8+2=10>>10 heures pour courir la course.\nEnsemble, les trois coureurs qui ont terminé la course en 10 heures ont mis au total 10*3 = <<10*3=30>>30 heures.\nLes huit coureurs ont mis 30+40 = 70 heures au total pour finir la course.\n#### 70"
+        },
+        "ko": {
+          "question": "경주에서 총 8명의 선수가 참여한다. 처음 5명의 선수는 8시간 동안 경주를 완주했고, 나머지 선수들은 그보다 2시간 더 늦게 경주를 완주했다. 8명의 선수가 경주를 완주하기까지 총 소요한 시간을 계산하시오.",
+          "answer": "첫 번째 5명의 선수는 경주를 완주하기 위해 총 5*8 = <<5*8=40>>40시간을 소요했다.\n첫 번째 5명 이후에 경주를 2시간 더 늦게 완주한 선수의 수는 8-5 = <<8-5=3>>3명이다.\n이 3명의 선수는 경주를 8+2 =<<8+2=10>>10시간 동안 완주했다.\n이 3명의 선수는 총 10*3 = <<10*3=30>>30시간을 소요했다.\n따라서 8명의 선수는 총 30+40 = 70시간 동안 경주를 완주했다.\n#### 70"
+        },
+        "es": {
+          "question": "En una carrera, hay ocho corredores. Los primeros cinco corredores terminan la carrera en 8 horas, mientras que el resto de corredores terminan la carrera 2 horas después. Calcule el tiempo total que tardaron los ocho corredores en terminar la carrera.",
+          "answer": "Los primeros cinco corredores tardaron un total combinado de 5*8 = <<5*8=40>>40 horas en terminar la carrera.\nEl número de corredores que terminaron la carrera 2 horas después de los primeros cinco es 8-5 = <<8-5=3>>3\nLos tres corredores que terminaron la carrera 2 horas después tardaron un total de 8+2 = <<8+2=10>>10 horas en correr la carrera.\nJuntos, los tres corredores que terminaron la carrera en 10 horas tardaron un total de 10*3 = <<10*3=30>>30 horas.\nTodos los ocho corredores tardaron 30+40 = 70 horas en total para terminar la carrera.\n#### 70"
+        }
+      }
+    },
+    {
+      "index": 395,
+      "source": {
+        "question": "Utopia National Park hosted 30,000 elephants on Friday night. The next morning, there was a 4-hour elephant exodus out of the park, at a constant rate of 2,880 elephants/hour. Over the next 7-hour period, new elephants entered the park at a constant rate. If the final number of elephants in the park was 28,980, at what rate did the new elephants enter the park?",
+        "answer": "The Saturday morning exodus out of the park comprised 4*2880 = <<4*2880=11520>>11520 elephants\nThis means that after the exodus, the park was left with 30000 - 11520 = <<30000-11520=18480>>18480 elephants\nSince the final number of elephants was 28,980, the new elephants that entered were 28980 - 18480 = <<28980-18480=10500>>10500\nThe rate at which the new elephants entered the park was therefore 10500/7 = <<10500/7=1500>>1500 elephants/hour\n#### 1500"
+      },
+      "translations": {
+        "en": {
+          "question": "Utopia National Park hosted 30,000 elephants on Friday night. The next morning, there was a 4-hour elephant exodus out of the park, at a constant rate of 2,880 elephants/hour. Over the next 7-hour period, new elephants entered the park at a constant rate. If the final number of elephants in the park was 28,980, at what rate did the new elephants enter the park?",
+          "answer": "The Saturday morning exodus out of the park comprised 4*2880 = <<4*2880=11520>>11520 elephants\nThis means that after the exodus, the park was left with 30000 - 11520 = <<30000-11520=18480>>18480 elephants\nSince the final number of elephants was 28,980, the new elephants that entered were 28980 - 18480 = <<28980-18480=10500>>10500\nThe rate at which the new elephants entered the park was therefore 10500/7 = <<10500/7=1500>>1500 elephants/hour\n#### 1500"
+        },
+        "zh": {
+          "question": "乌托邦国家公园周五晚上有30,000头大象。第二天早上，有4小时的大象撤离，每小时撤离2,880头大象，速率恒定。在接下来的7小时内，有新大象以恒定速率进入公园。如果公园最终的大象数量为28,980头，新大象进入的速率是多少？",
+          "answer": "周六早上撤离的 elephants 数量为 4*2880 = <<4*2880=11520>>11520\n这意味着撤离后，公园剩下 30000 - 11520 = <<30000-11520=18480>>18480 头大象\n由于最终的大象数量为28,980，因此新进入的大象数量为 28980 - 18480 = <<28980-18480=10500>>10500\n因此，新大象进入的速率为 10500/7 = <<10500/7=1500>>1500 头/小时\n#### 1500"
+        },
+        "fr": {
+          "question": "Le parc national Utopia a accueilli 30 000 éléphants le vendredi soir. Le lendemain matin, il y a eu un exode d'éléphants de 4 heures à un rythme constant de 2 880 éléphants/horaire. Pendant la période suivante de 7 heures, de nouveaux éléphants sont entrés dans le parc à un rythme constant. Si le nombre final d'éléphants dans le parc était de 28 980, à quelle vitesse les nouveaux éléphants sont-ils entrés dans le parc ?",
+          "answer": "L'exode du samedi matin a impliqué 4*2880 = <<4*2880=11520>>11520 éléphants\nCela signifie que après l'exode, le parc était resté avec 30000 - 11520 = <<30000-11520=18480>>18480 éléphants\nPuisque le nombre final d'éléphants était de 28 980, les nouveaux éléphants entrés étaient 28980 - 18480 = <<28980-18480=10500>>10500\nLe rythme à which les nouveaux éléphants sont entrés dans le parc était donc de 10500/7 = <<10500/7=1500>>1500 éléphants/horaire\n#### 1500"
+        },
+        "ko": {
+          "question": "Utopia 국립공원은 금요일 밤에 30,000마리의 전갈을 주거했다. 다음 날 아침, 전갈들이 4시간 동안 일정한 속도로 공원을 떠났다. 그 후 7시간 동안 새로운 전갈들이 일정한 속도로 공원에 들어왔다. 만약 공원에 남은 전갈의 최종 수가 28,980마리였다면, 새로운 전갈들이 공원에 들어오는 속도는 얼마인가요?",
+          "answer": "토요일 아침 전갈들의 이탈은 4*2880 = <<4*2880=11520>>11520마리였다\n이로 인해 전갈들이 공원에 남은 수는 30000 - 11520 = <<30000-11520=18480>>18480마리였다\n최종 전갈 수가 28,980마리이므로 새로운 전갈들이 들어온 수는 28980 - 18480 = <<28980-18480=10500>>10500마리였다\n따라서 새로운 전갈들이 공원에 들어오는 속도는 10500/7 = <<10500/7=1500>>1500마리/시간이었다\n#### 1500"
+        },
+        "es": {
+          "question": "El Parque Nacional Utopía albergó 30.000 elefantes la noche de viernes. La mañana siguiente, hubo un exodo de elefantes de 4 horas hacia el exterior del parque, a una tasa constante de 2.880 elefantes/hora. Durante el siguiente período de 7 horas, nuevos elefantes entraron al parque a una tasa constante. Si el número final de elefantes en el parque fue de 28.980, ¿a qué tasa entraron los nuevos elefantes al parque?",
+          "answer": "El exodo de sábado por la mañana hacia el exterior del parque comprendió 4*2880 = <<4*2880=11520>>11520 elefantes\nEsto significa que después del exodo, el parque quedó con 30000 - 11520 = <<30000-11520=18480>>18480 elefantes\nComo el número final de elefantes fue de 28.980, los nuevos elefantes que entraron fueron 28980 - 18480 = <<28980-18480=10500>>10500\nLa tasa a la que los nuevos elefantes entraron al parque fue por tanto 10500/7 = <<10500/7=1500>>1500 elefantes/hora\n#### 1500"
+        }
+      }
+    },
+    {
+      "index": 399,
+      "source": {
+        "question": "Sam works at the Widget Factory, assembling Widgets. He can assemble 1 widget every 10 minutes. Jack from the loading dock can help assemble widgets when he doesn't have anything else to do. When he helps, they put together 2 complete widgets every 15 minutes. Recently the factory hired Tony to help assemble widgets. Being new to the job, he doesn't work as fast as Sam or Jack. Yesterday Sam worked for 6 hours before he had to leave work early for a dentist appointment. Jack was able to help out for 4 hours before he had to go back to the loading dock to unload a new shipment of widget materials. Tony worked the entire 8-hour shift. At the end of the day, they had completed 68 widgets. How long does it take Tony to assemble a Widget, in minutes?",
+        "answer": "Sam completes a widget every 10 minutes.\nWhen Jack helps they finish 2 in 15 minutes. Sam has finished 1 widget and has begun working on another one, and Jack finishes the second one at 15 minutes. So it takes Jack 15 minutes to complete a widget.\nSam worked for 6 hours yesterday, so he was able to complete 6 hours * 60 minutes per hour / 10 minutes per widget = <<6*60/10=36>>36 widgets.\nJack worked for 4 hours, so he was able to complete 4 hours * 60 minutes per hour / 15 minutes per widget = <<4*60/15=16>>16 widgets.\nSam, Jack, and Tony were able to complete 68 widgets together. So of those, Tony personally completed 68 widgets - 36 widgets - 16 widgets = <<68-36-16=16>>16 widgets.\nIt took Tony 8 hours to complete those 16 widgets, so he takes 8 hours * 60 minutes per hour / 16 widgets = <<8*60/16=30>>30 minutes per widget.\n#### 30"
+      },
+      "translations": {
+        "en": {
+          "question": "Sam works at the Widget Factory, assembling Widgets. He can assemble 1 widget every 10 minutes. Jack from the loading dock can help assemble widgets when he doesn't have anything else to do. When he helps, they put together 2 complete widgets every 15 minutes. Recently the factory hired Tony to help assemble widgets. Being new to the job, he doesn't work as fast as Sam or Jack. Yesterday Sam worked for 6 hours before he had to leave work early for a dentist appointment. Jack was able to help out for 4 hours before he had to go back to the loading dock to unload a new shipment of widget materials. Tony worked the entire 8-hour shift. At the end of the day, they had completed 68 widgets. How long does it take Tony to assemble a Widget, in minutes?",
+          "answer": "Sam completes a widget every 10 minutes.\nWhen Jack helps they finish 2 in 15 minutes. Sam has finished 1 widget and has begun working on another one, and Jack finishes the second one at 15 minutes. So it takes Jack 15 minutes to complete a widget.\nSam worked for 6 hours yesterday, so he was able to complete 6 hours * 60 minutes per hour / 10 minutes per widget = <<6*60/10=36>>36 widgets.\nJack worked for 4 hours, so he was able to complete 4 hours * 60 minutes per hour / 15 minutes per widget = <<4*60/15=16>>16 widgets.\nSam, Jack, and Tony were able to complete 68 widgets together. So of those, Tony personally completed 68 widgets - 36 widgets - 16 widgets = <<68-36-16=16>>16 widgets.\nIt took Tony 8 hours to complete those 16 widgets, so he takes 8 hours * 60 minutes per hour / 16 widgets = <<8*60/16=30>>30 minutes per widget.\n#### 30"
+        },
+        "zh": {
+          "question": "萨姆在Widget工厂组装Widget。他每10分钟可以组装一个Widget。来自装卸区的杰克在没有其他事情可做时也可以帮忙组装Widget。当杰克帮忙时，他们每15分钟可以组装2个完整的Widget。最近工厂雇佣了托尼来帮忙组装Widget。由于是新手，托尼的效率不如萨姆或杰克。昨天萨姆工作了6小时，之后因牙医预约不得不提前离开工作。杰克帮忙工作了4小时，之后必须返回装卸区卸载一批新的Widget材料。托尼完成了整个8小时的班次。当天结束时，他们一共完成了68个Widget。托尼组装一个Widget需要多少分钟？",
+          "answer": "萨姆每10分钟完成一个Widget。\n当杰克帮忙时，他们每15分钟完成2个Widget。萨姆完成一个Widget并开始制作下一个，而杰克在15分钟时完成第二个Widget。因此杰克完成一个Widget需要15分钟。\n萨姆昨天工作了6小时，因此他完成了6小时 * 每小时60分钟 / 每个Widget 10分钟 = <<6*60/10=36>>36个Widget。\n杰克工作了4小时，因此他完成了4小时 * 每小时60分钟 / 每个Widget 15分钟 = <<4*60/15=16>>16个Widget。\n萨姆、杰克和托尼一共完成了68个Widget。因此，托尼个人完成了68个Widget - 36个Widget - 16个Widget = <<68-36-16=16>>16个Widget。\n托尼用8小时完成了这16个Widget，因此他每个Widget需要8小时 * 每小时60分钟 / 16个Widget = <<8*60/16=30>>30分钟。\n#### 30"
+        },
+        "fr": {
+          "question": "Sam travaille dans l'usine de widgets, en assemblant des widgets. Il peut assembler un widget toutes les 10 minutes. Jack, du quai de chargement, peut aider à assembler des widgets quand il n'a rien d'autre à faire. Quand il aide, ils réalisent 2 widgets complets toutes les 15 minutes. Récemment, l'usine a embauché Tony pour aider à assembler des widgets. Étant nouveau dans le poste, il ne travaille pas aussi vite que Sam ou Jack. Hier, Sam a travaillé 6 heures avant d'avoir à quitter son travail tôt pour un rendez-vous chez le dentiste. Jack a pu aider pendant 4 heures avant d'aller retourner au quai pour décharger un nouveau stock de matériaux de widgets. Tony a travaillé toute la durée de 8 heures. À la fin de la journée, ils ont complété 68 widgets. Combien de temps faut-il à Tony pour assembler un widget, en minutes ?",
+          "answer": "Sam complète un widget toutes les 10 minutes.\nQuand Jack aide, ils terminent 2 widgets en 15 minutes. Sam a terminé un widget et commence à en faire un autre, et Jack termine le deuxième après 15 minutes. Il faut donc à Jack 15 minutes pour compléter un widget.\nSam a travaillé 6 heures hier, donc il a pu compléter 6 heures * 60 minutes par heure / 10 minutes par widget = <<6*60/10=36>>36 widgets.\nJack a travaillé 4 heures, donc il a pu compléter 4 heures * 60 minutes par heure / 15 minutes par widget = <<4*60/15=16>>16 widgets.\nSam, Jack et Tony ont complété ensemble 68 widgets. Donc parmi ces 68 widgets, Tony a personnellement complété 68 widgets - 36 widgets - 16 widgets = <<68-36-16=16>>16 widgets.\nIl a fallu à Tony 8 heures pour compléter ces 16 widgets, donc il met 8 heures * 60 minutes par heure / 16 widgets = <<8*60/16=30>>30 minutes par widget.\n#### 30"
+        },
+        "ko": {
+          "question": "사마는 위젯 공장에서 위젯을 조립하는 일을 합니다. 그는 10분에 1개의 위젯을 조립할 수 있습니다. 로딩 도크에서 온 잭은 다른 일 없을 때 위젯 조립을 도와줄 수 있습니다. 그가 도와줄 때는 15분에 2개의 완성된 위젯을 조립합니다. 최근 공장은 토니를 위젯 조립에 도와주기 위해 고용했습니다. 토니는 새로운 직무이기 때문에 사마나 잭보다 느리게 일합니다. 어제 사마는 6시간 동안 일했고, 치과 약속으로 일찍 떠나야 했습니다. 잭은 4시간 동안 도와주었고, 이후 로딩 도크로 돌아가 새로운 위젯 재료를 하역해야 했습니다. 토니는 전 8시간 동안 일했습니다. 하루 종료 시점에 그들은 총 68개의 위젯을 완성했습니다. 토니가 1개의 위젯을 조립하는 데 걸리는 시간은 몇 분인가요?",
+          "answer": "사마는 10분에 1개의 위젯을 조립합니다.\n잭이 도와줄 때는 15분에 2개의 완성된 위젯을 조립합니다. 사마는 1개의 위젯을 완성하고 또 다른 하나를 시작하며, 잭은 15분 후에 두 번째 위젯을 완성합니다. 따라서 잭은 15분에 1개의 위젯을 조립합니다.\n사마는 어제 6시간 동안 일했기 때문에, 6시간 * 60분/시간 / 10분/위젯 = <<6*60/10=36>>36개의 위젯을 완성했습니다.\n잭은 4시간 동안 일했기 때문에, 4시간 * 60분/시간 / 15분/위젯 = <<4*60/15=16>>16개의 위젯을 완성했습니다.\n사마, 잭, 토니가 함께 68개의 위젯을 완성했으므로, 토니가 직접 완성한 위젯은 68개 - 36개 - 16개 = <<68-36-16=16>>16개입니다.\n토니는 8시간 동안 16개의 위젯을 완성했으므로, 8시간 * 60분/시간 / 16개의 위젯 = <<8*60/16=30>>30분에 1개의 위젯을 조립합니다.\n#### 30"
+        },
+        "es": {
+          "question": "Sam trabaja en la Fábrica de Widgets, ensamblando Widgets. Puede ensamblar 1 widget cada 10 minutos. Jack, del área de carga, puede ayudar a ensamblar widgets cuando no tiene nada más que hacer. Cuando ayuda, juntos completan 2 widgets cada 15 minutos. Recientemente, la fábrica contrató a Tony para ayudar a ensamblar widgets. Al ser nuevo en el trabajo, no trabaja tan rápido como Sam o Jack. Ayer, Sam trabajó durante 6 horas antes de tener que ir a una cita con el dentista. Jack pudo ayudar durante 4 horas antes de tener que regresar al área de carga para descargar una nueva entrega de materiales de widgets. Tony trabajó toda la jornada de 8 horas. Al final del día, completaron 68 widgets. ¿Cuánto tiempo le lleva a Tony ensamblar un widget, en minutos?",
+          "answer": "Sam completa un widget cada 10 minutos.\nCuando Jack ayuda, terminan 2 en 15 minutos. Sam ha completado 1 widget y ha comenzado a trabajar en otro, y Jack termina el segundo en 15 minutos. Por lo tanto, le lleva a Jack 15 minutos completar un widget.\nSam trabajó durante 6 horas ayer, por lo que pudo completar 6 horas * 60 minutos por hora / 10 minutos por widget = <<6*60/10=36>>36 widgets.\nJack trabajó durante 4 horas, por lo que pudo completar 4 horas * 60 minutos por hora / 15 minutos por widget = <<4*60/15=16>>16 widgets.\nSam, Jack y Tony completaron juntos 68 widgets. Por lo tanto, Tony completó personalmente 68 widgets - 36 widgets - 16 widgets = <<68-36-16=16>>16 widgets.\nLe llevó a Tony 8 horas completar esas 16 piezas, por lo que tarda 8 horas * 60 minutos por hora / 16 widgets = <<8*60/16=30>>30 minutos por widget.\n#### 30"
+        }
+      }
+    }
+  ]
+}

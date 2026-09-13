@@ -1,0 +1,3035 @@
+{
+  "summary": {
+    "num_queries": 51,
+    "num_translation_candidates": 204,
+    "top4_item_accuracy_mean": 0.2549019753932953,
+    "top4_all_same_source_rate": 0.058823529411764705,
+    "queries_with_all_4_same_source": 3,
+    "queries_with_all_4_same_source_and_all_languages": 3,
+    "top4_same_source_count_histogram": {
+      "0": 27,
+      "1": 6,
+      "2": 11,
+      "3": 4,
+      "4": 3
+    },
+    "method": "forvalue_streaming_ghrh imported functions, selected readout proposed score",
+    "scoring_method": "forvalue",
+    "native_pooling": null,
+    "readout_channels": [
+      "rh",
+      "gh"
+    ],
+    "gh_embedding_layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "gh_layer_index_mode": "top",
+    "gh_use_input_layernorm": true,
+    "model_name": "Qwen/Qwen3-1.7B",
+    "retrieval_query_field": "question",
+    "max_length": 768,
+    "batch_size": 4,
+    "prediction_topk": 16
+  },
+  "per_query": [
+    {
+      "query": {
+        "test_index": 0,
+        "dataset": "openai/gsm8k",
+        "index": 8,
+        "source_id": "openai/gsm8k:8",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 169971360.0,
+          "same_source": false
+        },
+        {
+          "train_index": 5,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "fr",
+          "rank": 2,
+          "score": 161981552.0,
+          "same_source": false
+        },
+        {
+          "train_index": 7,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "es",
+          "rank": 3,
+          "score": 144243904.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 4,
+          "score": 116729080.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 1,
+        "dataset": "openai/gsm8k",
+        "index": 9,
+        "source_id": "openai/gsm8k:9",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 161223904.0,
+          "same_source": true
+        },
+        {
+          "train_index": 7,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "es",
+          "rank": 2,
+          "score": 127463360.0,
+          "same_source": true
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 3,
+          "score": 103163152.0,
+          "same_source": false
+        },
+        {
+          "train_index": 59,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "es",
+          "rank": 4,
+          "score": 98422584.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 2,
+        "dataset": "openai/gsm8k",
+        "index": 11,
+        "source_id": "openai/gsm8k:11",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 158780704.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 155833008.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 153147520.0,
+          "same_source": false
+        },
+        {
+          "train_index": 126,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "ko",
+          "rank": 4,
+          "score": 135252928.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 3,
+        "dataset": "openai/gsm8k",
+        "index": 15,
+        "source_id": "openai/gsm8k:15",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 1,
+          "score": 124378408.0,
+          "same_source": true
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 2,
+          "score": 115580088.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 3,
+          "score": 115244976.0,
+          "same_source": false
+        },
+        {
+          "train_index": 13,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "fr",
+          "rank": 4,
+          "score": 111095120.0,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 4,
+        "dataset": "openai/gsm8k",
+        "index": 18,
+        "source_id": "openai/gsm8k:18",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 144467808.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 133458904.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 132858784.0,
+          "same_source": false
+        },
+        {
+          "train_index": 7,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "es",
+          "rank": 4,
+          "score": 121925936.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 5,
+        "dataset": "openai/gsm8k",
+        "index": 27,
+        "source_id": "openai/gsm8k:27",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 1,
+          "score": 123106912.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 2,
+          "score": 120295584.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 3,
+          "score": 109787152.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 4,
+          "score": 108542384.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 6,
+        "dataset": "openai/gsm8k",
+        "index": 38,
+        "source_id": "openai/gsm8k:38",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 184466848.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 157738000.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 149744128.0,
+          "same_source": false
+        },
+        {
+          "train_index": 7,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "es",
+          "rank": 4,
+          "score": 147385232.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 7,
+        "dataset": "openai/gsm8k",
+        "index": 42,
+        "source_id": "openai/gsm8k:42",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 67379568.0,
+          "same_source": false
+        },
+        {
+          "train_index": 7,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "es",
+          "rank": 2,
+          "score": 63312268.0,
+          "same_source": false
+        },
+        {
+          "train_index": 5,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "fr",
+          "rank": 3,
+          "score": 61660480.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 4,
+          "score": 59593652.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 8,
+        "dataset": "openai/gsm8k",
+        "index": 43,
+        "source_id": "openai/gsm8k:43",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 161264320.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 140943072.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 137263440.0,
+          "same_source": false
+        },
+        {
+          "train_index": 126,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "ko",
+          "rank": 4,
+          "score": 129745736.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 9,
+        "dataset": "openai/gsm8k",
+        "index": 46,
+        "source_id": "openai/gsm8k:46",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 70631480.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 2,
+          "score": 68207208.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 3,
+          "score": 67733280.0,
+          "same_source": false
+        },
+        {
+          "train_index": 106,
+          "dataset": "openai/gsm8k",
+          "index": 99,
+          "source_id": "openai/gsm8k:99",
+          "language": "ko",
+          "rank": 4,
+          "score": 61654848.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 10,
+        "dataset": "openai/gsm8k",
+        "index": 50,
+        "source_id": "openai/gsm8k:50",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 3,
+      "top4_same_source_accuracy": 0.75,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 40,
+          "dataset": "openai/gsm8k",
+          "index": 50,
+          "source_id": "openai/gsm8k:50",
+          "language": "zh",
+          "rank": 1,
+          "score": 30603316.0,
+          "same_source": true
+        },
+        {
+          "train_index": 43,
+          "dataset": "openai/gsm8k",
+          "index": 50,
+          "source_id": "openai/gsm8k:50",
+          "language": "es",
+          "rank": 2,
+          "score": 30259728.0,
+          "same_source": true
+        },
+        {
+          "train_index": 41,
+          "dataset": "openai/gsm8k",
+          "index": 50,
+          "source_id": "openai/gsm8k:50",
+          "language": "fr",
+          "rank": 3,
+          "score": 26635002.0,
+          "same_source": true
+        },
+        {
+          "train_index": 57,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "fr",
+          "rank": 4,
+          "score": 25720058.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 11,
+        "dataset": "openai/gsm8k",
+        "index": 60,
+        "source_id": "openai/gsm8k:60",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 269662624.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 245767488.0,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 3,
+          "score": 234504832.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 4,
+          "score": 215634464.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 12,
+        "dataset": "openai/gsm8k",
+        "index": 61,
+        "source_id": "openai/gsm8k:61",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 311541504.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 263045360.0,
+          "same_source": false
+        },
+        {
+          "train_index": 5,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "fr",
+          "rank": 3,
+          "score": 237970208.0,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 4,
+          "score": 236323984.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 13,
+        "dataset": "openai/gsm8k",
+        "index": 63,
+        "source_id": "openai/gsm8k:63",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 4,
+      "top4_same_source_accuracy": 1.0,
+      "top4_all_same_source": true,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 52,
+          "dataset": "openai/gsm8k",
+          "index": 63,
+          "source_id": "openai/gsm8k:63",
+          "language": "zh",
+          "rank": 1,
+          "score": 69785392.0,
+          "same_source": true
+        },
+        {
+          "train_index": 54,
+          "dataset": "openai/gsm8k",
+          "index": 63,
+          "source_id": "openai/gsm8k:63",
+          "language": "ko",
+          "rank": 2,
+          "score": 41611932.0,
+          "same_source": true
+        },
+        {
+          "train_index": 53,
+          "dataset": "openai/gsm8k",
+          "index": 63,
+          "source_id": "openai/gsm8k:63",
+          "language": "fr",
+          "rank": 3,
+          "score": 31720850.0,
+          "same_source": true
+        },
+        {
+          "train_index": 55,
+          "dataset": "openai/gsm8k",
+          "index": 63,
+          "source_id": "openai/gsm8k:63",
+          "language": "es",
+          "rank": 4,
+          "score": 24349840.0,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 14,
+        "dataset": "openai/gsm8k",
+        "index": 66,
+        "source_id": "openai/gsm8k:66",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 59,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "es",
+          "rank": 1,
+          "score": 83637264.0,
+          "same_source": true
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 75541072.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 72118832.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 4,
+          "score": 69444848.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 15,
+        "dataset": "openai/gsm8k",
+        "index": 67,
+        "source_id": "openai/gsm8k:67",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 4,
+      "top4_same_source_accuracy": 1.0,
+      "top4_all_same_source": true,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 63,
+          "dataset": "openai/gsm8k",
+          "index": 67,
+          "source_id": "openai/gsm8k:67",
+          "language": "es",
+          "rank": 1,
+          "score": 99716352.0,
+          "same_source": true
+        },
+        {
+          "train_index": 61,
+          "dataset": "openai/gsm8k",
+          "index": 67,
+          "source_id": "openai/gsm8k:67",
+          "language": "fr",
+          "rank": 2,
+          "score": 87046944.0,
+          "same_source": true
+        },
+        {
+          "train_index": 60,
+          "dataset": "openai/gsm8k",
+          "index": 67,
+          "source_id": "openai/gsm8k:67",
+          "language": "zh",
+          "rank": 3,
+          "score": 83388728.0,
+          "same_source": true
+        },
+        {
+          "train_index": 62,
+          "dataset": "openai/gsm8k",
+          "index": 67,
+          "source_id": "openai/gsm8k:67",
+          "language": "ko",
+          "rank": 4,
+          "score": 60502908.0,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 16,
+        "dataset": "openai/gsm8k",
+        "index": 73,
+        "source_id": "openai/gsm8k:73",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 112616520.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 108691720.0,
+          "same_source": false
+        },
+        {
+          "train_index": 125,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "fr",
+          "rank": 3,
+          "score": 104928704.0,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 4,
+          "score": 104168832.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 17,
+        "dataset": "openai/gsm8k",
+        "index": 76,
+        "source_id": "openai/gsm8k:76",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 1,
+          "score": 61684276.0,
+          "same_source": false
+        },
+        {
+          "train_index": 7,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "es",
+          "rank": 2,
+          "score": 50276088.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 47963796.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 4,
+          "score": 47030456.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 18,
+        "dataset": "openai/gsm8k",
+        "index": 79,
+        "source_id": "openai/gsm8k:79",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 73,
+          "dataset": "openai/gsm8k",
+          "index": 79,
+          "source_id": "openai/gsm8k:79",
+          "language": "fr",
+          "rank": 1,
+          "score": 20364520.0,
+          "same_source": true
+        },
+        {
+          "train_index": 75,
+          "dataset": "openai/gsm8k",
+          "index": 79,
+          "source_id": "openai/gsm8k:79",
+          "language": "es",
+          "rank": 2,
+          "score": 18794724.0,
+          "same_source": true
+        },
+        {
+          "train_index": 39,
+          "dataset": "openai/gsm8k",
+          "index": 46,
+          "source_id": "openai/gsm8k:46",
+          "language": "es",
+          "rank": 3,
+          "score": 15973239.0,
+          "same_source": false
+        },
+        {
+          "train_index": 129,
+          "dataset": "openai/gsm8k",
+          "index": 118,
+          "source_id": "openai/gsm8k:118",
+          "language": "fr",
+          "rank": 4,
+          "score": 12468057.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 19,
+        "dataset": "openai/gsm8k",
+        "index": 81,
+        "source_id": "openai/gsm8k:81",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 214226160.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 183825696.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 170090864.0,
+          "same_source": false
+        },
+        {
+          "train_index": 126,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "ko",
+          "rank": 4,
+          "score": 165024048.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 20,
+        "dataset": "openai/gsm8k",
+        "index": 85,
+        "source_id": "openai/gsm8k:85",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 3,
+      "top4_same_source_accuracy": 0.75,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 81,
+          "dataset": "openai/gsm8k",
+          "index": 85,
+          "source_id": "openai/gsm8k:85",
+          "language": "fr",
+          "rank": 1,
+          "score": 71352224.0,
+          "same_source": true
+        },
+        {
+          "train_index": 83,
+          "dataset": "openai/gsm8k",
+          "index": 85,
+          "source_id": "openai/gsm8k:85",
+          "language": "es",
+          "rank": 2,
+          "score": 64393860.0,
+          "same_source": true
+        },
+        {
+          "train_index": 80,
+          "dataset": "openai/gsm8k",
+          "index": 85,
+          "source_id": "openai/gsm8k:85",
+          "language": "zh",
+          "rank": 3,
+          "score": 57164084.0,
+          "same_source": true
+        },
+        {
+          "train_index": 113,
+          "dataset": "openai/gsm8k",
+          "index": 107,
+          "source_id": "openai/gsm8k:107",
+          "language": "fr",
+          "rank": 4,
+          "score": 43767512.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 21,
+        "dataset": "openai/gsm8k",
+        "index": 89,
+        "source_id": "openai/gsm8k:89",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 3,
+      "top4_same_source_accuracy": 0.75,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 86,
+          "dataset": "openai/gsm8k",
+          "index": 89,
+          "source_id": "openai/gsm8k:89",
+          "language": "ko",
+          "rank": 1,
+          "score": 87613392.0,
+          "same_source": true
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 2,
+          "score": 86424240.0,
+          "same_source": false
+        },
+        {
+          "train_index": 85,
+          "dataset": "openai/gsm8k",
+          "index": 89,
+          "source_id": "openai/gsm8k:89",
+          "language": "fr",
+          "rank": 3,
+          "score": 82929752.0,
+          "same_source": true
+        },
+        {
+          "train_index": 87,
+          "dataset": "openai/gsm8k",
+          "index": 89,
+          "source_id": "openai/gsm8k:89",
+          "language": "es",
+          "rank": 4,
+          "score": 75595792.0,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 22,
+        "dataset": "openai/gsm8k",
+        "index": 90,
+        "source_id": "openai/gsm8k:90",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 1,
+          "score": 77324256.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 2,
+          "score": 74418736.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 3,
+          "score": 73732744.0,
+          "same_source": false
+        },
+        {
+          "train_index": 59,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "es",
+          "rank": 4,
+          "score": 70804976.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 23,
+        "dataset": "openai/gsm8k",
+        "index": 91,
+        "source_id": "openai/gsm8k:91",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 206757824.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 2,
+          "score": 148939680.0,
+          "same_source": false
+        },
+        {
+          "train_index": 7,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "es",
+          "rank": 3,
+          "score": 141820800.0,
+          "same_source": false
+        },
+        {
+          "train_index": 5,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "fr",
+          "rank": 4,
+          "score": 141036752.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 24,
+        "dataset": "openai/gsm8k",
+        "index": 95,
+        "source_id": "openai/gsm8k:95",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 153019168.0,
+          "same_source": false
+        },
+        {
+          "train_index": 97,
+          "dataset": "openai/gsm8k",
+          "index": 95,
+          "source_id": "openai/gsm8k:95",
+          "language": "fr",
+          "rank": 2,
+          "score": 149386512.0,
+          "same_source": true
+        },
+        {
+          "train_index": 99,
+          "dataset": "openai/gsm8k",
+          "index": 95,
+          "source_id": "openai/gsm8k:95",
+          "language": "es",
+          "rank": 3,
+          "score": 142457472.0,
+          "same_source": true
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 4,
+          "score": 139569872.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 25,
+        "dataset": "openai/gsm8k",
+        "index": 98,
+        "source_id": "openai/gsm8k:98",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 1,
+          "score": 130159456.0,
+          "same_source": true
+        },
+        {
+          "train_index": 103,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "es",
+          "rank": 2,
+          "score": 112443696.0,
+          "same_source": true
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 3,
+          "score": 62473604.0,
+          "same_source": false
+        },
+        {
+          "train_index": 5,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "fr",
+          "rank": 4,
+          "score": 58938308.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 26,
+        "dataset": "openai/gsm8k",
+        "index": 99,
+        "source_id": "openai/gsm8k:99",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 146857168.0,
+          "same_source": false
+        },
+        {
+          "train_index": 106,
+          "dataset": "openai/gsm8k",
+          "index": 99,
+          "source_id": "openai/gsm8k:99",
+          "language": "ko",
+          "rank": 2,
+          "score": 144760016.0,
+          "same_source": true
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 3,
+          "score": 141634800.0,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 4,
+          "score": 130383784.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 27,
+        "dataset": "openai/gsm8k",
+        "index": 104,
+        "source_id": "openai/gsm8k:104",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 1,
+          "score": 77972760.0,
+          "same_source": false
+        },
+        {
+          "train_index": 59,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "es",
+          "rank": 2,
+          "score": 75174800.0,
+          "same_source": false
+        },
+        {
+          "train_index": 63,
+          "dataset": "openai/gsm8k",
+          "index": 67,
+          "source_id": "openai/gsm8k:67",
+          "language": "es",
+          "rank": 3,
+          "score": 73961992.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 4,
+          "score": 73633552.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 28,
+        "dataset": "openai/gsm8k",
+        "index": 107,
+        "source_id": "openai/gsm8k:107",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 195760384.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 184666752.0,
+          "same_source": false
+        },
+        {
+          "train_index": 114,
+          "dataset": "openai/gsm8k",
+          "index": 107,
+          "source_id": "openai/gsm8k:107",
+          "language": "ko",
+          "rank": 3,
+          "score": 173629968.0,
+          "same_source": true
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 4,
+          "score": 171741760.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 29,
+        "dataset": "openai/gsm8k",
+        "index": 108,
+        "source_id": "openai/gsm8k:108",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 150520480.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 135590720.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 3,
+          "score": 123935632.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 4,
+          "score": 119505624.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 30,
+        "dataset": "openai/gsm8k",
+        "index": 112,
+        "source_id": "openai/gsm8k:112",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 1,
+          "score": 103073288.0,
+          "same_source": true
+        },
+        {
+          "train_index": 122,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "ko",
+          "rank": 2,
+          "score": 66102124.0,
+          "same_source": true
+        },
+        {
+          "train_index": 125,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "fr",
+          "rank": 3,
+          "score": 57081400.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 4,
+          "score": 54379504.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 31,
+        "dataset": "openai/gsm8k",
+        "index": 116,
+        "source_id": "openai/gsm8k:116",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 337706176.0,
+          "same_source": false
+        },
+        {
+          "train_index": 125,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "fr",
+          "rank": 2,
+          "score": 323407808.0,
+          "same_source": true
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 3,
+          "score": 302973536.0,
+          "same_source": false
+        },
+        {
+          "train_index": 127,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "es",
+          "rank": 4,
+          "score": 301626464.0,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 32,
+        "dataset": "openai/gsm8k",
+        "index": 118,
+        "source_id": "openai/gsm8k:118",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 1,
+          "score": 64905252.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 2,
+          "score": 57631108.0,
+          "same_source": false
+        },
+        {
+          "train_index": 126,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "ko",
+          "rank": 3,
+          "score": 57334952.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 4,
+          "score": 56586748.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 33,
+        "dataset": "openai/gsm8k",
+        "index": 129,
+        "source_id": "openai/gsm8k:129",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 106518208.0,
+          "same_source": false
+        },
+        {
+          "train_index": 5,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "fr",
+          "rank": 2,
+          "score": 83231744.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 3,
+          "score": 79657368.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 4,
+          "score": 78491624.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 34,
+        "dataset": "openai/gsm8k",
+        "index": 131,
+        "source_id": "openai/gsm8k:131",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 1,
+          "score": 168955840.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 2,
+          "score": 166526480.0,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 3,
+          "score": 164787600.0,
+          "same_source": false
+        },
+        {
+          "train_index": 173,
+          "dataset": "openai/gsm8k",
+          "index": 167,
+          "source_id": "openai/gsm8k:167",
+          "language": "fr",
+          "rank": 4,
+          "score": 154588288.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 35,
+        "dataset": "openai/gsm8k",
+        "index": 134,
+        "source_id": "openai/gsm8k:134",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 69210648.0,
+          "same_source": false
+        },
+        {
+          "train_index": 59,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "es",
+          "rank": 2,
+          "score": 60875640.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 3,
+          "score": 57662412.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 4,
+          "score": 57484720.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 36,
+        "dataset": "openai/gsm8k",
+        "index": 135,
+        "source_id": "openai/gsm8k:135",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 26775538.0,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 2,
+          "score": 26005180.0,
+          "same_source": false
+        },
+        {
+          "train_index": 155,
+          "dataset": "openai/gsm8k",
+          "index": 143,
+          "source_id": "openai/gsm8k:143",
+          "language": "es",
+          "rank": 3,
+          "score": 23567742.0,
+          "same_source": false
+        },
+        {
+          "train_index": 145,
+          "dataset": "openai/gsm8k",
+          "index": 135,
+          "source_id": "openai/gsm8k:135",
+          "language": "fr",
+          "rank": 4,
+          "score": 23380076.0,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 37,
+        "dataset": "openai/gsm8k",
+        "index": 138,
+        "source_id": "openai/gsm8k:138",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 156909552.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 2,
+          "score": 132116792.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 3,
+          "score": 128742088.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 4,
+          "score": 120489008.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 38,
+        "dataset": "openai/gsm8k",
+        "index": 143,
+        "source_id": "openai/gsm8k:143",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 155,
+          "dataset": "openai/gsm8k",
+          "index": 143,
+          "source_id": "openai/gsm8k:143",
+          "language": "es",
+          "rank": 1,
+          "score": 108310296.0,
+          "same_source": true
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 2,
+          "score": 92948144.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 3,
+          "score": 89918024.0,
+          "same_source": false
+        },
+        {
+          "train_index": 153,
+          "dataset": "openai/gsm8k",
+          "index": 143,
+          "source_id": "openai/gsm8k:143",
+          "language": "fr",
+          "rank": 4,
+          "score": 82571552.0,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 39,
+        "dataset": "openai/gsm8k",
+        "index": 153,
+        "source_id": "openai/gsm8k:153",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 144284448.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 2,
+          "score": 100752160.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 3,
+          "score": 95246624.0,
+          "same_source": false
+        },
+        {
+          "train_index": 59,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "es",
+          "rank": 4,
+          "score": 95133760.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 40,
+        "dataset": "openai/gsm8k",
+        "index": 160,
+        "source_id": "openai/gsm8k:160",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 242772912.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 2,
+          "score": 209064112.0,
+          "same_source": true
+        },
+        {
+          "train_index": 5,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "fr",
+          "rank": 3,
+          "score": 192434880.0,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 4,
+          "score": 178873344.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 41,
+        "dataset": "openai/gsm8k",
+        "index": 161,
+        "source_id": "openai/gsm8k:161",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 1,
+          "score": 159633696.0,
+          "same_source": false
+        },
+        {
+          "train_index": 59,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "es",
+          "rank": 2,
+          "score": 136400480.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 3,
+          "score": 135139216.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 4,
+          "score": 132068296.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 42,
+        "dataset": "openai/gsm8k",
+        "index": 165,
+        "source_id": "openai/gsm8k:165",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 171,
+          "dataset": "openai/gsm8k",
+          "index": 165,
+          "source_id": "openai/gsm8k:165",
+          "language": "es",
+          "rank": 1,
+          "score": 83943560.0,
+          "same_source": true
+        },
+        {
+          "train_index": 169,
+          "dataset": "openai/gsm8k",
+          "index": 165,
+          "source_id": "openai/gsm8k:165",
+          "language": "fr",
+          "rank": 2,
+          "score": 77778296.0,
+          "same_source": true
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 3,
+          "score": 55964072.0,
+          "same_source": false
+        },
+        {
+          "train_index": 97,
+          "dataset": "openai/gsm8k",
+          "index": 95,
+          "source_id": "openai/gsm8k:95",
+          "language": "fr",
+          "rank": 4,
+          "score": 50671976.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 43,
+        "dataset": "openai/gsm8k",
+        "index": 167,
+        "source_id": "openai/gsm8k:167",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 173,
+          "dataset": "openai/gsm8k",
+          "index": 167,
+          "source_id": "openai/gsm8k:167",
+          "language": "fr",
+          "rank": 1,
+          "score": 166604400.0,
+          "same_source": true
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 2,
+          "score": 143406144.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 142970176.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 4,
+          "score": 140128432.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 44,
+        "dataset": "openai/gsm8k",
+        "index": 173,
+        "source_id": "openai/gsm8k:173",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 177,
+          "dataset": "openai/gsm8k",
+          "index": 173,
+          "source_id": "openai/gsm8k:173",
+          "language": "fr",
+          "rank": 1,
+          "score": 61394796.0,
+          "same_source": true
+        },
+        {
+          "train_index": 179,
+          "dataset": "openai/gsm8k",
+          "index": 173,
+          "source_id": "openai/gsm8k:173",
+          "language": "es",
+          "rank": 2,
+          "score": 51719820.0,
+          "same_source": true
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 3,
+          "score": 49815080.0,
+          "same_source": false
+        },
+        {
+          "train_index": 114,
+          "dataset": "openai/gsm8k",
+          "index": 107,
+          "source_id": "openai/gsm8k:107",
+          "language": "ko",
+          "rank": 4,
+          "score": 45124920.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 45,
+        "dataset": "openai/gsm8k",
+        "index": 177,
+        "source_id": "openai/gsm8k:177",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 183,
+          "dataset": "openai/gsm8k",
+          "index": 177,
+          "source_id": "openai/gsm8k:177",
+          "language": "es",
+          "rank": 1,
+          "score": 25997888.0,
+          "same_source": true
+        },
+        {
+          "train_index": 13,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "fr",
+          "rank": 2,
+          "score": 24797660.0,
+          "same_source": false
+        },
+        {
+          "train_index": 180,
+          "dataset": "openai/gsm8k",
+          "index": 177,
+          "source_id": "openai/gsm8k:177",
+          "language": "zh",
+          "rank": 3,
+          "score": 24546808.0,
+          "same_source": true
+        },
+        {
+          "train_index": 9,
+          "dataset": "openai/gsm8k",
+          "index": 11,
+          "source_id": "openai/gsm8k:11",
+          "language": "fr",
+          "rank": 4,
+          "score": 23889714.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 46,
+        "dataset": "openai/gsm8k",
+        "index": 178,
+        "source_id": "openai/gsm8k:178",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 59,
+          "dataset": "openai/gsm8k",
+          "index": 66,
+          "source_id": "openai/gsm8k:66",
+          "language": "es",
+          "rank": 1,
+          "score": 146134112.0,
+          "same_source": false
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 2,
+          "score": 137207952.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 3,
+          "score": 134422480.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 4,
+          "score": 130104576.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 47,
+        "dataset": "openai/gsm8k",
+        "index": 187,
+        "source_id": "openai/gsm8k:187",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 4,
+      "top4_same_source_accuracy": 1.0,
+      "top4_all_same_source": true,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 189,
+          "dataset": "openai/gsm8k",
+          "index": 187,
+          "source_id": "openai/gsm8k:187",
+          "language": "fr",
+          "rank": 1,
+          "score": 70602696.0,
+          "same_source": true
+        },
+        {
+          "train_index": 188,
+          "dataset": "openai/gsm8k",
+          "index": 187,
+          "source_id": "openai/gsm8k:187",
+          "language": "zh",
+          "rank": 2,
+          "score": 60012660.0,
+          "same_source": true
+        },
+        {
+          "train_index": 191,
+          "dataset": "openai/gsm8k",
+          "index": 187,
+          "source_id": "openai/gsm8k:187",
+          "language": "es",
+          "rank": 3,
+          "score": 52161292.0,
+          "same_source": true
+        },
+        {
+          "train_index": 190,
+          "dataset": "openai/gsm8k",
+          "index": 187,
+          "source_id": "openai/gsm8k:187",
+          "language": "ko",
+          "rank": 4,
+          "score": 38040820.0,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 48,
+        "dataset": "openai/gsm8k",
+        "index": 190,
+        "source_id": "openai/gsm8k:190",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 3,
+      "top4_same_source_accuracy": 0.75,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 193,
+          "dataset": "openai/gsm8k",
+          "index": 190,
+          "source_id": "openai/gsm8k:190",
+          "language": "fr",
+          "rank": 1,
+          "score": 87121448.0,
+          "same_source": true
+        },
+        {
+          "train_index": 195,
+          "dataset": "openai/gsm8k",
+          "index": 190,
+          "source_id": "openai/gsm8k:190",
+          "language": "es",
+          "rank": 2,
+          "score": 81019568.0,
+          "same_source": true
+        },
+        {
+          "train_index": 192,
+          "dataset": "openai/gsm8k",
+          "index": 190,
+          "source_id": "openai/gsm8k:190",
+          "language": "zh",
+          "rank": 3,
+          "score": 70875280.0,
+          "same_source": true
+        },
+        {
+          "train_index": 162,
+          "dataset": "openai/gsm8k",
+          "index": 160,
+          "source_id": "openai/gsm8k:160",
+          "language": "ko",
+          "rank": 4,
+          "score": 69300016.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 49,
+        "dataset": "openai/gsm8k",
+        "index": 191,
+        "source_id": "openai/gsm8k:191",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 1,
+          "score": 122800208.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 2,
+          "score": 117913048.0,
+          "same_source": false
+        },
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 3,
+          "score": 109322112.0,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "openai/gsm8k",
+          "index": 112,
+          "source_id": "openai/gsm8k:112",
+          "language": "fr",
+          "rank": 4,
+          "score": 98782272.0,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 50,
+        "dataset": "openai/gsm8k",
+        "index": 199,
+        "source_id": "openai/gsm8k:199",
+        "retrieval_query_field": "question"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 14,
+          "dataset": "openai/gsm8k",
+          "index": 15,
+          "source_id": "openai/gsm8k:15",
+          "language": "ko",
+          "rank": 1,
+          "score": 60984344.0,
+          "same_source": false
+        },
+        {
+          "train_index": 126,
+          "dataset": "openai/gsm8k",
+          "index": 116,
+          "source_id": "openai/gsm8k:116",
+          "language": "ko",
+          "rank": 2,
+          "score": 47001460.0,
+          "same_source": false
+        },
+        {
+          "train_index": 6,
+          "dataset": "openai/gsm8k",
+          "index": 9,
+          "source_id": "openai/gsm8k:9",
+          "language": "ko",
+          "rank": 3,
+          "score": 46102400.0,
+          "same_source": false
+        },
+        {
+          "train_index": 101,
+          "dataset": "openai/gsm8k",
+          "index": 98,
+          "source_id": "openai/gsm8k:98",
+          "language": "fr",
+          "rank": 4,
+          "score": 45370900.0,
+          "same_source": false
+        }
+      ]
+    }
+  ]
+}

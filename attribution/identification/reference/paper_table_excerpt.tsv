@@ -1,0 +1,7 @@
+dataset	display_name	method	auc_mean	auc_std	recall_mean	recall_std
+grammars	Sentence transformations	CH1	1.000	0.001	0.989	0.025
+grammars	Sentence transformations	CH1+CH2	0.998	0.006	0.963	0.044
+math_without_reason	Math problems (w/o reasoning)	CH1	1.000	0.000	0.998	0.011
+math_without_reason	Math problems (w/o reasoning)	CH1+CH2	1.000	0.000	0.999	0.006
+math_with_reason	Math problems (w/ reasoning)	CH1	1.000	0.000	0.998	0.008
+math_with_reason	Math problems (w/ reasoning)	CH1+CH2	1.000	0.000	1.000	0.000

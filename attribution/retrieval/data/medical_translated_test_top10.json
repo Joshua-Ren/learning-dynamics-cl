@@ -1,0 +1,1677 @@
+{
+  "source_dataset": "lavita/medical-qa-datasets",
+  "split": "test",
+  "max_samples_per_dataset": 10,
+  "translation_backend": "assistant_manual",
+  "translation_model": "direct_manual_translation",
+  "source_language": "eng_Latn",
+  "record_level": false,
+  "languages": {
+    "zh": {
+      "name": "Chinese",
+      "nllb_code": "zho_Hans"
+    },
+    "fr": {
+      "name": "French",
+      "nllb_code": "fra_Latn"
+    },
+    "ko": {
+      "name": "Korean",
+      "nllb_code": "kor_Hang"
+    },
+    "es": {
+      "name": "Spanish",
+      "nllb_code": "spa_Latn"
+    }
+  },
+  "datasets": {
+    "mmmlu-college-biology": [
+      {
+        "index": 0,
+        "target": "C",
+        "source": {
+          "input": "A frameshift mutation is created when",
+          "A": "telomeric sequences are removed from DNA",
+          "B": "a codon's nucleotide sequence changes so that it calls for production of a different amino acid than the original one",
+          "C": "a base pair is either inserted or deleted in a gene",
+          "D": "a codon's nucleotide sequence is changed so that instead of coding for a given amino acid it acts to terminate translation"
+        },
+        "translations": {
+          "zh": {
+            "input": "移码突变产生于以下情况",
+            "A": "端粒序列从 DNA 中被移除",
+            "B": "密码子的核苷酸序列发生改变，使其编码与原来不同的氨基酸",
+            "C": "一个碱基对在基因中被插入或删除",
+            "D": "密码子的核苷酸序列发生改变，使其不再编码某种氨基酸，而是起到终止翻译的作用"
+          },
+          "fr": {
+            "input": "Une mutation par décalage du cadre de lecture se produit lorsque",
+            "A": "des séquences télomériques sont retirées de l’ADN",
+            "B": "la séquence nucléotidique d’un codon change de sorte qu’il code un acide aminé différent de l’original",
+            "C": "une paire de bases est insérée ou supprimée dans un gène",
+            "D": "la séquence nucléotidique d’un codon est modifiée de sorte qu’au lieu de coder un acide aminé donné, elle provoque l’arrêt de la traduction"
+          },
+          "ko": {
+            "input": "프레임시프트 돌연변이는 다음의 경우에 생긴다",
+            "A": "텔로미어 서열이 DNA에서 제거된다",
+            "B": "코돈의 뉴클레오타이드 서열이 변하여 원래와 다른 아미노산을 만들도록 지정한다",
+            "C": "유전자에 염기쌍 하나가 삽입되거나 삭제된다",
+            "D": "코돈의 뉴클레오타이드 서열이 변하여 특정 아미노산을 암호화하는 대신 번역을 종결시키는 역할을 한다"
+          },
+          "es": {
+            "input": "Una mutación por desplazamiento del marco de lectura se produce cuando",
+            "A": "las secuencias teloméricas se eliminan del ADN",
+            "B": "la secuencia de nucleótidos de un codón cambia de modo que codifica un aminoácido diferente del original",
+            "C": "se inserta o se elimina un par de bases en un gen",
+            "D": "la secuencia de nucleótidos de un codón cambia de modo que, en lugar de codificar un aminoácido dado, actúa para terminar la traducción"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "target": "A",
+        "source": {
+          "input": "To prevent desiccation and injury, the embryos of terrestrial vertebrates are encased within a fluid secreted by the",
+          "A": "amnion",
+          "B": "chorion",
+          "C": "allantois",
+          "D": "yolk sac"
+        },
+        "translations": {
+          "zh": {
+            "input": "为了防止干燥和损伤，陆生脊椎动物的胚胎被包裹在由以下结构分泌的液体中",
+            "A": "羊膜",
+            "B": "绒毛膜",
+            "C": "尿囊",
+            "D": "卵黄囊"
+          },
+          "fr": {
+            "input": "Afin d’éviter la dessiccation et les lésions, les embryons des vertébrés terrestres sont enfermés dans un liquide sécrété par",
+            "A": "l’amnios",
+            "B": "le chorion",
+            "C": "l’allantoïde",
+            "D": "le sac vitellin"
+          },
+          "ko": {
+            "input": "건조와 손상을 막기 위해 육상 척추동물의 배아는 다음 구조가 분비한 액체 안에 싸여 있다",
+            "A": "양막",
+            "B": "융모막",
+            "C": "요막",
+            "D": "난황낭"
+          },
+          "es": {
+            "input": "Para evitar la desecación y las lesiones, los embriones de los vertebrados terrestres están encerrados en un líquido secretado por",
+            "A": "el amnios",
+            "B": "el corion",
+            "C": "el alantoides",
+            "D": "el saco vitelino"
+          }
+        }
+      },
+      {
+        "index": 2,
+        "target": "B",
+        "source": {
+          "input": "Which of the following is a second messenger that stimulates release of calcium ions into the cytoplasm?",
+          "A": "Prostaglandins",
+          "B": "Inositol triphosphate",
+          "C": "Cyclic AMP",
+          "D": "Calmodulin"
+        },
+        "translations": {
+          "zh": {
+            "input": "以下哪项是能刺激钙离子释放到细胞质中的第二信使？",
+            "A": "前列腺素",
+            "B": "三磷酸肌醇",
+            "C": "环磷酸腺苷",
+            "D": "钙调蛋白"
+          },
+          "fr": {
+            "input": "Lequel des éléments suivants est un second messager qui stimule la libération d’ions calcium dans le cytoplasme ?",
+            "A": "Les prostaglandines",
+            "B": "L’inositol triphosphate",
+            "C": "L’AMP cyclique",
+            "D": "La calmoduline"
+          },
+          "ko": {
+            "input": "다음 중 칼슘 이온이 세포질로 방출되도록 자극하는 2차 전달자는 무엇인가?",
+            "A": "프로스타글란딘",
+            "B": "이노시톨 삼인산",
+            "C": "고리형 AMP",
+            "D": "칼모듈린"
+          },
+          "es": {
+            "input": "¿Cuál de los siguientes es un segundo mensajero que estimula la liberación de iones calcio al citoplasma?",
+            "A": "Prostaglandinas",
+            "B": "Trifosfato de inositol",
+            "C": "AMP cíclico",
+            "D": "Calmodulina"
+          }
+        }
+      },
+      {
+        "index": 3,
+        "target": "A",
+        "source": {
+          "input": "Synthesis of an RNA/DNA hybrid from a single-stranded RNA template requires",
+          "A": "a DNA or RNA primer and reverse transcriptase",
+          "B": "a DNA or RNA primer and DNA polymerase",
+          "C": "RNase only",
+          "D": "reverse transcriptase only"
+        },
+        "translations": {
+          "zh": {
+            "input": "从单链 RNA 模板合成 RNA/DNA 杂合体需要",
+            "A": "DNA 或 RNA 引物和逆转录酶",
+            "B": "DNA 或 RNA 引物和 DNA 聚合酶",
+            "C": "仅需 RNase",
+            "D": "仅需逆转录酶"
+          },
+          "fr": {
+            "input": "La synthèse d’un hybride ARN/ADN à partir d’une matrice d’ARN simple brin nécessite",
+            "A": "une amorce d’ADN ou d’ARN et une transcriptase inverse",
+            "B": "une amorce d’ADN ou d’ARN et une ADN polymérase",
+            "C": "uniquement une RNase",
+            "D": "uniquement une transcriptase inverse"
+          },
+          "ko": {
+            "input": "단일 가닥 RNA 주형에서 RNA/DNA 잡종을 합성하려면 다음이 필요하다",
+            "A": "DNA 또는 RNA 프라이머와 역전사효소",
+            "B": "DNA 또는 RNA 프라이머와 DNA 중합효소",
+            "C": "RNase만",
+            "D": "역전사효소만"
+          },
+          "es": {
+            "input": "La síntesis de un híbrido ARN/ADN a partir de una plantilla de ARN monocatenario requiere",
+            "A": "un cebador de ADN o ARN y transcriptasa inversa",
+            "B": "un cebador de ADN o ARN y ADN polimerasa",
+            "C": "solo RNasa",
+            "D": "solo transcriptasa inversa"
+          }
+        }
+      },
+      {
+        "index": 4,
+        "target": "A",
+        "source": {
+          "input": "In order for the Hardy-Weinberg law to operate with respect to a population of organisms, each of the following conditions must be met EXCEPT:",
+          "A": "Genes are exchanged with other populations.",
+          "B": "Population size is large.",
+          "C": "Natural selection does not take place.",
+          "D": "Matings are random."
+        },
+        "translations": {
+          "zh": {
+            "input": "为了使哈代-温伯格定律适用于某个生物种群，必须满足以下所有条件，除了：",
+            "A": "与其他种群发生基因交换。",
+            "B": "种群规模很大。",
+            "C": "不发生自然选择。",
+            "D": "随机交配。"
+          },
+          "fr": {
+            "input": "Pour que la loi de Hardy-Weinberg s’applique à une population d’organismes, chacune des conditions suivantes doit être remplie SAUF :",
+            "A": "Des gènes sont échangés avec d’autres populations.",
+            "B": "La taille de la population est grande.",
+            "C": "La sélection naturelle n’a pas lieu.",
+            "D": "Les accouplements sont aléatoires."
+          },
+          "ko": {
+            "input": "하디-바인베르크 법칙이 한 생물 집단에 적용되려면 다음 조건이 모두 충족되어야 한다. 예외는?",
+            "A": "다른 집단과 유전자가 교환된다.",
+            "B": "집단의 크기가 크다.",
+            "C": "자연선택이 일어나지 않는다.",
+            "D": "교배가 무작위로 이루어진다."
+          },
+          "es": {
+            "input": "Para que la ley de Hardy-Weinberg opere respecto a una población de organismos, deben cumplirse todas las condiciones siguientes EXCEPTO:",
+            "A": "Se intercambian genes con otras poblaciones.",
+            "B": "El tamaño de la población es grande.",
+            "C": "No ocurre selección natural.",
+            "D": "Los apareamientos son aleatorios."
+          }
+        }
+      },
+      {
+        "index": 5,
+        "target": "B",
+        "source": {
+          "input": "The Barr body found within female mammalian cells' nuclei is an example of",
+          "A": "euchromatin",
+          "B": "heterochromatin",
+          "C": "a cistron",
+          "D": "pseudogenes"
+        },
+        "translations": {
+          "zh": {
+            "input": "雌性哺乳动物细胞核内发现的巴尔小体是以下哪项的例子",
+            "A": "常染色质",
+            "B": "异染色质",
+            "C": "顺反子",
+            "D": "假基因"
+          },
+          "fr": {
+            "input": "Le corpuscule de Barr présent dans les noyaux des cellules mammifères femelles est un exemple de",
+            "A": "euchromatine",
+            "B": "hétérochromatine",
+            "C": "cistron",
+            "D": "pseudogènes"
+          },
+          "ko": {
+            "input": "암컷 포유류 세포의 핵 안에서 발견되는 바 소체는 다음의 예이다",
+            "A": "진정염색질",
+            "B": "이질염색질",
+            "C": "시스트론",
+            "D": "가유전자"
+          },
+          "es": {
+            "input": "El cuerpo de Barr que se encuentra en los núcleos de células mamíferas femeninas es un ejemplo de",
+            "A": "eucromatina",
+            "B": "heterocromatina",
+            "C": "un cistrón",
+            "D": "pseudogenes"
+          }
+        }
+      },
+      {
+        "index": 6,
+        "target": "B",
+        "source": {
+          "input": "Which of the following is NOT a source of atmospheric carbon?",
+          "A": "Respiration",
+          "B": "Photosynthesis",
+          "C": "Bacterial decomposition",
+          "D": "Combustion of fossil fuels"
+        },
+        "translations": {
+          "zh": {
+            "input": "以下哪项不是大气碳的来源？",
+            "A": "呼吸",
+            "B": "光合作用",
+            "C": "细菌分解",
+            "D": "化石燃料燃烧"
+          },
+          "fr": {
+            "input": "Laquelle des propositions suivantes n’est PAS une source de carbone atmosphérique ?",
+            "A": "La respiration",
+            "B": "La photosynthèse",
+            "C": "La décomposition bactérienne",
+            "D": "La combustion de combustibles fossiles"
+          },
+          "ko": {
+            "input": "다음 중 대기 중 탄소의 공급원이 아닌 것은?",
+            "A": "호흡",
+            "B": "광합성",
+            "C": "세균 분해",
+            "D": "화석 연료의 연소"
+          },
+          "es": {
+            "input": "¿Cuál de las siguientes NO es una fuente de carbono atmosférico?",
+            "A": "Respiración",
+            "B": "Fotosíntesis",
+            "C": "Descomposición bacteriana",
+            "D": "Combustión de combustibles fósiles"
+          }
+        }
+      },
+      {
+        "index": 7,
+        "target": "D",
+        "source": {
+          "input": "The concept of punctuated equilibrium refers to",
+          "A": "oscillating ecological successional stages",
+          "B": "ecological succession arrested by sudden environmental changes, e.g., fire",
+          "C": "persistent predator-prey relationships in relatively stable environments",
+          "D": "bursts of speciation followed by relatively unchanging lineages"
+        },
+        "translations": {
+          "zh": {
+            "input": "间断平衡的概念指的是",
+            "A": "振荡的生态演替阶段",
+            "B": "被突然环境变化（例如火灾）中止的生态演替",
+            "C": "相对稳定环境中持续的捕食者-猎物关系",
+            "D": "物种形成的爆发，随后谱系相对不变"
+          },
+          "fr": {
+            "input": "Le concept d’équilibre ponctué désigne",
+            "A": "des stades oscillants de succession écologique",
+            "B": "une succession écologique arrêtée par des changements environnementaux soudains, par exemple un incendie",
+            "C": "des relations prédateur-proie persistantes dans des environnements relativement stables",
+            "D": "des poussées de spéciation suivies de lignées relativement inchangées"
+          },
+          "ko": {
+            "input": "단속평형의 개념은 다음을 의미한다",
+            "A": "진동하는 생태 천이 단계",
+            "B": "화재와 같은 갑작스러운 환경 변화로 중단된 생태 천이",
+            "C": "비교적 안정된 환경에서 지속되는 포식자-피식자 관계",
+            "D": "종분화의 폭발적 증가 뒤에 비교적 변하지 않는 계통이 이어지는 현상"
+          },
+          "es": {
+            "input": "El concepto de equilibrio puntuado se refiere a",
+            "A": "etapas oscilantes de sucesión ecológica",
+            "B": "sucesión ecológica detenida por cambios ambientales repentinos, por ejemplo, un incendio",
+            "C": "relaciones depredador-presa persistentes en ambientes relativamente estables",
+            "D": "estallidos de especiación seguidos por linajes relativamente invariables"
+          }
+        }
+      },
+      {
+        "index": 8,
+        "target": "C",
+        "source": {
+          "input": "When an influenza virus enters a cell, it immediately starts to do which of the following?",
+          "A": "Incorporate viral DNA into the host cell’s chromosome",
+          "B": "Destroy the host cell’s transcriptional machinery",
+          "C": "Replicate its genetic material and synthesize viral proteins",
+          "D": "Use a viral copy of reverse transcriptase to manufacture viral DNA"
+        },
+        "translations": {
+          "zh": {
+            "input": "流感病毒进入细胞后，会立即开始做以下哪项？",
+            "A": "将病毒 DNA 整合到宿主细胞的染色体中",
+            "B": "破坏宿主细胞的转录机器",
+            "C": "复制其遗传物质并合成病毒蛋白",
+            "D": "利用病毒携带的逆转录酶副本制造病毒 DNA"
+          },
+          "fr": {
+            "input": "Lorsqu’un virus de la grippe pénètre dans une cellule, que commence-t-il immédiatement à faire ?",
+            "A": "Incorporer l’ADN viral dans le chromosome de la cellule hôte",
+            "B": "Détruire la machinerie transcriptionnelle de la cellule hôte",
+            "C": "Répliquer son matériel génétique et synthétiser des protéines virales",
+            "D": "Utiliser une copie virale de transcriptase inverse pour fabriquer de l’ADN viral"
+          },
+          "ko": {
+            "input": "인플루엔자 바이러스가 세포에 들어가면 즉시 다음 중 무엇을 시작하는가?",
+            "A": "바이러스 DNA를 숙주 세포의 염색체에 통합한다",
+            "B": "숙주 세포의 전사 기구를 파괴한다",
+            "C": "자신의 유전물질을 복제하고 바이러스 단백질을 합성한다",
+            "D": "바이러스성 역전사효소 사본을 사용하여 바이러스 DNA를 만든다"
+          },
+          "es": {
+            "input": "Cuando un virus de la influenza entra en una célula, ¿qué comienza a hacer de inmediato?",
+            "A": "Incorporar ADN viral en el cromosoma de la célula huésped",
+            "B": "Destruir la maquinaria transcripcional de la célula huésped",
+            "C": "Replicar su material genético y sintetizar proteínas virales",
+            "D": "Usar una copia viral de transcriptasa inversa para fabricar ADN viral"
+          }
+        }
+      },
+      {
+        "index": 9,
+        "target": "C",
+        "source": {
+          "input": "Cleavage symmetry arising from early cell divisions that occur at an oblique angle to the polar axis is known as",
+          "A": "meroblastic cleavage",
+          "B": "radial cleavage",
+          "C": "spiral cleavage",
+          "D": "superficial cleavage"
+        },
+        "translations": {
+          "zh": {
+            "input": "早期细胞分裂以相对于极轴的斜角发生而产生的卵裂对称性称为",
+            "A": "不完全卵裂",
+            "B": "辐射卵裂",
+            "C": "螺旋卵裂",
+            "D": "表面卵裂"
+          },
+          "fr": {
+            "input": "La symétrie de clivage issue de divisions cellulaires précoces qui se produisent selon un angle oblique par rapport à l’axe polaire est appelée",
+            "A": "clivage méroblastique",
+            "B": "clivage radial",
+            "C": "clivage spiral",
+            "D": "clivage superficiel"
+          },
+          "ko": {
+            "input": "극축에 대해 비스듬한 각도로 일어나는 초기 세포분열에서 생기는 난할 대칭은 다음과 같이 알려져 있다",
+            "A": "부분난할",
+            "B": "방사난할",
+            "C": "나선난할",
+            "D": "표면난할"
+          },
+          "es": {
+            "input": "La simetría de segmentación que surge de divisiones celulares tempranas que ocurren en un ángulo oblicuo respecto al eje polar se conoce como",
+            "A": "segmentación meroblástica",
+            "B": "segmentación radial",
+            "C": "segmentación espiral",
+            "D": "segmentación superficial"
+          }
+        }
+      }
+    ],
+    "mmmlu-clinical-knowledge": [
+      {
+        "index": 0,
+        "target": "D",
+        "source": {
+          "input": "The key attribute in successful marathon running is:",
+          "A": "strength.",
+          "B": "power.",
+          "C": "stride length.",
+          "D": "stamina."
+        },
+        "translations": {
+          "zh": {
+            "input": "成功进行马拉松跑的关键属性是：",
+            "A": "力量。",
+            "B": "爆发力。",
+            "C": "步幅长度。",
+            "D": "耐力。"
+          },
+          "fr": {
+            "input": "L’attribut clé pour réussir une course de marathon est :",
+            "A": "la force.",
+            "B": "la puissance.",
+            "C": "la longueur de foulée.",
+            "D": "l’endurance."
+          },
+          "ko": {
+            "input": "성공적인 마라톤 달리기의 핵심 특성은 다음과 같다:",
+            "A": "힘.",
+            "B": "파워.",
+            "C": "보폭.",
+            "D": "지구력."
+          },
+          "es": {
+            "input": "El atributo clave para correr un maratón con éxito es:",
+            "A": "fuerza.",
+            "B": "potencia.",
+            "C": "longitud de zancada.",
+            "D": "resistencia."
+          }
+        }
+      },
+      {
+        "index": 1,
+        "target": "A",
+        "source": {
+          "input": "Which of the following is the commonest cause of dementia in the UK?",
+          "A": "Alzheimer's disease.",
+          "B": "Cerebrovascular (stroke) disease.",
+          "C": "Lewy body dementia.",
+          "D": "HIV infection."
+        },
+        "translations": {
+          "zh": {
+            "input": "以下哪项是英国痴呆最常见的原因？",
+            "A": "阿尔茨海默病。",
+            "B": "脑血管（卒中）疾病。",
+            "C": "路易体痴呆。",
+            "D": "HIV 感染。"
+          },
+          "fr": {
+            "input": "Laquelle des propositions suivantes est la cause la plus fréquente de démence au Royaume-Uni ?",
+            "A": "La maladie d’Alzheimer.",
+            "B": "La maladie cérébrovasculaire (accident vasculaire cérébral).",
+            "C": "La démence à corps de Lewy.",
+            "D": "L’infection par le VIH."
+          },
+          "ko": {
+            "input": "다음 중 영국에서 치매의 가장 흔한 원인은 무엇인가?",
+            "A": "알츠하이머병.",
+            "B": "뇌혈관 질환(뇌졸중).",
+            "C": "루이소체 치매.",
+            "D": "HIV 감염."
+          },
+          "es": {
+            "input": "¿Cuál de las siguientes es la causa más común de demencia en el Reino Unido?",
+            "A": "Enfermedad de Alzheimer.",
+            "B": "Enfermedad cerebrovascular (ictus).",
+            "C": "Demencia con cuerpos de Lewy.",
+            "D": "Infección por VIH."
+          }
+        }
+      },
+      {
+        "index": 2,
+        "target": "B",
+        "source": {
+          "input": "Which of the following is NOT a symptom of anaphylaxis?",
+          "A": "Stridor.",
+          "B": "Bradycardia.",
+          "C": "Severe wheeze.",
+          "D": "Rash."
+        },
+        "translations": {
+          "zh": {
+            "input": "以下哪项不是过敏性休克的症状？",
+            "A": "喘鸣。",
+            "B": "心动过缓。",
+            "C": "严重喘息。",
+            "D": "皮疹。"
+          },
+          "fr": {
+            "input": "Lequel des éléments suivants n’est PAS un symptôme de l’anaphylaxie ?",
+            "A": "Stridor.",
+            "B": "Bradycardie.",
+            "C": "Sibilants sévères.",
+            "D": "Éruption cutanée."
+          },
+          "ko": {
+            "input": "다음 중 아나필락시스의 증상이 아닌 것은?",
+            "A": "협착음.",
+            "B": "서맥.",
+            "C": "심한 천명.",
+            "D": "발진."
+          },
+          "es": {
+            "input": "¿Cuál de los siguientes NO es un síntoma de anafilaxia?",
+            "A": "Estridor.",
+            "B": "Bradicardia.",
+            "C": "Sibilancias intensas.",
+            "D": "Erupción cutánea."
+          }
+        }
+      },
+      {
+        "index": 3,
+        "target": "B",
+        "source": {
+          "input": "In what situation are closed pouches applied?",
+          "A": "The patient has a semi-formed or liquid output.",
+          "B": "The patient has a colostomy.",
+          "C": "In the immediate post-operative period.",
+          "D": "The patient has a urostomy."
+        },
+        "translations": {
+          "zh": {
+            "input": "在什么情况下使用闭合式造口袋？",
+            "A": "患者有半成形或液体排出物。",
+            "B": "患者有结肠造口。",
+            "C": "术后即刻。",
+            "D": "患者有泌尿造口。"
+          },
+          "fr": {
+            "input": "Dans quelle situation utilise-t-on des poches fermées ?",
+            "A": "Le patient a des effluents semi-formés ou liquides.",
+            "B": "Le patient a une colostomie.",
+            "C": "En période postopératoire immédiate.",
+            "D": "Le patient a une urostomie."
+          },
+          "ko": {
+            "input": "어떤 상황에서 폐쇄형 주머니를 적용하는가?",
+            "A": "환자에게 반고형 또는 액체 배출물이 있다.",
+            "B": "환자에게 결장루가 있다.",
+            "C": "수술 직후 기간이다.",
+            "D": "환자에게 요루가 있다."
+          },
+          "es": {
+            "input": "¿En qué situación se aplican bolsas cerradas?",
+            "A": "El paciente tiene una salida semiformada o líquida.",
+            "B": "El paciente tiene una colostomía.",
+            "C": "En el período posoperatorio inmediato.",
+            "D": "El paciente tiene una urostomía."
+          }
+        }
+      },
+      {
+        "index": 4,
+        "target": "D",
+        "source": {
+          "input": "With an increasing number of sprints the:",
+          "A": "anaerobic contribution progressively increases.",
+          "B": "pH of the muscle falls below 6.0.",
+          "C": "blood glucose concentration falls below 3 mmol/L.",
+          "D": "relative contribution of aerobic metabolism increases."
+        },
+        "translations": {
+          "zh": {
+            "input": "随着冲刺次数增加：",
+            "A": "无氧供能的贡献逐渐增加。",
+            "B": "肌肉 pH 降至 6.0 以下。",
+            "C": "血糖浓度降至 3 mmol/L 以下。",
+            "D": "有氧代谢的相对贡献增加。"
+          },
+          "fr": {
+            "input": "Avec un nombre croissant de sprints :",
+            "A": "la contribution anaérobie augmente progressivement.",
+            "B": "le pH du muscle tombe au-dessous de 6,0.",
+            "C": "la concentration de glucose sanguin tombe au-dessous de 3 mmol/L.",
+            "D": "la contribution relative du métabolisme aérobie augmente."
+          },
+          "ko": {
+            "input": "스프린트 횟수가 증가하면:",
+            "A": "무산소성 기여가 점진적으로 증가한다.",
+            "B": "근육의 pH가 6.0 아래로 떨어진다.",
+            "C": "혈당 농도가 3 mmol/L 아래로 떨어진다.",
+            "D": "유산소 대사의 상대적 기여가 증가한다."
+          },
+          "es": {
+            "input": "Con un número creciente de sprints:",
+            "A": "la contribución anaeróbica aumenta progresivamente.",
+            "B": "el pH del músculo cae por debajo de 6,0.",
+            "C": "la concentración de glucosa en sangre cae por debajo de 3 mmol/L.",
+            "D": "aumenta la contribución relativa del metabolismo aeróbico."
+          }
+        }
+      },
+      {
+        "index": 5,
+        "target": "B",
+        "source": {
+          "input": "Which of the following is true in diplopia?",
+          "A": "Diplopia can never occur if one eye is covered",
+          "B": "The outer image is always the false image",
+          "C": "A fourth nerve palsy occurs when the patient looks upwards",
+          "D": "A sixth nerve palsy causes a divergent squint"
+        },
+        "translations": {
+          "zh": {
+            "input": "关于复视，以下哪项正确？",
+            "A": "如果遮盖一只眼，复视绝不会发生。",
+            "B": "外侧影像总是假像。",
+            "C": "患者向上看时会出现第四脑神经麻痹。",
+            "D": "第六脑神经麻痹会导致外斜视。"
+          },
+          "fr": {
+            "input": "Laquelle des affirmations suivantes est vraie en cas de diplopie ?",
+            "A": "La diplopie ne peut jamais survenir si un œil est couvert.",
+            "B": "L’image externe est toujours la fausse image.",
+            "C": "Une paralysie du quatrième nerf survient lorsque le patient regarde vers le haut.",
+            "D": "Une paralysie du sixième nerf provoque un strabisme divergent."
+          },
+          "ko": {
+            "input": "복시에서 다음 중 옳은 것은?",
+            "A": "한쪽 눈을 가리면 복시는 절대 발생할 수 없다.",
+            "B": "바깥쪽 영상은 항상 거짓 영상이다.",
+            "C": "환자가 위를 볼 때 제4뇌신경 마비가 발생한다.",
+            "D": "제6뇌신경 마비는 외사시를 일으킨다."
+          },
+          "es": {
+            "input": "¿Cuál de las siguientes afirmaciones es verdadera en la diplopía?",
+            "A": "La diplopía nunca puede ocurrir si se cubre un ojo.",
+            "B": "La imagen externa siempre es la imagen falsa.",
+            "C": "Una parálisis del cuarto nervio ocurre cuando el paciente mira hacia arriba.",
+            "D": "Una parálisis del sexto nervio causa un estrabismo divergente."
+          }
+        }
+      },
+      {
+        "index": 6,
+        "target": "A",
+        "source": {
+          "input": "Sodium bicarbonate ingestion improves middle distance running performance by:",
+          "A": "elevating the pH and buffering capacity of the extracellular fluid allowing a faster efflux of hydrogen ions from muscle.",
+          "B": "reducing the pH and buffering capacity of the extracellular fluid allowing a faster efflux of hydrogen ions from muscle.",
+          "C": "elevating the pH and buffering capacity of the extracellular fluid allowing a faster influx of hydrogen ions into muscle.",
+          "D": "elevating the pre-exercise muscle pH."
+        },
+        "translations": {
+          "zh": {
+            "input": "摄入碳酸氢钠通过以下机制提高中距离跑表现：",
+            "A": "提高细胞外液的 pH 和缓冲能力，使氢离子更快从肌肉外流。",
+            "B": "降低细胞外液的 pH 和缓冲能力，使氢离子更快从肌肉外流。",
+            "C": "提高细胞外液的 pH 和缓冲能力，使氢离子更快流入肌肉。",
+            "D": "提高运动前肌肉 pH。"
+          },
+          "fr": {
+            "input": "L’ingestion de bicarbonate de sodium améliore la performance en course de demi-fond en :",
+            "A": "élevant le pH et la capacité tampon du liquide extracellulaire, permettant un efflux plus rapide des ions hydrogène hors du muscle.",
+            "B": "abaissant le pH et la capacité tampon du liquide extracellulaire, permettant un efflux plus rapide des ions hydrogène hors du muscle.",
+            "C": "élevant le pH et la capacité tampon du liquide extracellulaire, permettant un influx plus rapide des ions hydrogène dans le muscle.",
+            "D": "élevant le pH musculaire avant l’exercice."
+          },
+          "ko": {
+            "input": "탄산수소나트륨 섭취는 다음 기전으로 중거리 달리기 수행 능력을 향상시킨다:",
+            "A": "세포외액의 pH와 완충능을 높여 근육에서 수소 이온이 더 빠르게 빠져나가게 한다.",
+            "B": "세포외액의 pH와 완충능을 낮춰 근육에서 수소 이온이 더 빠르게 빠져나가게 한다.",
+            "C": "세포외액의 pH와 완충능을 높여 수소 이온이 근육 안으로 더 빠르게 들어가게 한다.",
+            "D": "운동 전 근육 pH를 높인다."
+          },
+          "es": {
+            "input": "La ingestión de bicarbonato de sodio mejora el rendimiento en carreras de media distancia al:",
+            "A": "elevar el pH y la capacidad amortiguadora del líquido extracelular, permitiendo una salida más rápida de iones hidrógeno desde el músculo.",
+            "B": "reducir el pH y la capacidad amortiguadora del líquido extracelular, permitiendo una salida más rápida de iones hidrógeno desde el músculo.",
+            "C": "elevar el pH y la capacidad amortiguadora del líquido extracelular, permitiendo una entrada más rápida de iones hidrógeno al músculo.",
+            "D": "elevar el pH muscular antes del ejercicio."
+          }
+        }
+      },
+      {
+        "index": 7,
+        "target": "A",
+        "source": {
+          "input": "Codons are composed of:",
+          "A": "triplet sequences of nucleotide bases in mRNA or DNA .",
+          "B": "quadruplet sequences of nucleotide bases in mRNA or DNA.",
+          "C": "triplet sequences of amino acids in polypeptide chains.",
+          "D": "triplet sequences of deoxyribose sugars in DNA."
+        },
+        "translations": {
+          "zh": {
+            "input": "密码子由以下组成：",
+            "A": "mRNA 或 DNA 中的三联体核苷酸碱基序列。",
+            "B": "mRNA 或 DNA 中的四联体核苷酸碱基序列。",
+            "C": "多肽链中的三联体氨基酸序列。",
+            "D": "DNA 中的三联体脱氧核糖序列。"
+          },
+          "fr": {
+            "input": "Les codons sont composés de :",
+            "A": "séquences triplets de bases nucléotidiques dans l’ARNm ou l’ADN.",
+            "B": "séquences quadruplets de bases nucléotidiques dans l’ARNm ou l’ADN.",
+            "C": "séquences triplets d’acides aminés dans les chaînes polypeptidiques.",
+            "D": "séquences triplets de sucres désoxyribose dans l’ADN."
+          },
+          "ko": {
+            "input": "코돈은 다음으로 구성된다:",
+            "A": "mRNA 또는 DNA의 뉴클레오타이드 염기 삼중 서열.",
+            "B": "mRNA 또는 DNA의 뉴클레오타이드 염기 사중 서열.",
+            "C": "폴리펩타이드 사슬의 아미노산 삼중 서열.",
+            "D": "DNA의 디옥시리보스 당 삼중 서열."
+          },
+          "es": {
+            "input": "Los codones están compuestos por:",
+            "A": "secuencias tripletes de bases nucleotídicas en ARNm o ADN.",
+            "B": "secuencias cuádruples de bases nucleotídicas en ARNm o ADN.",
+            "C": "secuencias tripletes de aminoácidos en cadenas polipeptídicas.",
+            "D": "secuencias tripletes de azúcares desoxirribosa en el ADN."
+          }
+        }
+      },
+      {
+        "index": 8,
+        "target": "D",
+        "source": {
+          "input": "Fatty acids are transported into the mitochondria bound to:",
+          "A": "thiokinase.",
+          "B": "coenzyme A (CoA).",
+          "C": "acetyl-CoA.",
+          "D": "carnitine."
+        },
+        "translations": {
+          "zh": {
+            "input": "脂肪酸进入线粒体时与以下物质结合运输：",
+            "A": "硫激酶。",
+            "B": "辅酶 A（CoA）。",
+            "C": "乙酰辅酶 A。",
+            "D": "肉碱。"
+          },
+          "fr": {
+            "input": "Les acides gras sont transportés dans les mitochondries liés à :",
+            "A": "la thiokinase.",
+            "B": "la coenzyme A (CoA).",
+            "C": "l’acétyl-CoA.",
+            "D": "la carnitine."
+          },
+          "ko": {
+            "input": "지방산은 다음 물질에 결합한 상태로 미토콘드리아 안으로 운반된다:",
+            "A": "티오키나아제.",
+            "B": "조효소 A(CoA).",
+            "C": "아세틸-CoA.",
+            "D": "카르니틴."
+          },
+          "es": {
+            "input": "Los ácidos grasos son transportados a la mitocondria unidos a:",
+            "A": "tioquinasa.",
+            "B": "coenzima A (CoA).",
+            "C": "acetil-CoA.",
+            "D": "carnitina."
+          }
+        }
+      },
+      {
+        "index": 9,
+        "target": "C",
+        "source": {
+          "input": "Which of the answers below best indicates the compatible blood types that can be given to a person with a blood group B (rhesus negative)?",
+          "A": "Blood type AB (rhesus negative), blood type B, and blood type O (rhesus negative).",
+          "B": "Blood type B (rhesus positive) and blood type O (rhesus positive).",
+          "C": "Blood type B (rhesus negative) and blood type O (rhesus negative).",
+          "D": "Blood type B (rhesus negative) only."
+        },
+        "translations": {
+          "zh": {
+            "input": "以下哪个答案最能表示可以输给 B 型（Rh 阴性）血型者的相容血型？",
+            "A": "AB 型（Rh 阴性）、B 型和 O 型（Rh 阴性）。",
+            "B": "B 型（Rh 阳性）和 O 型（Rh 阳性）。",
+            "C": "B 型（Rh 阴性）和 O 型（Rh 阴性）。",
+            "D": "仅 B 型（Rh 阴性）。"
+          },
+          "fr": {
+            "input": "Parmi les réponses ci-dessous, laquelle indique le mieux les groupes sanguins compatibles pouvant être donnés à une personne de groupe sanguin B (Rhésus négatif) ?",
+            "A": "Groupe AB (Rhésus négatif), groupe B et groupe O (Rhésus négatif).",
+            "B": "Groupe B (Rhésus positif) et groupe O (Rhésus positif).",
+            "C": "Groupe B (Rhésus négatif) et groupe O (Rhésus négatif).",
+            "D": "Groupe B (Rhésus négatif) uniquement."
+          },
+          "ko": {
+            "input": "아래 답 중 B형(Rh 음성) 혈액형인 사람에게 줄 수 있는 적합한 혈액형을 가장 잘 나타내는 것은?",
+            "A": "AB형(Rh 음성), B형, O형(Rh 음성).",
+            "B": "B형(Rh 양성)과 O형(Rh 양성).",
+            "C": "B형(Rh 음성)과 O형(Rh 음성).",
+            "D": "B형(Rh 음성)만."
+          },
+          "es": {
+            "input": "¿Cuál de las respuestas siguientes indica mejor los tipos de sangre compatibles que pueden administrarse a una persona con grupo sanguíneo B (Rh negativo)?",
+            "A": "Tipo de sangre AB (Rh negativo), tipo B y tipo O (Rh negativo).",
+            "B": "Tipo de sangre B (Rh positivo) y tipo O (Rh positivo).",
+            "C": "Tipo de sangre B (Rh negativo) y tipo O (Rh negativo).",
+            "D": "Solo tipo de sangre B (Rh negativo)."
+          }
+        }
+      }
+    ],
+    "mmmlu-college-medicine": [
+      {
+        "index": 0,
+        "target": "D",
+        "source": {
+          "input": "Who set the world record for the mile race in 1886?",
+          "A": "R Bannister",
+          "B": "S Coe",
+          "C": "J DiMaggio",
+          "D": "WG George"
+        },
+        "translations": {
+          "zh": {
+            "input": "谁在 1886 年创造了一英里赛跑的世界纪录？",
+            "A": "R·班尼斯特",
+            "B": "S·科",
+            "C": "J·迪马吉奥",
+            "D": "WG·乔治"
+          },
+          "fr": {
+            "input": "Qui a établi le record du monde du mile en 1886 ?",
+            "A": "R Bannister",
+            "B": "S Coe",
+            "C": "J DiMaggio",
+            "D": "WG George"
+          },
+          "ko": {
+            "input": "1886년에 1마일 달리기 세계 기록을 세운 사람은 누구인가?",
+            "A": "R 배니스터",
+            "B": "S 코",
+            "C": "J 디마지오",
+            "D": "WG 조지"
+          },
+          "es": {
+            "input": "¿Quién estableció el récord mundial de la carrera de la milla en 1886?",
+            "A": "R Bannister",
+            "B": "S Coe",
+            "C": "J DiMaggio",
+            "D": "WG George"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "target": "D",
+        "source": {
+          "input": "Which of the following statements identifies a chemically based sensory system?\nI. Gustatory system\nII. Auditory system\nIII. Olfactory system",
+          "A": "I only",
+          "B": "II only",
+          "C": "III only",
+          "D": "I and III only"
+        },
+        "translations": {
+          "zh": {
+            "input": "以下哪些陈述识别出以化学物质为基础的感觉系统？\nI. 味觉系统\nII. 听觉系统\nIII. 嗅觉系统",
+            "A": "仅 I",
+            "B": "仅 II",
+            "C": "仅 III",
+            "D": "仅 I 和 III"
+          },
+          "fr": {
+            "input": "Parmi les affirmations suivantes, lesquelles désignent un système sensoriel fondé sur des substances chimiques ?\nI. Système gustatif\nII. Système auditif\nIII. Système olfactif",
+            "A": "I seulement",
+            "B": "II seulement",
+            "C": "III seulement",
+            "D": "I et III seulement"
+          },
+          "ko": {
+            "input": "다음 진술 중 화학 물질에 기반한 감각계를 나타내는 것은?\nI. 미각계\nII. 청각계\nIII. 후각계",
+            "A": "I만",
+            "B": "II만",
+            "C": "III만",
+            "D": "I와 III만"
+          },
+          "es": {
+            "input": "¿Cuál de las siguientes afirmaciones identifica un sistema sensorial de base química?\nI. Sistema gustativo\nII. Sistema auditivo\nIII. Sistema olfativo",
+            "A": "Solo I",
+            "B": "Solo II",
+            "C": "Solo III",
+            "D": "Solo I y III"
+          }
+        }
+      },
+      {
+        "index": 2,
+        "target": "D",
+        "source": {
+          "input": "The complete resynthesis of phosphocreatine after very high intensity exercise normally takes:",
+          "A": "about 10 seconds.",
+          "B": "about 30 seconds.",
+          "C": "about 1 minute.",
+          "D": "about 4 minutes."
+        },
+        "translations": {
+          "zh": {
+            "input": "极高强度运动后，磷酸肌酸完全再合成通常需要：",
+            "A": "约 10 秒。",
+            "B": "约 30 秒。",
+            "C": "约 1 分钟。",
+            "D": "约 4 分钟。"
+          },
+          "fr": {
+            "input": "La resynthèse complète de la phosphocréatine après un exercice de très haute intensité prend normalement :",
+            "A": "environ 10 secondes.",
+            "B": "environ 30 secondes.",
+            "C": "environ 1 minute.",
+            "D": "environ 4 minutes."
+          },
+          "ko": {
+            "input": "매우 고강도 운동 후 포스포크레아틴이 완전히 재합성되는 데 보통 걸리는 시간은:",
+            "A": "약 10초.",
+            "B": "약 30초.",
+            "C": "약 1분.",
+            "D": "약 4분."
+          },
+          "es": {
+            "input": "La resíntesis completa de fosfocreatina después de ejercicio de muy alta intensidad normalmente tarda:",
+            "A": "unos 10 segundos.",
+            "B": "unos 30 segundos.",
+            "C": "aproximadamente 1 minuto.",
+            "D": "aproximadamente 4 minutos."
+          }
+        }
+      },
+      {
+        "index": 3,
+        "target": "A",
+        "source": {
+          "input": "A race car attempting to jump a series of 8 buses is set up on a flat track with a ramp at the end. Engineers assigned to the project have determined that, in order to jump the buses, the car must reach a velocity of 130 km/h. If the distance of the track is 50m, at what rate must the car accelerate to reach this velocity?",
+          "A": "13 m/s^2",
+          "B": "26 m/s^2",
+          "C": "7 m/s^2",
+          "D": "17 m/s^2"
+        },
+        "translations": {
+          "zh": {
+            "input": "一辆赛车试图跳过一排 8 辆公交车，赛道为平直轨道，末端有坡道。项目工程师确定，为了跳过这些公交车，赛车必须达到 130 km/h 的速度。如果赛道距离为 50 m，赛车必须以多大的加速度达到该速度？",
+            "A": "13 m/s^2",
+            "B": "26 m/s^2",
+            "C": "7 m/s^2",
+            "D": "17 m/s^2"
+          },
+          "fr": {
+            "input": "Une voiture de course tente de sauter par-dessus une série de 8 bus sur une piste plate munie d’une rampe à l’extrémité. Les ingénieurs du projet ont déterminé que, pour sauter les bus, la voiture doit atteindre une vitesse de 130 km/h. Si la distance de la piste est de 50 m, à quelle accélération la voiture doit-elle parvenir pour atteindre cette vitesse ?",
+            "A": "13 m/s^2",
+            "B": "26 m/s^2",
+            "C": "7 m/s^2",
+            "D": "17 m/s^2"
+          },
+          "ko": {
+            "input": "한 경주용 자동차가 끝에 램프가 있는 평평한 트랙에서 8대의 버스를 뛰어넘으려 한다. 프로젝트 엔지니어들은 버스를 뛰어넘으려면 자동차가 130 km/h의 속도에 도달해야 한다고 판단했다. 트랙 거리가 50 m라면, 자동차가 이 속도에 도달하려면 어느 정도의 가속도가 필요한가?",
+            "A": "13 m/s^2",
+            "B": "26 m/s^2",
+            "C": "7 m/s^2",
+            "D": "17 m/s^2"
+          },
+          "es": {
+            "input": "Un coche de carreras que intenta saltar una serie de 8 autobuses está colocado en una pista plana con una rampa al final. Los ingenieros asignados al proyecto han determinado que, para saltar los autobuses, el coche debe alcanzar una velocidad de 130 km/h. Si la distancia de la pista es de 50 m, ¿a qué aceleración debe acelerar el coche para alcanzar esa velocidad?",
+            "A": "13 m/s^2",
+            "B": "26 m/s^2",
+            "C": "7 m/s^2",
+            "D": "17 m/s^2"
+          }
+        }
+      },
+      {
+        "index": 4,
+        "target": "D",
+        "source": {
+          "input": "Fatty acids are transported into the mitochondria bound to:",
+          "A": "thiokinase.",
+          "B": "coenzyme A (CoA).",
+          "C": "acetyl-CoA.",
+          "D": "carnitine."
+        },
+        "translations": {
+          "zh": {
+            "input": "脂肪酸进入线粒体时与以下物质结合运输：",
+            "A": "硫激酶。",
+            "B": "辅酶 A（CoA）。",
+            "C": "乙酰辅酶 A。",
+            "D": "肉碱。"
+          },
+          "fr": {
+            "input": "Les acides gras sont transportés dans les mitochondries liés à :",
+            "A": "la thiokinase.",
+            "B": "la coenzyme A (CoA).",
+            "C": "l’acétyl-CoA.",
+            "D": "la carnitine."
+          },
+          "ko": {
+            "input": "지방산은 다음 물질에 결합한 상태로 미토콘드리아 안으로 운반된다:",
+            "A": "티오키나아제.",
+            "B": "조효소 A(CoA).",
+            "C": "아세틸-CoA.",
+            "D": "카르니틴."
+          },
+          "es": {
+            "input": "Los ácidos grasos son transportados a la mitocondria unidos a:",
+            "A": "tioquinasa.",
+            "B": "coenzima A (CoA).",
+            "C": "acetil-CoA.",
+            "D": "carnitina."
+          }
+        }
+      },
+      {
+        "index": 5,
+        "target": "A",
+        "source": {
+          "input": "Sauna use, sometimes referred to as \"sauna bathing,\" is characterized by short-term passive exposure to extreme heat. This exposure elicits mild hyperthermia – an increase in the body's core temperature – that induces a thermoregulatory response involving neuroendocrine, cardiovascular, and cytoprotective mechanisms that work together to restore homeostasis and condition the body for future heat stressors… In recent decades, sauna bathing has emerged as a means to increase lifespan and improve overall health, based on compelling data from observational, interventional, and mechanistic studies. Of particular interest are the findings from studies of participants in the Kuopio Ischemic Heart Disease Risk Factor (KIHD) Study, an ongoing prospective population-based cohort study of health outcomes in more than 2,300 middle-aged men from eastern Finland, which identified strong links between sauna use and reduced death and disease… The KIHD findings showed that men who used the sauna two to three times per week were 27 percent less likely to die from cardiovascular-related causes than men who didn't use the sauna.[2] Furthermore, the benefits they experienced were found to be dose-dependent: Men who used the sauna roughly twice as often, about four to seven times per week, experienced roughly twice the benefits – and were 50 percent less likely to die from cardiovascular-related causes.[2] In addition, frequent sauna users were found to be 40 percent less likely to die from all causes of premature death. These findings held true even when considering age, activity levels, and lifestyle factors that might have influenced the men's health.[2]... The KIHD also revealed that frequent sauna use reduced the risk of developing dementia and Alzheimer's disease in a dose-dependent manner. Men who used the sauna two to three times per week had a 66 percent lower risk of developing dementia and a 65 percent lower risk of developing Alzheimer's disease, compared to men who used the sauna only one time per week… The health benefits associated with sauna use extended to other aspects of mental health, as well. Men participating in the KIHD study who used the sauna four to seven times per week were 77 percent less likely to develop psychotic disorders, regardless of the men's dietary habits, socioeconomic status, physical activity, and inflammatory status (as measured by C-reactive protein)…Exposure to high temperature stresses the body, eliciting a rapid, robust response. The skin and core body temperatures increase markedly, and sweating ensues. The skin heats first, rising to 40°C (104°F), and then changes in core body temperature occur, rising slowly from 37°C (98.6°F, or normal) to 38°C (100.4°F) and then rapidly increasing to 39°C (102.2°F)…  Cardiac output, a measure of the amount of work the heart performs in response to the body's need for oxygen, increases by 60 to 70 percent, while the heart rate (the number of beats per minute) increases and the stroke volume (the amount of blood pumped) remains unchanged.[5] During this time, approximately 50 to 70 percent of the body's blood flow is redistributed from the core to the skin to facilitate sweating. The average person loses approximately 0.5 kg of sweat while sauna bathing.[11] Acute heat exposure also induces a transient increase in overall plasma volume to mitigate the decrease in core blood volume. This increase in plasma volume not only provides a reserve source of fluid for sweating, but it also acts like the water in a car's radiator, cooling the body to prevent rapid increases in core body temperature and promoting heat tolerance… Repeated sauna use acclimates the body to heat and optimizes the body's response to future exposures, likely due to a biological phenomenon known as hormesis, a compensatory defense response following exposure to a mild stressor that is disproportionate to the magnitude of the stressor. Hormesis triggers a vast array of protective mechanisms that not only repair cell damage but also provide protection from subsequent exposures to more devastating stressors… The physiological responses to sauna use are remarkably similar to those experienced during moderate- to vigorous-intensity exercise. In fact, sauna use has been proposed as an alternative to exercise for people who are unable to engage in physical activity due to chronic disease or physical limitations.[13]\n\nBased on the article, which of the following statements is the author likely to agree with?",
+          "A": "Heart surgery patients who cannot run on treadmills may benefit from sauna use.",
+          "B": "Patients on a diet would benefit from sauna use.",
+          "C": "Salt restriction would be equal to sauna use for hypertensive patients.",
+          "D": "Patients with skin conditions may be cured with sauna use."
+        },
+        "translations": {
+          "zh": {
+            "input": "桑拿使用，有时称为“桑拿浴”，其特点是短时间被动暴露于极高热环境。这种暴露会引起轻度高热，即身体核心温度升高，并诱发涉及神经内分泌、心血管和细胞保护机制的体温调节反应，这些机制共同恢复稳态并使身体适应未来的热应激……近几十年来，基于观察性、干预性和机制研究的有力数据，桑拿浴已成为延长寿命和改善总体健康的一种方式。尤其值得关注的是库奥皮奥缺血性心脏病危险因素（KIHD）研究的发现；这是一项正在进行的、基于芬兰东部 2300 多名中年男性人群的前瞻性队列研究，发现桑拿使用与死亡和疾病减少之间有很强联系……KIHD 结果显示，每周使用桑拿两到三次的男性死于心血管相关原因的可能性比不使用桑拿者低 27%。此外，获益呈剂量依赖性：每周使用约四到七次者获益约为两倍，死于心血管相关原因的可能性低 50%。频繁使用桑拿者死于所有早死原因的可能性也低 40%。即使考虑年龄、活动水平和生活方式因素后，这些结果仍然成立……KIHD 还显示，频繁使用桑拿以剂量依赖方式降低发生痴呆和阿尔茨海默病的风险。与每周只使用一次桑拿的男性相比，每周使用两到三次者发生痴呆的风险低 66%，发生阿尔茨海默病的风险低 65%……桑拿使用相关的健康益处也延伸到心理健康的其他方面。KIHD 研究中每周使用桑拿四到七次的男性发生精神病性障碍的可能性低 77%，这一结果不受饮食习惯、社会经济地位、体力活动和炎症状态（以 C 反应蛋白衡量）的影响……暴露于高温会给身体施加压力，并引发快速而强烈的反应。皮肤和核心体温显著升高，并开始出汗。皮肤先升温至 40°C（104°F），随后核心体温从 37°C（98.6°F，正常）缓慢升至 38°C（100.4°F），再快速升至 39°C（102.2°F）……心输出量，即心脏为满足身体氧需求而完成的工作量，增加 60% 到 70%；心率增加，而每搏输出量保持不变。在此期间，约 50% 到 70% 的身体血流从核心重新分配到皮肤，以促进出汗。普通人在桑拿浴中约损失 0.5 kg 汗液。急性热暴露还会短暂增加总体血浆容量，以缓解核心血容量下降。这种血浆容量增加不仅为出汗提供备用液体，也像汽车散热器中的水一样冷却身体，防止核心体温快速升高并促进耐热性……反复使用桑拿会使身体适应热环境，并优化身体对未来暴露的反应，这可能源于一种称为毒物兴奋效应的生物现象，即暴露于轻度应激后产生的补偿性防御反应，其强度与应激本身不成比例。毒物兴奋效应会触发大量保护机制，不仅修复细胞损伤，还能保护机体免受随后更严重应激的影响……桑拿使用的生理反应与中等到高强度运动时的反应非常相似。事实上，桑拿已被提出作为因慢性疾病或身体限制而无法进行体力活动者的运动替代方式。\n\n根据文章，作者可能同意以下哪项陈述？",
+            "A": "不能在跑步机上跑步的心脏手术患者可能会从桑拿使用中获益。",
+            "B": "正在节食的患者会从桑拿使用中获益。",
+            "C": "限盐对高血压患者的作用等同于桑拿使用。",
+            "D": "患有皮肤病的患者可能通过桑拿使用被治愈。"
+          },
+          "fr": {
+            "input": "L’utilisation du sauna, parfois appelée bain de sauna, se caractérise par une courte exposition passive à une chaleur extrême. Cette exposition provoque une légère hyperthermie, c’est-à-dire une augmentation de la température centrale du corps, qui déclenche une réponse thermorégulatrice impliquant des mécanismes neuroendocriniens, cardiovasculaires et cytoprotecteurs travaillant ensemble pour rétablir l’homéostasie et préparer le corps à de futurs stress thermiques… Au cours des dernières décennies, le bain de sauna est apparu comme un moyen d’augmenter la longévité et d’améliorer la santé générale, sur la base de données convaincantes provenant d’études observationnelles, interventionnelles et mécanistiques. Les résultats de l’étude Kuopio Ischemic Heart Disease Risk Factor (KIHD), une étude de cohorte prospective populationnelle en cours portant sur plus de 2 300 hommes d’âge moyen de l’est de la Finlande, sont particulièrement intéressants, car ils ont mis en évidence des liens forts entre l’usage du sauna et une réduction des décès et des maladies… Les résultats du KIHD ont montré que les hommes utilisant le sauna deux à trois fois par semaine avaient 27 % de risque en moins de mourir de causes cardiovasculaires que ceux qui ne l’utilisaient pas. De plus, les bénéfices étaient dose-dépendants : les hommes utilisant le sauna environ deux fois plus souvent, soit quatre à sept fois par semaine, présentaient environ deux fois plus de bénéfices et avaient 50 % de risque en moins de mourir de causes cardiovasculaires. Les utilisateurs fréquents de sauna avaient aussi 40 % de risque en moins de mourir de toute cause de décès prématuré. Ces résultats restaient vrais même en tenant compte de l’âge, du niveau d’activité et des facteurs de mode de vie… Le KIHD a également révélé que l’usage fréquent du sauna réduisait le risque de développer une démence et une maladie d’Alzheimer de manière dose-dépendante. Les hommes utilisant le sauna deux à trois fois par semaine avaient un risque de démence inférieur de 66 % et un risque de maladie d’Alzheimer inférieur de 65 % par rapport aux hommes l’utilisant seulement une fois par semaine… Les bénéfices pour la santé associés au sauna s’étendaient aussi à d’autres aspects de la santé mentale. Les hommes du KIHD utilisant le sauna quatre à sept fois par semaine avaient 77 % de risque en moins de développer des troubles psychotiques, indépendamment de leur alimentation, de leur statut socioéconomique, de leur activité physique et de leur état inflammatoire mesuré par la protéine C-réactive… L’exposition à une température élevée stresse l’organisme et provoque une réponse rapide et robuste. Les températures de la peau et du noyau corporel augmentent nettement, et la transpiration commence. La peau chauffe d’abord jusqu’à 40°C, puis la température centrale passe lentement de 37°C à 38°C avant d’augmenter rapidement jusqu’à 39°C… Le débit cardiaque, mesure du travail fourni par le cœur pour répondre aux besoins en oxygène du corps, augmente de 60 à 70 %, tandis que la fréquence cardiaque augmente et que le volume d’éjection systolique reste inchangé. Pendant ce temps, environ 50 à 70 % du flux sanguin corporel est redistribué du centre vers la peau pour faciliter la transpiration. Une personne moyenne perd environ 0,5 kg de sueur lors d’un bain de sauna. L’exposition aiguë à la chaleur induit aussi une augmentation transitoire du volume plasmatique global afin d’atténuer la diminution du volume sanguin central. Cette augmentation fournit une réserve de liquide pour la transpiration et agit comme l’eau du radiateur d’une voiture, refroidissant le corps pour prévenir une hausse rapide de la température centrale et favoriser la tolérance à la chaleur… L’usage répété du sauna acclimate le corps à la chaleur et optimise sa réponse aux expositions futures, probablement grâce à un phénomène biologique appelé hormèse, une réponse défensive compensatrice après exposition à un stress léger et disproportionnée par rapport à l’intensité du stress. L’hormèse déclenche de nombreux mécanismes protecteurs qui réparent les lésions cellulaires et protègent contre des stress ultérieurs plus graves… Les réponses physiologiques au sauna sont remarquablement similaires à celles observées lors d’un exercice d’intensité modérée à vigoureuse. En fait, le sauna a été proposé comme alternative à l’exercice pour les personnes incapables de pratiquer une activité physique en raison d’une maladie chronique ou de limitations physiques.\n\nD’après l’article, avec laquelle des affirmations suivantes l’auteur serait-il probablement d’accord ?",
+            "A": "Les patients ayant subi une chirurgie cardiaque et ne pouvant pas courir sur un tapis roulant pourraient bénéficier de l’utilisation du sauna.",
+            "B": "Les patients au régime bénéficieraient de l’utilisation du sauna.",
+            "C": "La restriction en sel serait équivalente à l’utilisation du sauna chez les patients hypertendus.",
+            "D": "Les patients atteints d’affections cutanées pourraient être guéris par l’utilisation du sauna."
+          },
+          "ko": {
+            "input": "사우나 사용은 때때로 사우나 목욕이라고 불리며, 극심한 열에 짧은 시간 수동적으로 노출되는 것이 특징이다. 이러한 노출은 신체 중심 온도의 상승인 가벼운 고체온을 일으키고, 항상성을 회복하며 향후 열 스트레스에 대비하도록 신체를 조절하는 신경내분비, 심혈관 및 세포보호 기전이 관여하는 체온조절 반응을 유발한다… 최근 수십 년 동안 사우나 목욕은 관찰 연구, 중재 연구, 기전 연구에서 나온 설득력 있는 자료를 바탕으로 수명을 늘리고 전반적 건강을 개선하는 방법으로 부상했다. 특히 핀란드 동부의 중년 남성 2,300명 이상을 대상으로 건강 결과를 추적하는 진행 중인 인구 기반 전향적 코호트 연구인 쿠오피오 허혈성 심장질환 위험요인(KIHD) 연구의 결과가 주목된다. 이 연구는 사우나 사용과 사망 및 질병 감소 사이의 강한 관련성을 확인했다… KIHD 결과에 따르면 사우나를 주 2~3회 사용한 남성은 사우나를 사용하지 않은 남성보다 심혈관 관련 원인으로 사망할 가능성이 27% 낮았다. 또한 이들이 경험한 이점은 용량 의존적이었다. 사우나를 약 두 배 더 자주, 즉 주 4~7회 사용한 남성은 이점도 약 두 배였고 심혈관 관련 원인으로 사망할 가능성이 50% 낮았다. 잦은 사우나 사용자는 모든 조기 사망 원인으로 사망할 가능성도 40% 낮았다. 이러한 결과는 나이, 활동 수준, 생활 습관 요인을 고려해도 유지되었다… KIHD는 또한 잦은 사우나 사용이 치매와 알츠하이머병 발생 위험을 용량 의존적으로 낮춘다는 것을 보여 주었다. 사우나를 주 2~3회 사용한 남성은 주 1회만 사용한 남성에 비해 치매 발생 위험이 66%, 알츠하이머병 발생 위험이 65% 낮았다… 사우나 사용과 관련된 건강 이점은 정신건강의 다른 측면으로도 확장되었다. KIHD 연구에 참여한 남성 중 사우나를 주 4~7회 사용한 사람들은 식습관, 사회경제적 지위, 신체활동, C-반응단백으로 측정한 염증 상태와 무관하게 정신병적 장애가 생길 가능성이 77% 낮았다… 고온 노출은 신체에 스트레스를 주며 빠르고 강력한 반응을 유발한다. 피부와 중심 체온이 뚜렷하게 상승하고 땀이 난다. 피부가 먼저 40°C까지 올라가고, 이어 중심 체온은 정상인 37°C에서 38°C로 천천히 상승한 뒤 39°C까지 빠르게 올라간다… 심장이 산소 필요에 반응하여 수행하는 일의 양을 나타내는 심박출량은 60~70% 증가하고, 심박수는 증가하지만 1회 박출량은 변하지 않는다. 이 기간 동안 신체 혈류의 약 50~70%가 중심부에서 피부로 재분배되어 발한을 돕는다. 평균적인 사람은 사우나 목욕 중 약 0.5 kg의 땀을 잃는다. 급성 열 노출은 중심 혈액량 감소를 완화하기 위해 전체 혈장량도 일시적으로 증가시킨다. 이러한 혈장량 증가는 발한을 위한 예비 수분을 제공할 뿐 아니라 자동차 라디에이터의 물처럼 몸을 식혀 중심 체온의 급격한 상승을 막고 열 내성을 촉진한다… 반복적인 사우나 사용은 신체를 열에 적응시키고 향후 노출에 대한 반응을 최적화한다. 이는 가벼운 스트레스 노출 후 스트레스의 크기에 비해 불균형적으로 큰 보상적 방어 반응인 호르메시스라는 생물학적 현상 때문일 가능성이 높다. 호르메시스는 세포 손상을 복구할 뿐 아니라 이후 더 심각한 스트레스로부터 보호하는 다양한 보호 기전을 촉발한다… 사우나 사용에 대한 생리적 반응은 중등도에서 고강도 운동 중 경험하는 반응과 놀라울 정도로 유사하다. 실제로 사우나는 만성 질환이나 신체적 제한 때문에 신체활동을 할 수 없는 사람들에게 운동의 대안으로 제안되어 왔다.\n\n이 글에 근거할 때, 저자가 동의할 가능성이 높은 진술은 다음 중 무엇인가?",
+            "A": "트레드밀에서 달릴 수 없는 심장 수술 환자는 사우나 사용으로 이익을 얻을 수 있다.",
+            "B": "식이요법 중인 환자는 사우나 사용으로 이익을 얻을 것이다.",
+            "C": "고혈압 환자에게 염분 제한은 사우나 사용과 동등할 것이다.",
+            "D": "피부 질환이 있는 환자는 사우나 사용으로 치유될 수 있다."
+          },
+          "es": {
+            "input": "El uso de sauna, a veces llamado baño de sauna, se caracteriza por una exposición pasiva de corta duración a calor extremo. Esta exposición provoca una hipertermia leve, es decir, un aumento de la temperatura central del cuerpo, que induce una respuesta termorreguladora con mecanismos neuroendocrinos, cardiovasculares y citoprotectores que trabajan juntos para restaurar la homeostasis y acondicionar el cuerpo para futuros estresores térmicos… En las últimas décadas, el baño de sauna ha surgido como un medio para aumentar la esperanza de vida y mejorar la salud general, con base en datos convincentes de estudios observacionales, intervencionales y mecanísticos. Son de especial interés los hallazgos del estudio Kuopio Ischemic Heart Disease Risk Factor (KIHD), un estudio de cohorte prospectivo poblacional en curso sobre resultados de salud en más de 2.300 hombres de mediana edad del este de Finlandia, que identificó vínculos fuertes entre el uso de sauna y una reducción de la muerte y la enfermedad… Los hallazgos del KIHD mostraron que los hombres que usaban la sauna dos o tres veces por semana tenían un 27 % menos de probabilidad de morir por causas cardiovasculares que los hombres que no la usaban. Además, los beneficios fueron dependientes de la dosis: los hombres que usaban la sauna aproximadamente el doble de veces, unas cuatro a siete veces por semana, experimentaban aproximadamente el doble de beneficios y tenían un 50 % menos de probabilidad de morir por causas cardiovasculares. Además, se observó que los usuarios frecuentes de sauna tenían un 40 % menos de probabilidad de morir por cualquier causa de muerte prematura. Estos hallazgos se mantuvieron incluso al considerar la edad, los niveles de actividad y los factores de estilo de vida… El KIHD también reveló que el uso frecuente de sauna reducía el riesgo de desarrollar demencia y enfermedad de Alzheimer de manera dependiente de la dosis. Los hombres que usaban la sauna dos o tres veces por semana tenían un 66 % menos de riesgo de desarrollar demencia y un 65 % menos de riesgo de desarrollar enfermedad de Alzheimer, en comparación con los hombres que la usaban solo una vez por semana… Los beneficios para la salud asociados con el uso de sauna también se extendían a otros aspectos de la salud mental. Los hombres del estudio KIHD que usaban la sauna cuatro a siete veces por semana tenían un 77 % menos de probabilidad de desarrollar trastornos psicóticos, independientemente de sus hábitos alimentarios, situación socioeconómica, actividad física y estado inflamatorio medido por proteína C reactiva… La exposición a alta temperatura estresa el cuerpo y provoca una respuesta rápida y robusta. Las temperaturas de la piel y del núcleo corporal aumentan de forma marcada, y comienza la sudoración. La piel se calienta primero hasta 40°C, y luego la temperatura central cambia, subiendo lentamente desde 37°C, lo normal, hasta 38°C y después aumentando rápidamente hasta 39°C… El gasto cardíaco, una medida del trabajo que realiza el corazón en respuesta a la necesidad de oxígeno del cuerpo, aumenta entre 60 y 70 %, mientras la frecuencia cardíaca aumenta y el volumen sistólico permanece sin cambios. Durante este tiempo, aproximadamente 50 a 70 % del flujo sanguíneo del cuerpo se redistribuye desde el núcleo hacia la piel para facilitar la sudoración. La persona promedio pierde aproximadamente 0,5 kg de sudor durante un baño de sauna. La exposición aguda al calor también induce un aumento transitorio del volumen plasmático total para mitigar la disminución del volumen sanguíneo central. Este aumento proporciona una reserva de líquido para sudar y actúa como el agua del radiador de un automóvil, enfriando el cuerpo para evitar aumentos rápidos de la temperatura central y favorecer la tolerancia al calor… El uso repetido de sauna aclimata el cuerpo al calor y optimiza la respuesta a exposiciones futuras, probablemente debido a un fenómeno biológico conocido como hormesis, una respuesta defensiva compensatoria tras la exposición a un estresor leve que es desproporcionada respecto a la magnitud del estresor. La hormesis desencadena numerosos mecanismos protectores que reparan el daño celular y protegen frente a exposiciones posteriores a estresores más dañinos… Las respuestas fisiológicas al uso de sauna son notablemente similares a las que se experimentan durante el ejercicio de intensidad moderada a vigorosa. De hecho, se ha propuesto el uso de sauna como alternativa al ejercicio para personas que no pueden realizar actividad física debido a enfermedad crónica o limitaciones físicas.\n\nSegún el artículo, ¿con cuál de las siguientes afirmaciones es probable que el autor esté de acuerdo?",
+            "A": "Los pacientes de cirugía cardíaca que no pueden correr en cintas de correr pueden beneficiarse del uso de sauna.",
+            "B": "Los pacientes que están a dieta se beneficiarían del uso de sauna.",
+            "C": "La restricción de sal sería equivalente al uso de sauna para pacientes hipertensos.",
+            "D": "Los pacientes con afecciones cutáneas pueden curarse con el uso de sauna."
+          }
+        }
+      },
+      {
+        "index": 6,
+        "target": "C",
+        "source": {
+          "input": "Diisopropylfluorophosphate (DFP) binds to the active site of acetylcholinesterase (ACE) in the synapses of neurons. When DFP binds to ACE, the ACE enzyme is rendered permanently inactive. This makes DFP a potent toxin, with lethal amounts at less than 100 mg. The interaction between DFP and ACE can best be characterized as:",
+          "A": "Competitive inhibition",
+          "B": "Noncompetitive inhibition",
+          "C": "Irreversible inhibition",
+          "D": "Partially competitive inhibition"
+        },
+        "translations": {
+          "zh": {
+            "input": "二异丙基氟磷酸酯（DFP）与神经元突触中乙酰胆碱酯酶（ACE）的活性位点结合。当 DFP 与 ACE 结合时，ACE 酶会被永久灭活。这使 DFP 成为一种强效毒素，致死量低于 100 mg。DFP 与 ACE 的相互作用最好描述为：",
+            "A": "竞争性抑制",
+            "B": "非竞争性抑制",
+            "C": "不可逆抑制",
+            "D": "部分竞争性抑制"
+          },
+          "fr": {
+            "input": "Le diisopropylfluorophosphate (DFP) se lie au site actif de l’acétylcholinestérase (ACE) dans les synapses des neurones. Lorsque le DFP se lie à l’ACE, l’enzyme ACE est rendue définitivement inactive. Cela fait du DFP une toxine puissante, avec des doses létales inférieures à 100 mg. L’interaction entre le DFP et l’ACE peut être mieux caractérisée comme :",
+            "A": "Inhibition compétitive",
+            "B": "Inhibition non compétitive",
+            "C": "Inhibition irréversible",
+            "D": "Inhibition partiellement compétitive"
+          },
+          "ko": {
+            "input": "디이소프로필플루오로포스페이트(DFP)는 뉴런의 시냅스에서 아세틸콜린에스터라아제(ACE)의 활성 부위에 결합한다. DFP가 ACE에 결합하면 ACE 효소는 영구적으로 비활성화된다. 이 때문에 DFP는 100 mg 미만의 양으로도 치명적인 강력한 독소가 된다. DFP와 ACE의 상호작용은 다음 중 무엇으로 가장 잘 특징지을 수 있는가?",
+            "A": "경쟁적 억제",
+            "B": "비경쟁적 억제",
+            "C": "비가역적 억제",
+            "D": "부분 경쟁적 억제"
+          },
+          "es": {
+            "input": "El diisopropilfluorofosfato (DFP) se une al sitio activo de la acetilcolinesterasa (ACE) en las sinapsis de las neuronas. Cuando el DFP se une a la ACE, la enzima ACE queda permanentemente inactiva. Esto convierte al DFP en una toxina potente, con cantidades letales inferiores a 100 mg. La interacción entre DFP y ACE se caracteriza mejor como:",
+            "A": "Inhibición competitiva",
+            "B": "Inhibición no competitiva",
+            "C": "Inhibición irreversible",
+            "D": "Inhibición parcialmente competitiva"
+          }
+        }
+      },
+      {
+        "index": 7,
+        "target": "A",
+        "source": {
+          "input": "The process of translation requires the presence of:",
+          "A": "mRNA, tRNA and ribosomes.",
+          "B": "mRNA, ribosomes and RNA polymerase.",
+          "C": "DNA, mRNA and RNA polymerase.",
+          "D": "chromatin, DNA and amino acids."
+        },
+        "translations": {
+          "zh": {
+            "input": "翻译过程需要存在：",
+            "A": "mRNA、tRNA 和核糖体。",
+            "B": "mRNA、核糖体和 RNA 聚合酶。",
+            "C": "DNA、mRNA 和 RNA 聚合酶。",
+            "D": "染色质、DNA 和氨基酸。"
+          },
+          "fr": {
+            "input": "Le processus de traduction nécessite la présence de :",
+            "A": "ARNm, ARNt et ribosomes.",
+            "B": "ARNm, ribosomes et ARN polymérase.",
+            "C": "ADN, ARNm et ARN polymérase.",
+            "D": "chromatine, ADN et acides aminés."
+          },
+          "ko": {
+            "input": "번역 과정에는 다음이 필요하다:",
+            "A": "mRNA, tRNA 및 리보솜.",
+            "B": "mRNA, 리보솜 및 RNA 중합효소.",
+            "C": "DNA, mRNA 및 RNA 중합효소.",
+            "D": "염색질, DNA 및 아미노산."
+          },
+          "es": {
+            "input": "El proceso de traducción requiere la presencia de:",
+            "A": "ARNm, ARNt y ribosomas.",
+            "B": "ARNm, ribosomas y ARN polimerasa.",
+            "C": "ADN, ARNm y ARN polimerasa.",
+            "D": "cromatina, ADN y aminoácidos."
+          }
+        }
+      },
+      {
+        "index": 8,
+        "target": "A",
+        "source": {
+          "input": "Performance enhancing synthetic steroids are based on the structure of the hormone:",
+          "A": "testosterone.",
+          "B": "cortisol.",
+          "C": "progesterone.",
+          "D": "aldosterone."
+        },
+        "translations": {
+          "zh": {
+            "input": "增强运动表现的合成类固醇是基于以下激素的结构：",
+            "A": "睾酮。",
+            "B": "皮质醇。",
+            "C": "孕酮。",
+            "D": "醛固酮。"
+          },
+          "fr": {
+            "input": "Les stéroïdes synthétiques améliorant la performance sont basés sur la structure de l’hormone :",
+            "A": "testostérone.",
+            "B": "cortisol.",
+            "C": "progestérone.",
+            "D": "aldostérone."
+          },
+          "ko": {
+            "input": "운동 수행 능력을 향상시키는 합성 스테로이드는 다음 호르몬의 구조를 바탕으로 한다:",
+            "A": "테스토스테론.",
+            "B": "코르티솔.",
+            "C": "프로게스테론.",
+            "D": "알도스테론."
+          },
+          "es": {
+            "input": "Los esteroides sintéticos que mejoran el rendimiento se basan en la estructura de la hormona:",
+            "A": "testosterona.",
+            "B": "cortisol.",
+            "C": "progesterona.",
+            "D": "aldosterona."
+          }
+        }
+      },
+      {
+        "index": 9,
+        "target": "C",
+        "source": {
+          "input": "Perchloric acid (HClO4) is considered one of the stronger acids in existence. Which of the following statements corresponds most accurately with strong acids?",
+          "A": "Ka is less than 1",
+          "B": "They have an open electron spot on their outer valence rings",
+          "C": "They have stable conjugate bases",
+          "D": "They remain bound in the presence of water."
+        },
+        "translations": {
+          "zh": {
+            "input": "高氯酸（HClO4）被认为是现有较强酸之一。以下哪项陈述与强酸最准确相符？",
+            "A": "Ka 小于 1",
+            "B": "它们在外层价电子环上有一个空电子位置",
+            "C": "它们具有稳定的共轭碱",
+            "D": "它们在水存在时仍保持结合状态。"
+          },
+          "fr": {
+            "input": "L’acide perchlorique (HClO4) est considéré comme l’un des acides les plus forts qui existent. Laquelle des affirmations suivantes correspond le plus précisément aux acides forts ?",
+            "A": "Ka est inférieur à 1",
+            "B": "Ils ont une place électronique vacante sur leur couche de valence externe",
+            "C": "Ils ont des bases conjuguées stables",
+            "D": "Ils restent liés en présence d’eau."
+          },
+          "ko": {
+            "input": "과염소산(HClO4)은 존재하는 산 중 더 강한 산의 하나로 여겨진다. 다음 중 강산에 가장 정확히 해당하는 설명은?",
+            "A": "Ka가 1보다 작다",
+            "B": "바깥 원자가 껍질에 빈 전자 자리가 있다",
+            "C": "안정한 짝염기를 가진다",
+            "D": "물의 존재하에서도 결합된 상태로 남아 있다."
+          },
+          "es": {
+            "input": "El ácido perclórico (HClO4) se considera uno de los ácidos más fuertes existentes. ¿Cuál de las siguientes afirmaciones corresponde con mayor precisión a los ácidos fuertes?",
+            "A": "Ka es menor que 1",
+            "B": "Tienen un sitio electrónico abierto en sus capas externas de valencia",
+            "C": "Tienen bases conjugadas estables",
+            "D": "Permanecen unidos en presencia de agua."
+          }
+        }
+      }
+    ],
+    "mmmlu-medical-genetics": [
+      {
+        "index": 0,
+        "target": "A",
+        "source": {
+          "input": "Zinc finger proteins and helix-turn-helix proteins are",
+          "A": "types of DNA-binding proteins",
+          "B": "involved in the control of translation",
+          "C": "components of ribosomes",
+          "D": "part of the hemoglobin in blood cells"
+        },
+        "translations": {
+          "zh": {
+            "input": "锌指蛋白和螺旋-转角-螺旋蛋白是",
+            "A": "DNA 结合蛋白的类型",
+            "B": "参与翻译控制",
+            "C": "核糖体的组成成分",
+            "D": "血细胞中血红蛋白的一部分"
+          },
+          "fr": {
+            "input": "Les protéines à doigts de zinc et les protéines hélice-coude-hélice sont",
+            "A": "des types de protéines liant l’ADN",
+            "B": "impliquées dans le contrôle de la traduction",
+            "C": "des composants des ribosomes",
+            "D": "une partie de l’hémoglobine dans les cellules sanguines"
+          },
+          "ko": {
+            "input": "아연 핑거 단백질과 헬릭스-턴-헬릭스 단백질은",
+            "A": "DNA 결합 단백질의 종류이다",
+            "B": "번역 조절에 관여한다",
+            "C": "리보솜의 구성 성분이다",
+            "D": "혈액 세포의 헤모글로빈 일부이다"
+          },
+          "es": {
+            "input": "Las proteínas con dedos de zinc y las proteínas hélice-giro-hélice son",
+            "A": "tipos de proteínas de unión al ADN",
+            "B": "participan en el control de la traducción",
+            "C": "componentes de los ribosomas",
+            "D": "parte de la hemoglobina en las células sanguíneas"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "target": "A",
+        "source": {
+          "input": "If the frequency of males affected with an X-linked recessive condition in a human population is .10 (one in ten), what will be the expected frequency of affected females?",
+          "A": "0.01",
+          "B": "0.001",
+          "C": "0.02",
+          "D": "0.0001"
+        },
+        "translations": {
+          "zh": {
+            "input": "如果在人群中 X 连锁隐性疾病男性受累频率为 0.10（十分之一），预期女性受累频率是多少？",
+            "A": "0.01",
+            "B": "0.001",
+            "C": "0.02",
+            "D": "0.0001"
+          },
+          "fr": {
+            "input": "Si la fréquence des hommes atteints d’une affection récessive liée à l’X dans une population humaine est de 0,10 (un sur dix), quelle sera la fréquence attendue des femmes atteintes ?",
+            "A": "0,01",
+            "B": "0,001",
+            "C": "0,02",
+            "D": "0,0001"
+          },
+          "ko": {
+            "input": "인간 집단에서 X-연관 열성 질환에 영향을 받은 남성의 빈도가 0.10(10명 중 1명)이라면, 영향을 받은 여성의 예상 빈도는 얼마인가?",
+            "A": "0.01",
+            "B": "0.001",
+            "C": "0.02",
+            "D": "0.0001"
+          },
+          "es": {
+            "input": "Si la frecuencia de varones afectados por una condición recesiva ligada al X en una población humana es 0,10 (uno de cada diez), ¿cuál será la frecuencia esperada de mujeres afectadas?",
+            "A": "0,01",
+            "B": "0,001",
+            "C": "0,02",
+            "D": "0,0001"
+          }
+        }
+      },
+      {
+        "index": 2,
+        "target": "C",
+        "source": {
+          "input": "In DNA adenine normally pairs with:",
+          "A": "cytosine.",
+          "B": "guanine.",
+          "C": "thymine.",
+          "D": "uracil."
+        },
+        "translations": {
+          "zh": {
+            "input": "在 DNA 中，腺嘌呤通常与以下哪种碱基配对：",
+            "A": "胞嘧啶。",
+            "B": "鸟嘌呤。",
+            "C": "胸腺嘧啶。",
+            "D": "尿嘧啶。"
+          },
+          "fr": {
+            "input": "Dans l’ADN, l’adénine s’apparie normalement avec :",
+            "A": "la cytosine.",
+            "B": "la guanine.",
+            "C": "la thymine.",
+            "D": "l’uracile."
+          },
+          "ko": {
+            "input": "DNA에서 아데닌은 보통 다음과 짝을 이룬다:",
+            "A": "사이토신.",
+            "B": "구아닌.",
+            "C": "티민.",
+            "D": "우라실."
+          },
+          "es": {
+            "input": "En el ADN, la adenina normalmente se aparea con:",
+            "A": "citosina.",
+            "B": "guanina.",
+            "C": "timina.",
+            "D": "uracilo."
+          }
+        }
+      },
+      {
+        "index": 3,
+        "target": "A",
+        "source": {
+          "input": "The pattern of inheritance shown by malignant hyperthermia (hyperpyrexia) is:",
+          "A": "autosomal dominant.",
+          "B": "autosomal recessive.",
+          "C": "X-linked dominant.",
+          "D": "X-linked recessive."
+        },
+        "translations": {
+          "zh": {
+            "input": "恶性高热（高热症）所显示的遗传方式是：",
+            "A": "常染色体显性。",
+            "B": "常染色体隐性。",
+            "C": "X 连锁显性。",
+            "D": "X 连锁隐性。"
+          },
+          "fr": {
+            "input": "Le mode de transmission observé dans l’hyperthermie maligne (hyperpyrexie) est :",
+            "A": "autosomique dominant.",
+            "B": "autosomique récessif.",
+            "C": "dominant lié à l’X.",
+            "D": "récessif lié à l’X."
+          },
+          "ko": {
+            "input": "악성 고열증(고체온증)이 보이는 유전 양식은:",
+            "A": "상염색체 우성.",
+            "B": "상염색체 열성.",
+            "C": "X-연관 우성.",
+            "D": "X-연관 열성."
+          },
+          "es": {
+            "input": "El patrón de herencia mostrado por la hipertermia maligna (hiperpirexia) es:",
+            "A": "autosómico dominante.",
+            "B": "autosómico recesivo.",
+            "C": "dominante ligado al X.",
+            "D": "recesivo ligado al X."
+          }
+        }
+      },
+      {
+        "index": 4,
+        "target": "B",
+        "source": {
+          "input": "Mapping of human chromosomes:",
+          "A": "has been restricted to the sex chromosomes because of small family sizes",
+          "B": "proceeded much more successfully as large numbers of DNA markers became available.",
+          "C": "has determined that the number of linkage groups is about twice the number of chromosomes",
+          "D": "has demonstrated that almost all of the DNA is involved in coding for genes"
+        },
+        "translations": {
+          "zh": {
+            "input": "人类染色体作图：",
+            "A": "由于家系规模小，一直局限于性染色体",
+            "B": "随着大量 DNA 标记可用而进展得更加成功。",
+            "C": "已经确定连锁群的数量约为染色体数量的两倍",
+            "D": "已经证明几乎所有 DNA 都参与基因编码"
+          },
+          "fr": {
+            "input": "La cartographie des chromosomes humains :",
+            "A": "a été limitée aux chromosomes sexuels en raison de la petite taille des familles",
+            "B": "a progressé beaucoup plus efficacement lorsque de nombreux marqueurs d’ADN sont devenus disponibles.",
+            "C": "a déterminé que le nombre de groupes de liaison est environ deux fois le nombre de chromosomes",
+            "D": "a démontré que presque tout l’ADN participe au codage des gènes"
+          },
+          "ko": {
+            "input": "인간 염색체 지도 작성은:",
+            "A": "가족 규모가 작기 때문에 성염색체로 제한되어 왔다",
+            "B": "많은 수의 DNA 표지가 이용 가능해지면서 훨씬 더 성공적으로 진행되었다.",
+            "C": "연관군의 수가 염색체 수의 약 두 배임을 밝혀냈다",
+            "D": "거의 모든 DNA가 유전자 암호화에 관여함을 입증했다"
+          },
+          "es": {
+            "input": "El mapeo de los cromosomas humanos:",
+            "A": "se ha restringido a los cromosomas sexuales debido al pequeño tamaño de las familias",
+            "B": "avanzó con mucho más éxito a medida que estuvieron disponibles grandes números de marcadores de ADN.",
+            "C": "ha determinado que el número de grupos de ligamiento es aproximadamente el doble del número de cromosomas",
+            "D": "ha demostrado que casi todo el ADN participa en la codificación de genes"
+          }
+        }
+      },
+      {
+        "index": 5,
+        "target": "D",
+        "source": {
+          "input": "Intergenerational transmission to offspring can occur as a result of parental exposures to ______.",
+          "A": "war",
+          "B": "natural disasters",
+          "C": "hunger",
+          "D": "all of these"
+        },
+        "translations": {
+          "zh": {
+            "input": "亲代暴露于 ______ 可导致对子代的跨代传递。",
+            "A": "战争",
+            "B": "自然灾害",
+            "C": "饥饿",
+            "D": "以上全部"
+          },
+          "fr": {
+            "input": "Une transmission intergénérationnelle à la descendance peut survenir à la suite d’expositions parentales à ______.",
+            "A": "la guerre",
+            "B": "des catastrophes naturelles",
+            "C": "la faim",
+            "D": "tous ces éléments"
+          },
+          "ko": {
+            "input": "부모가 ______에 노출된 결과로 자손에게 세대 간 전달이 일어날 수 있다.",
+            "A": "전쟁",
+            "B": "자연재해",
+            "C": "기아",
+            "D": "이 모든 것"
+          },
+          "es": {
+            "input": "La transmisión intergeneracional a la descendencia puede ocurrir como resultado de exposiciones parentales a ______.",
+            "A": "guerra",
+            "B": "desastres naturales",
+            "C": "hambre",
+            "D": "todos estos"
+          }
+        }
+      },
+      {
+        "index": 6,
+        "target": "C",
+        "source": {
+          "input": "Asp235Phe in a molecular report indicates that:",
+          "A": "asparagine has been replaced by phenylalanine.",
+          "B": "phenylalanine has been replaced by asparagine.",
+          "C": "aspartic acid has been replaced by phenylalanine.",
+          "D": "phenylalanine has been replaced by aspartic acid."
+        },
+        "translations": {
+          "zh": {
+            "input": "分子报告中的 Asp235Phe 表示：",
+            "A": "天冬酰胺被苯丙氨酸取代。",
+            "B": "苯丙氨酸被天冬酰胺取代。",
+            "C": "天冬氨酸被苯丙氨酸取代。",
+            "D": "苯丙氨酸被天冬氨酸取代。"
+          },
+          "fr": {
+            "input": "Asp235Phe dans un rapport moléculaire indique que :",
+            "A": "l’asparagine a été remplacée par la phénylalanine.",
+            "B": "la phénylalanine a été remplacée par l’asparagine.",
+            "C": "l’acide aspartique a été remplacé par la phénylalanine.",
+            "D": "la phénylalanine a été remplacée par l’acide aspartique."
+          },
+          "ko": {
+            "input": "분자 보고서에서 Asp235Phe는 다음을 의미한다:",
+            "A": "아스파라긴이 페닐알라닌으로 대체되었다.",
+            "B": "페닐알라닌이 아스파라긴으로 대체되었다.",
+            "C": "아스파르트산이 페닐알라닌으로 대체되었다.",
+            "D": "페닐알라닌이 아스파르트산으로 대체되었다."
+          },
+          "es": {
+            "input": "Asp235Phe en un informe molecular indica que:",
+            "A": "la asparagina ha sido reemplazada por fenilalanina.",
+            "B": "la fenilalanina ha sido reemplazada por asparagina.",
+            "C": "el ácido aspártico ha sido reemplazado por fenilalanina.",
+            "D": "la fenilalanina ha sido reemplazada por ácido aspártico."
+          }
+        }
+      },
+      {
+        "index": 7,
+        "target": "D",
+        "source": {
+          "input": "The risk of abnormality in the child of a mother with untreated phenylketonuria is:",
+          "A": "1%",
+          "B": "10%",
+          "C": "25%",
+          "D": "Almost 100%"
+        },
+        "translations": {
+          "zh": {
+            "input": "未经治疗的苯丙酮尿症母亲所生儿童发生异常的风险是：",
+            "A": "1%",
+            "B": "10%",
+            "C": "25%",
+            "D": "几乎 100%"
+          },
+          "fr": {
+            "input": "Le risque d’anomalie chez l’enfant d’une mère atteinte de phénylcétonurie non traitée est de :",
+            "A": "1 %",
+            "B": "10 %",
+            "C": "25 %",
+            "D": "Presque 100 %"
+          },
+          "ko": {
+            "input": "치료받지 않은 페닐케톤뇨증 산모의 아이에게 이상이 생길 위험은:",
+            "A": "1%",
+            "B": "10%",
+            "C": "25%",
+            "D": "거의 100%"
+          },
+          "es": {
+            "input": "El riesgo de anomalía en el hijo de una madre con fenilcetonuria no tratada es:",
+            "A": "1 %",
+            "B": "10 %",
+            "C": "25 %",
+            "D": "Casi 100 %"
+          }
+        }
+      },
+      {
+        "index": 8,
+        "target": "C",
+        "source": {
+          "input": "Exon skipping is associated with:",
+          "A": "nonsense mutations.",
+          "B": "regulatory mutations.",
+          "C": "RNA processing mutations.",
+          "D": "silent mutations."
+        },
+        "translations": {
+          "zh": {
+            "input": "外显子跳跃与以下哪项有关：",
+            "A": "无义突变。",
+            "B": "调控突变。",
+            "C": "RNA 加工突变。",
+            "D": "沉默突变。"
+          },
+          "fr": {
+            "input": "Le saut d’exon est associé à :",
+            "A": "des mutations non-sens.",
+            "B": "des mutations régulatrices.",
+            "C": "des mutations du traitement de l’ARN.",
+            "D": "des mutations silencieuses."
+          },
+          "ko": {
+            "input": "엑손 건너뛰기는 다음과 관련이 있다:",
+            "A": "넌센스 돌연변이.",
+            "B": "조절 돌연변이.",
+            "C": "RNA 처리 돌연변이.",
+            "D": "침묵 돌연변이."
+          },
+          "es": {
+            "input": "El salto de exón se asocia con:",
+            "A": "mutaciones sin sentido.",
+            "B": "mutaciones reguladoras.",
+            "C": "mutaciones del procesamiento del ARN.",
+            "D": "mutaciones silenciosas."
+          }
+        }
+      },
+      {
+        "index": 9,
+        "target": "A",
+        "source": {
+          "input": "Which of the following is not a chromosome instability syndrome?",
+          "A": "Klinefelter syndrome",
+          "B": "Ataxia telangiectasia",
+          "C": "Fanconi anaemia",
+          "D": "Bloom syndrome"
+        },
+        "translations": {
+          "zh": {
+            "input": "以下哪项不是染色体不稳定综合征？",
+            "A": "克莱恩费尔特综合征",
+            "B": "共济失调-毛细血管扩张症",
+            "C": "范可尼贫血",
+            "D": "布卢姆综合征"
+          },
+          "fr": {
+            "input": "Lequel des éléments suivants n’est pas un syndrome d’instabilité chromosomique ?",
+            "A": "Syndrome de Klinefelter",
+            "B": "Ataxie-télangiectasie",
+            "C": "Anémie de Fanconi",
+            "D": "Syndrome de Bloom"
+          },
+          "ko": {
+            "input": "다음 중 염색체 불안정성 증후군이 아닌 것은?",
+            "A": "클라인펠터 증후군",
+            "B": "운동실조-모세혈관확장증",
+            "C": "판코니 빈혈",
+            "D": "블룸 증후군"
+          },
+          "es": {
+            "input": "¿Cuál de los siguientes no es un síndrome de inestabilidad cromosómica?",
+            "A": "Síndrome de Klinefelter",
+            "B": "Ataxia telangiectasia",
+            "C": "Anemia de Fanconi",
+            "D": "Síndrome de Bloom"
+          }
+        }
+      }
+    ]
+  }
+}

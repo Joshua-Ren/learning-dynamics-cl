@@ -17,6 +17,10 @@ The release covers two experimental blocks:
 The directory intentionally excludes model checkpoints, generated responses,
 paper tables, job logs, scheduler configuration, and machine-specific paths.
 
+## Paired format-marker study
+
+[forgetting_format/](forgetting_format/) is a standalone GSM8K-to-MMLU answer-format-forgetting package with fixed paired inputs, archived summaries, and a full-parameter reproduction wrapper.
+
 ## Requirements
 
 Install the top-level `requirements.txt`, then install the accompanying

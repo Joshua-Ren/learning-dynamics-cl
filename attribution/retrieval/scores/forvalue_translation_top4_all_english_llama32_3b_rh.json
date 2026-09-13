@@ -1,0 +1,2513 @@
+{
+  "summary": {
+    "num_queries": 40,
+    "num_translation_candidates": 160,
+    "top4_item_accuracy_mean": 0.5062500238418579,
+    "top4_all_same_source_rate": 0.125,
+    "queries_with_all_4_same_source": 5,
+    "queries_with_all_4_same_source_and_all_languages": 5,
+    "top4_same_source_count_histogram": {
+      "0": 1,
+      "1": 10,
+      "2": 21,
+      "3": 3,
+      "4": 5
+    },
+    "method": "forvalue_streaming_ghrh imported functions, selected readout proposed score",
+    "readout_channels": [
+      "rh"
+    ],
+    "gh_embedding_layers": null,
+    "gh_layer_index_mode": null,
+    "gh_use_input_layernorm": false,
+    "model_name": "meta-llama/Llama-3.2-3B-Instruct",
+    "max_length": 192,
+    "batch_size": 4,
+    "prediction_topk": 16
+  },
+  "per_query": [
+    {
+      "query": {
+        "test_index": 0,
+        "dataset": "mmmlu-college-biology",
+        "index": 0,
+        "source_id": "mmmlu-college-biology:0",
+        "target": "C"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 1,
+          "dataset": "mmmlu-college-biology",
+          "index": 0,
+          "source_id": "mmmlu-college-biology:0",
+          "language": "fr",
+          "target": "C",
+          "rank": 1,
+          "score": 26498.53125,
+          "same_source": true
+        },
+        {
+          "train_index": 137,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 4,
+          "source_id": "mmmlu-medical-genetics:4",
+          "language": "fr",
+          "target": "B",
+          "rank": 2,
+          "score": 26153.08984375,
+          "same_source": false
+        },
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 3,
+          "score": 19474.71484375,
+          "same_source": false
+        },
+        {
+          "train_index": 3,
+          "dataset": "mmmlu-college-biology",
+          "index": 0,
+          "source_id": "mmmlu-college-biology:0",
+          "language": "es",
+          "target": "C",
+          "rank": 4,
+          "score": 18878.185546875,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 1,
+        "dataset": "mmmlu-college-biology",
+        "index": 1,
+        "source_id": "mmmlu-college-biology:1",
+        "target": "A"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 5,
+          "dataset": "mmmlu-college-biology",
+          "index": 1,
+          "source_id": "mmmlu-college-biology:1",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 24737.6796875,
+          "same_source": true
+        },
+        {
+          "train_index": 9,
+          "dataset": "mmmlu-college-biology",
+          "index": 2,
+          "source_id": "mmmlu-college-biology:2",
+          "language": "fr",
+          "target": "B",
+          "rank": 2,
+          "score": 18723.87890625,
+          "same_source": false
+        },
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 3,
+          "score": 18595.634765625,
+          "same_source": false
+        },
+        {
+          "train_index": 137,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 4,
+          "source_id": "mmmlu-medical-genetics:4",
+          "language": "fr",
+          "target": "B",
+          "rank": 4,
+          "score": 18088.591796875,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 2,
+        "dataset": "mmmlu-college-biology",
+        "index": 2,
+        "source_id": "mmmlu-college-biology:2",
+        "target": "B"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 9,
+          "dataset": "mmmlu-college-biology",
+          "index": 2,
+          "source_id": "mmmlu-college-biology:2",
+          "language": "fr",
+          "target": "B",
+          "rank": 1,
+          "score": 43927.421875,
+          "same_source": true
+        },
+        {
+          "train_index": 105,
+          "dataset": "mmmlu-college-medicine",
+          "index": 6,
+          "source_id": "mmmlu-college-medicine:6",
+          "language": "fr",
+          "target": "C",
+          "rank": 2,
+          "score": 22370.51171875,
+          "same_source": false
+        },
+        {
+          "train_index": 121,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 0,
+          "source_id": "mmmlu-medical-genetics:0",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 18555.150390625,
+          "same_source": false
+        },
+        {
+          "train_index": 1,
+          "dataset": "mmmlu-college-biology",
+          "index": 0,
+          "source_id": "mmmlu-college-biology:0",
+          "language": "fr",
+          "target": "C",
+          "rank": 4,
+          "score": 18407.712890625,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 3,
+        "dataset": "mmmlu-college-biology",
+        "index": 3,
+        "source_id": "mmmlu-college-biology:3",
+        "target": "A"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 13,
+          "dataset": "mmmlu-college-biology",
+          "index": 3,
+          "source_id": "mmmlu-college-biology:3",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 32428.8359375,
+          "same_source": true
+        },
+        {
+          "train_index": 137,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 4,
+          "source_id": "mmmlu-medical-genetics:4",
+          "language": "fr",
+          "target": "B",
+          "rank": 2,
+          "score": 29375.140625,
+          "same_source": false
+        },
+        {
+          "train_index": 12,
+          "dataset": "mmmlu-college-biology",
+          "index": 3,
+          "source_id": "mmmlu-college-biology:3",
+          "language": "zh",
+          "target": "A",
+          "rank": 3,
+          "score": 22426.388671875,
+          "same_source": true
+        },
+        {
+          "train_index": 1,
+          "dataset": "mmmlu-college-biology",
+          "index": 0,
+          "source_id": "mmmlu-college-biology:0",
+          "language": "fr",
+          "target": "C",
+          "rank": 4,
+          "score": 20575.40234375,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 4,
+        "dataset": "mmmlu-college-biology",
+        "index": 4,
+        "source_id": "mmmlu-college-biology:4",
+        "target": "A"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 17,
+          "dataset": "mmmlu-college-biology",
+          "index": 4,
+          "source_id": "mmmlu-college-biology:4",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 34066.0078125,
+          "same_source": true
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 2,
+          "score": 26450.2734375,
+          "same_source": false
+        },
+        {
+          "train_index": 57,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 4,
+          "source_id": "mmmlu-clinical-knowledge:4",
+          "language": "fr",
+          "target": "D",
+          "rank": 3,
+          "score": 24726.453125,
+          "same_source": false
+        },
+        {
+          "train_index": 53,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 3,
+          "source_id": "mmmlu-clinical-knowledge:3",
+          "language": "fr",
+          "target": "B",
+          "rank": 4,
+          "score": 23455.232421875,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 5,
+        "dataset": "mmmlu-college-biology",
+        "index": 5,
+        "source_id": "mmmlu-college-biology:5",
+        "target": "B"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 21,
+          "dataset": "mmmlu-college-biology",
+          "index": 5,
+          "source_id": "mmmlu-college-biology:5",
+          "language": "fr",
+          "target": "B",
+          "rank": 1,
+          "score": 28244.10546875,
+          "same_source": true
+        },
+        {
+          "train_index": 23,
+          "dataset": "mmmlu-college-biology",
+          "index": 5,
+          "source_id": "mmmlu-college-biology:5",
+          "language": "es",
+          "target": "B",
+          "rank": 2,
+          "score": 19519.484375,
+          "same_source": true
+        },
+        {
+          "train_index": 9,
+          "dataset": "mmmlu-college-biology",
+          "index": 2,
+          "source_id": "mmmlu-college-biology:2",
+          "language": "fr",
+          "target": "B",
+          "rank": 3,
+          "score": 17979.96484375,
+          "same_source": false
+        },
+        {
+          "train_index": 137,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 4,
+          "source_id": "mmmlu-medical-genetics:4",
+          "language": "fr",
+          "target": "B",
+          "rank": 4,
+          "score": 17679.509765625,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 6,
+        "dataset": "mmmlu-college-biology",
+        "index": 6,
+        "source_id": "mmmlu-college-biology:6",
+        "target": "B"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 77,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 9,
+          "source_id": "mmmlu-clinical-knowledge:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 1,
+          "score": 21359.017578125,
+          "same_source": false
+        },
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 2,
+          "score": 19999.54296875,
+          "same_source": false
+        },
+        {
+          "train_index": 25,
+          "dataset": "mmmlu-college-biology",
+          "index": 6,
+          "source_id": "mmmlu-college-biology:6",
+          "language": "fr",
+          "target": "B",
+          "rank": 3,
+          "score": 18927.28125,
+          "same_source": true
+        },
+        {
+          "train_index": 117,
+          "dataset": "mmmlu-college-medicine",
+          "index": 9,
+          "source_id": "mmmlu-college-medicine:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 4,
+          "score": 18867.130859375,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 7,
+        "dataset": "mmmlu-college-biology",
+        "index": 7,
+        "source_id": "mmmlu-college-biology:7",
+        "target": "D"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 29,
+          "dataset": "mmmlu-college-biology",
+          "index": 7,
+          "source_id": "mmmlu-college-biology:7",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 26118.48828125,
+          "same_source": true
+        },
+        {
+          "train_index": 31,
+          "dataset": "mmmlu-college-biology",
+          "index": 7,
+          "source_id": "mmmlu-college-biology:7",
+          "language": "es",
+          "target": "D",
+          "rank": 2,
+          "score": 23443.884765625,
+          "same_source": true
+        },
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 3,
+          "score": 22186.517578125,
+          "same_source": false
+        },
+        {
+          "train_index": 65,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 6,
+          "source_id": "mmmlu-clinical-knowledge:6",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 20396.65234375,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 8,
+        "dataset": "mmmlu-college-biology",
+        "index": 8,
+        "source_id": "mmmlu-college-biology:8",
+        "target": "C"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 1,
+          "score": 44460.8203125,
+          "same_source": true
+        },
+        {
+          "train_index": 35,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "es",
+          "target": "C",
+          "rank": 2,
+          "score": 35285.15234375,
+          "same_source": true
+        },
+        {
+          "train_index": 137,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 4,
+          "source_id": "mmmlu-medical-genetics:4",
+          "language": "fr",
+          "target": "B",
+          "rank": 3,
+          "score": 22897.427734375,
+          "same_source": false
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 19138.400390625,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 9,
+        "dataset": "mmmlu-college-biology",
+        "index": 9,
+        "source_id": "mmmlu-college-biology:9",
+        "target": "C"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 37,
+          "dataset": "mmmlu-college-biology",
+          "index": 9,
+          "source_id": "mmmlu-college-biology:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 1,
+          "score": 21740.0,
+          "same_source": true
+        },
+        {
+          "train_index": 9,
+          "dataset": "mmmlu-college-biology",
+          "index": 2,
+          "source_id": "mmmlu-college-biology:2",
+          "language": "fr",
+          "target": "B",
+          "rank": 2,
+          "score": 18648.16015625,
+          "same_source": false
+        },
+        {
+          "train_index": 39,
+          "dataset": "mmmlu-college-biology",
+          "index": 9,
+          "source_id": "mmmlu-college-biology:9",
+          "language": "es",
+          "target": "C",
+          "rank": 3,
+          "score": 17679.203125,
+          "same_source": true
+        },
+        {
+          "train_index": 105,
+          "dataset": "mmmlu-college-medicine",
+          "index": 6,
+          "source_id": "mmmlu-college-medicine:6",
+          "language": "fr",
+          "target": "C",
+          "rank": 4,
+          "score": 17290.501953125,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 10,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 0,
+        "source_id": "mmmlu-clinical-knowledge:0",
+        "target": "D"
+      },
+      "top4_same_source_count": 0,
+      "top4_same_source_accuracy": 0.0,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 33701.7890625,
+          "same_source": false
+        },
+        {
+          "train_index": 115,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "es",
+          "target": "A",
+          "rank": 2,
+          "score": 29213.8046875,
+          "same_source": false
+        },
+        {
+          "train_index": 57,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 4,
+          "source_id": "mmmlu-clinical-knowledge:4",
+          "language": "fr",
+          "target": "D",
+          "rank": 3,
+          "score": 28671.05078125,
+          "same_source": false
+        },
+        {
+          "train_index": 89,
+          "dataset": "mmmlu-college-medicine",
+          "index": 2,
+          "source_id": "mmmlu-college-medicine:2",
+          "language": "fr",
+          "target": "D",
+          "rank": 4,
+          "score": 28216.6328125,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 11,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 1,
+        "source_id": "mmmlu-clinical-knowledge:1",
+        "target": "A"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 47,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 1,
+          "source_id": "mmmlu-clinical-knowledge:1",
+          "language": "es",
+          "target": "A",
+          "rank": 1,
+          "score": 44957.16796875,
+          "same_source": true
+        },
+        {
+          "train_index": 45,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 1,
+          "source_id": "mmmlu-clinical-knowledge:1",
+          "language": "fr",
+          "target": "A",
+          "rank": 2,
+          "score": 41348.95703125,
+          "same_source": true
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 38490.2265625,
+          "same_source": false
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 35360.8125,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 12,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 2,
+        "source_id": "mmmlu-clinical-knowledge:2",
+        "target": "B"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 49,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 2,
+          "source_id": "mmmlu-clinical-knowledge:2",
+          "language": "fr",
+          "target": "B",
+          "rank": 1,
+          "score": 37971.59765625,
+          "same_source": true
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 2,
+          "score": 31264.734375,
+          "same_source": false
+        },
+        {
+          "train_index": 53,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 3,
+          "source_id": "mmmlu-clinical-knowledge:3",
+          "language": "fr",
+          "target": "B",
+          "rank": 3,
+          "score": 26176.375,
+          "same_source": false
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 25396.89453125,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 13,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 3,
+        "source_id": "mmmlu-clinical-knowledge:3",
+        "target": "B"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 53,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 3,
+          "source_id": "mmmlu-clinical-knowledge:3",
+          "language": "fr",
+          "target": "B",
+          "rank": 1,
+          "score": 54142.0546875,
+          "same_source": true
+        },
+        {
+          "train_index": 55,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 3,
+          "source_id": "mmmlu-clinical-knowledge:3",
+          "language": "es",
+          "target": "B",
+          "rank": 2,
+          "score": 41440.875,
+          "same_source": true
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 35244.203125,
+          "same_source": false
+        },
+        {
+          "train_index": 77,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 9,
+          "source_id": "mmmlu-clinical-knowledge:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 4,
+          "score": 33829.65234375,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 14,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 4,
+        "source_id": "mmmlu-clinical-knowledge:4",
+        "target": "D"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 57,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 4,
+          "source_id": "mmmlu-clinical-knowledge:4",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 76729.5390625,
+          "same_source": true
+        },
+        {
+          "train_index": 59,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 4,
+          "source_id": "mmmlu-clinical-knowledge:4",
+          "language": "es",
+          "target": "D",
+          "rank": 2,
+          "score": 54283.05078125,
+          "same_source": true
+        },
+        {
+          "train_index": 89,
+          "dataset": "mmmlu-college-medicine",
+          "index": 2,
+          "source_id": "mmmlu-college-medicine:2",
+          "language": "fr",
+          "target": "D",
+          "rank": 3,
+          "score": 32995.0234375,
+          "same_source": false
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 32845.18359375,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 15,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 5,
+        "source_id": "mmmlu-clinical-knowledge:5",
+        "target": "B"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 77,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 9,
+          "source_id": "mmmlu-clinical-knowledge:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 1,
+          "score": 19386.787109375,
+          "same_source": false
+        },
+        {
+          "train_index": 61,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 5,
+          "source_id": "mmmlu-clinical-knowledge:5",
+          "language": "fr",
+          "target": "B",
+          "rank": 2,
+          "score": 19198.134765625,
+          "same_source": true
+        },
+        {
+          "train_index": 9,
+          "dataset": "mmmlu-college-biology",
+          "index": 2,
+          "source_id": "mmmlu-college-biology:2",
+          "language": "fr",
+          "target": "B",
+          "rank": 3,
+          "score": 19166.05859375,
+          "same_source": false
+        },
+        {
+          "train_index": 63,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 5,
+          "source_id": "mmmlu-clinical-knowledge:5",
+          "language": "es",
+          "target": "B",
+          "rank": 4,
+          "score": 18101.2109375,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 16,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 6,
+        "source_id": "mmmlu-clinical-knowledge:6",
+        "target": "A"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 65,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 6,
+          "source_id": "mmmlu-clinical-knowledge:6",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 53052.26171875,
+          "same_source": true
+        },
+        {
+          "train_index": 57,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 4,
+          "source_id": "mmmlu-clinical-knowledge:4",
+          "language": "fr",
+          "target": "D",
+          "rank": 2,
+          "score": 42199.8828125,
+          "same_source": false
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 39149.67578125,
+          "same_source": false
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 37612.16015625,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 17,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 7,
+        "source_id": "mmmlu-clinical-knowledge:7",
+        "target": "A"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 77706.921875,
+          "same_source": true
+        },
+        {
+          "train_index": 109,
+          "dataset": "mmmlu-college-medicine",
+          "index": 7,
+          "source_id": "mmmlu-college-medicine:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 2,
+          "score": 48853.8984375,
+          "same_source": false
+        },
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 3,
+          "score": 44868.92578125,
+          "same_source": false
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 43734.078125,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 18,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 8,
+        "source_id": "mmmlu-clinical-knowledge:8",
+        "target": "D"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 73,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 8,
+          "source_id": "mmmlu-clinical-knowledge:8",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 49751.59375,
+          "same_source": true
+        },
+        {
+          "train_index": 97,
+          "dataset": "mmmlu-college-medicine",
+          "index": 4,
+          "source_id": "mmmlu-college-medicine:4",
+          "language": "fr",
+          "target": "D",
+          "rank": 2,
+          "score": 49751.59375,
+          "same_source": false
+        },
+        {
+          "train_index": 99,
+          "dataset": "mmmlu-college-medicine",
+          "index": 4,
+          "source_id": "mmmlu-college-medicine:4",
+          "language": "es",
+          "target": "D",
+          "rank": 3,
+          "score": 48503.13671875,
+          "same_source": false
+        },
+        {
+          "train_index": 75,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 8,
+          "source_id": "mmmlu-clinical-knowledge:8",
+          "language": "es",
+          "target": "D",
+          "rank": 4,
+          "score": 48503.13671875,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 19,
+        "dataset": "mmmlu-clinical-knowledge",
+        "index": 9,
+        "source_id": "mmmlu-clinical-knowledge:9",
+        "target": "C"
+      },
+      "top4_same_source_count": 4,
+      "top4_same_source_accuracy": 1.0,
+      "top4_all_same_source": true,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 77,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 9,
+          "source_id": "mmmlu-clinical-knowledge:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 1,
+          "score": 254463.96875,
+          "same_source": true
+        },
+        {
+          "train_index": 79,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 9,
+          "source_id": "mmmlu-clinical-knowledge:9",
+          "language": "es",
+          "target": "C",
+          "rank": 2,
+          "score": 199813.28125,
+          "same_source": true
+        },
+        {
+          "train_index": 78,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 9,
+          "source_id": "mmmlu-clinical-knowledge:9",
+          "language": "ko",
+          "target": "C",
+          "rank": 3,
+          "score": 81326.3984375,
+          "same_source": true
+        },
+        {
+          "train_index": 76,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 9,
+          "source_id": "mmmlu-clinical-knowledge:9",
+          "language": "zh",
+          "target": "C",
+          "rank": 4,
+          "score": 60203.3359375,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 20,
+        "dataset": "mmmlu-college-medicine",
+        "index": 0,
+        "source_id": "mmmlu-college-medicine:0",
+        "target": "D"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 81,
+          "dataset": "mmmlu-college-medicine",
+          "index": 0,
+          "source_id": "mmmlu-college-medicine:0",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 72903.296875,
+          "same_source": true
+        },
+        {
+          "train_index": 83,
+          "dataset": "mmmlu-college-medicine",
+          "index": 0,
+          "source_id": "mmmlu-college-medicine:0",
+          "language": "es",
+          "target": "D",
+          "rank": 2,
+          "score": 69962.109375,
+          "same_source": true
+        },
+        {
+          "train_index": 77,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 9,
+          "source_id": "mmmlu-clinical-knowledge:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 3,
+          "score": 17866.93359375,
+          "same_source": false
+        },
+        {
+          "train_index": 141,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 5,
+          "source_id": "mmmlu-medical-genetics:5",
+          "language": "fr",
+          "target": "D",
+          "rank": 4,
+          "score": 17547.248046875,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 21,
+        "dataset": "mmmlu-college-medicine",
+        "index": 1,
+        "source_id": "mmmlu-college-medicine:1",
+        "target": "D"
+      },
+      "top4_same_source_count": 3,
+      "top4_same_source_accuracy": 0.75,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 85,
+          "dataset": "mmmlu-college-medicine",
+          "index": 1,
+          "source_id": "mmmlu-college-medicine:1",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 33301.84765625,
+          "same_source": true
+        },
+        {
+          "train_index": 137,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 4,
+          "source_id": "mmmlu-medical-genetics:4",
+          "language": "fr",
+          "target": "B",
+          "rank": 2,
+          "score": 19587.85546875,
+          "same_source": false
+        },
+        {
+          "train_index": 86,
+          "dataset": "mmmlu-college-medicine",
+          "index": 1,
+          "source_id": "mmmlu-college-medicine:1",
+          "language": "ko",
+          "target": "D",
+          "rank": 3,
+          "score": 18937.66796875,
+          "same_source": true
+        },
+        {
+          "train_index": 87,
+          "dataset": "mmmlu-college-medicine",
+          "index": 1,
+          "source_id": "mmmlu-college-medicine:1",
+          "language": "es",
+          "target": "D",
+          "rank": 4,
+          "score": 18740.697265625,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 22,
+        "dataset": "mmmlu-college-medicine",
+        "index": 2,
+        "source_id": "mmmlu-college-medicine:2",
+        "target": "D"
+      },
+      "top4_same_source_count": 4,
+      "top4_same_source_accuracy": 1.0,
+      "top4_all_same_source": true,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 89,
+          "dataset": "mmmlu-college-medicine",
+          "index": 2,
+          "source_id": "mmmlu-college-medicine:2",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 92319.484375,
+          "same_source": true
+        },
+        {
+          "train_index": 91,
+          "dataset": "mmmlu-college-medicine",
+          "index": 2,
+          "source_id": "mmmlu-college-medicine:2",
+          "language": "es",
+          "target": "D",
+          "rank": 2,
+          "score": 84081.3046875,
+          "same_source": true
+        },
+        {
+          "train_index": 90,
+          "dataset": "mmmlu-college-medicine",
+          "index": 2,
+          "source_id": "mmmlu-college-medicine:2",
+          "language": "ko",
+          "target": "D",
+          "rank": 3,
+          "score": 48537.84765625,
+          "same_source": true
+        },
+        {
+          "train_index": 88,
+          "dataset": "mmmlu-college-medicine",
+          "index": 2,
+          "source_id": "mmmlu-college-medicine:2",
+          "language": "zh",
+          "target": "D",
+          "rank": 4,
+          "score": 41228.9140625,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 23,
+        "dataset": "mmmlu-college-medicine",
+        "index": 3,
+        "source_id": "mmmlu-college-medicine:3",
+        "target": "A"
+      },
+      "top4_same_source_count": 4,
+      "top4_same_source_accuracy": 1.0,
+      "top4_all_same_source": true,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 93,
+          "dataset": "mmmlu-college-medicine",
+          "index": 3,
+          "source_id": "mmmlu-college-medicine:3",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 81175.9296875,
+          "same_source": true
+        },
+        {
+          "train_index": 95,
+          "dataset": "mmmlu-college-medicine",
+          "index": 3,
+          "source_id": "mmmlu-college-medicine:3",
+          "language": "es",
+          "target": "A",
+          "rank": 2,
+          "score": 78857.9375,
+          "same_source": true
+        },
+        {
+          "train_index": 94,
+          "dataset": "mmmlu-college-medicine",
+          "index": 3,
+          "source_id": "mmmlu-college-medicine:3",
+          "language": "ko",
+          "target": "A",
+          "rank": 3,
+          "score": 63225.55859375,
+          "same_source": true
+        },
+        {
+          "train_index": 92,
+          "dataset": "mmmlu-college-medicine",
+          "index": 3,
+          "source_id": "mmmlu-college-medicine:3",
+          "language": "zh",
+          "target": "A",
+          "rank": 4,
+          "score": 62075.11328125,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 24,
+        "dataset": "mmmlu-college-medicine",
+        "index": 4,
+        "source_id": "mmmlu-college-medicine:4",
+        "target": "D"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 73,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 8,
+          "source_id": "mmmlu-clinical-knowledge:8",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 49773.5703125,
+          "same_source": false
+        },
+        {
+          "train_index": 97,
+          "dataset": "mmmlu-college-medicine",
+          "index": 4,
+          "source_id": "mmmlu-college-medicine:4",
+          "language": "fr",
+          "target": "D",
+          "rank": 2,
+          "score": 49773.5703125,
+          "same_source": true
+        },
+        {
+          "train_index": 99,
+          "dataset": "mmmlu-college-medicine",
+          "index": 4,
+          "source_id": "mmmlu-college-medicine:4",
+          "language": "es",
+          "target": "D",
+          "rank": 3,
+          "score": 48499.359375,
+          "same_source": true
+        },
+        {
+          "train_index": 75,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 8,
+          "source_id": "mmmlu-clinical-knowledge:8",
+          "language": "es",
+          "target": "D",
+          "rank": 4,
+          "score": 48499.359375,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 25,
+        "dataset": "mmmlu-college-medicine",
+        "index": 5,
+        "source_id": "mmmlu-college-medicine:5",
+        "target": "A"
+      },
+      "top4_same_source_count": 3,
+      "top4_same_source_accuracy": 0.75,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 103,
+          "dataset": "mmmlu-college-medicine",
+          "index": 5,
+          "source_id": "mmmlu-college-medicine:5",
+          "language": "es",
+          "target": "A",
+          "rank": 1,
+          "score": 72558.4296875,
+          "same_source": true
+        },
+        {
+          "train_index": 101,
+          "dataset": "mmmlu-college-medicine",
+          "index": 5,
+          "source_id": "mmmlu-college-medicine:5",
+          "language": "fr",
+          "target": "A",
+          "rank": 2,
+          "score": 69353.9609375,
+          "same_source": true
+        },
+        {
+          "train_index": 102,
+          "dataset": "mmmlu-college-medicine",
+          "index": 5,
+          "source_id": "mmmlu-college-medicine:5",
+          "language": "ko",
+          "target": "A",
+          "rank": 3,
+          "score": 12420.6533203125,
+          "same_source": true
+        },
+        {
+          "train_index": 109,
+          "dataset": "mmmlu-college-medicine",
+          "index": 7,
+          "source_id": "mmmlu-college-medicine:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 9160.0107421875,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 26,
+        "dataset": "mmmlu-college-medicine",
+        "index": 6,
+        "source_id": "mmmlu-college-medicine:6",
+        "target": "C"
+      },
+      "top4_same_source_count": 4,
+      "top4_same_source_accuracy": 1.0,
+      "top4_all_same_source": true,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 105,
+          "dataset": "mmmlu-college-medicine",
+          "index": 6,
+          "source_id": "mmmlu-college-medicine:6",
+          "language": "fr",
+          "target": "C",
+          "rank": 1,
+          "score": 83875.8671875,
+          "same_source": true
+        },
+        {
+          "train_index": 107,
+          "dataset": "mmmlu-college-medicine",
+          "index": 6,
+          "source_id": "mmmlu-college-medicine:6",
+          "language": "es",
+          "target": "C",
+          "rank": 2,
+          "score": 77373.59375,
+          "same_source": true
+        },
+        {
+          "train_index": 104,
+          "dataset": "mmmlu-college-medicine",
+          "index": 6,
+          "source_id": "mmmlu-college-medicine:6",
+          "language": "zh",
+          "target": "C",
+          "rank": 3,
+          "score": 31694.279296875,
+          "same_source": true
+        },
+        {
+          "train_index": 106,
+          "dataset": "mmmlu-college-medicine",
+          "index": 6,
+          "source_id": "mmmlu-college-medicine:6",
+          "language": "ko",
+          "target": "C",
+          "rank": 4,
+          "score": 21898.515625,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 27,
+        "dataset": "mmmlu-college-medicine",
+        "index": 7,
+        "source_id": "mmmlu-college-medicine:7",
+        "target": "A"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 109,
+          "dataset": "mmmlu-college-medicine",
+          "index": 7,
+          "source_id": "mmmlu-college-medicine:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 52792.078125,
+          "same_source": true
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 2,
+          "score": 46764.48046875,
+          "same_source": false
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 41922.62109375,
+          "same_source": false
+        },
+        {
+          "train_index": 111,
+          "dataset": "mmmlu-college-medicine",
+          "index": 7,
+          "source_id": "mmmlu-college-medicine:7",
+          "language": "es",
+          "target": "A",
+          "rank": 4,
+          "score": 40152.76953125,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 28,
+        "dataset": "mmmlu-college-medicine",
+        "index": 8,
+        "source_id": "mmmlu-college-medicine:8",
+        "target": "A"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 58078.95703125,
+          "same_source": true
+        },
+        {
+          "train_index": 115,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "es",
+          "target": "A",
+          "rank": 2,
+          "score": 50478.75,
+          "same_source": true
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 38233.38671875,
+          "same_source": false
+        },
+        {
+          "train_index": 109,
+          "dataset": "mmmlu-college-medicine",
+          "index": 7,
+          "source_id": "mmmlu-college-medicine:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 36361.640625,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 29,
+        "dataset": "mmmlu-college-medicine",
+        "index": 9,
+        "source_id": "mmmlu-college-medicine:9",
+        "target": "C"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 119,
+          "dataset": "mmmlu-college-medicine",
+          "index": 9,
+          "source_id": "mmmlu-college-medicine:9",
+          "language": "es",
+          "target": "C",
+          "rank": 1,
+          "score": 36154.7578125,
+          "same_source": true
+        },
+        {
+          "train_index": 117,
+          "dataset": "mmmlu-college-medicine",
+          "index": 9,
+          "source_id": "mmmlu-college-medicine:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 2,
+          "score": 34469.52734375,
+          "same_source": true
+        },
+        {
+          "train_index": 1,
+          "dataset": "mmmlu-college-biology",
+          "index": 0,
+          "source_id": "mmmlu-college-biology:0",
+          "language": "fr",
+          "target": "C",
+          "rank": 3,
+          "score": 19271.2265625,
+          "same_source": false
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 19048.890625,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 30,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 0,
+        "source_id": "mmmlu-medical-genetics:0",
+        "target": "A"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 121,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 0,
+          "source_id": "mmmlu-medical-genetics:0",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 23350.07421875,
+          "same_source": true
+        },
+        {
+          "train_index": 123,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 0,
+          "source_id": "mmmlu-medical-genetics:0",
+          "language": "es",
+          "target": "A",
+          "rank": 2,
+          "score": 20177.779296875,
+          "same_source": true
+        },
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 3,
+          "score": 17458.498046875,
+          "same_source": false
+        },
+        {
+          "train_index": 1,
+          "dataset": "mmmlu-college-biology",
+          "index": 0,
+          "source_id": "mmmlu-college-biology:0",
+          "language": "fr",
+          "target": "C",
+          "rank": 4,
+          "score": 17164.134765625,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 31,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 1,
+        "source_id": "mmmlu-medical-genetics:1",
+        "target": "A"
+      },
+      "top4_same_source_count": 3,
+      "top4_same_source_accuracy": 0.75,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko"
+      ],
+      "top4": [
+        {
+          "train_index": 125,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 1,
+          "source_id": "mmmlu-medical-genetics:1",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 47296.1953125,
+          "same_source": true
+        },
+        {
+          "train_index": 127,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 1,
+          "source_id": "mmmlu-medical-genetics:1",
+          "language": "es",
+          "target": "A",
+          "rank": 2,
+          "score": 39981.59375,
+          "same_source": true
+        },
+        {
+          "train_index": 126,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 1,
+          "source_id": "mmmlu-medical-genetics:1",
+          "language": "ko",
+          "target": "A",
+          "rank": 3,
+          "score": 30359.640625,
+          "same_source": true
+        },
+        {
+          "train_index": 93,
+          "dataset": "mmmlu-college-medicine",
+          "index": 3,
+          "source_id": "mmmlu-college-medicine:3",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 26836.9140625,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 32,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 2,
+        "source_id": "mmmlu-medical-genetics:2",
+        "target": "C"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 131,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 2,
+          "source_id": "mmmlu-medical-genetics:2",
+          "language": "es",
+          "target": "C",
+          "rank": 1,
+          "score": 39684.10546875,
+          "same_source": true
+        },
+        {
+          "train_index": 129,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 2,
+          "source_id": "mmmlu-medical-genetics:2",
+          "language": "fr",
+          "target": "C",
+          "rank": 2,
+          "score": 34999.47265625,
+          "same_source": true
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 33783.3984375,
+          "same_source": false
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 33234.91796875,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 33,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 3,
+        "source_id": "mmmlu-medical-genetics:3",
+        "target": "A"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 135,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 3,
+          "source_id": "mmmlu-medical-genetics:3",
+          "language": "es",
+          "target": "A",
+          "rank": 1,
+          "score": 44563.203125,
+          "same_source": true
+        },
+        {
+          "train_index": 133,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 3,
+          "source_id": "mmmlu-medical-genetics:3",
+          "language": "fr",
+          "target": "A",
+          "rank": 2,
+          "score": 42532.78515625,
+          "same_source": true
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 29179.96484375,
+          "same_source": false
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 29130.330078125,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 34,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 4,
+        "source_id": "mmmlu-medical-genetics:4",
+        "target": "B"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 137,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 4,
+          "source_id": "mmmlu-medical-genetics:4",
+          "language": "fr",
+          "target": "B",
+          "rank": 1,
+          "score": 25102.6015625,
+          "same_source": true
+        },
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 2,
+          "score": 20187.447265625,
+          "same_source": false
+        },
+        {
+          "train_index": 89,
+          "dataset": "mmmlu-college-medicine",
+          "index": 2,
+          "source_id": "mmmlu-college-medicine:2",
+          "language": "fr",
+          "target": "D",
+          "rank": 3,
+          "score": 19638.283203125,
+          "same_source": false
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 19475.716796875,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 35,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 5,
+        "source_id": "mmmlu-medical-genetics:5",
+        "target": "D"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 141,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 5,
+          "source_id": "mmmlu-medical-genetics:5",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 21616.875,
+          "same_source": true
+        },
+        {
+          "train_index": 9,
+          "dataset": "mmmlu-college-biology",
+          "index": 2,
+          "source_id": "mmmlu-college-biology:2",
+          "language": "fr",
+          "target": "B",
+          "rank": 2,
+          "score": 19308.91015625,
+          "same_source": false
+        },
+        {
+          "train_index": 137,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 4,
+          "source_id": "mmmlu-medical-genetics:4",
+          "language": "fr",
+          "target": "B",
+          "rank": 3,
+          "score": 17278.458984375,
+          "same_source": false
+        },
+        {
+          "train_index": 117,
+          "dataset": "mmmlu-college-medicine",
+          "index": 9,
+          "source_id": "mmmlu-college-medicine:9",
+          "language": "fr",
+          "target": "C",
+          "rank": 4,
+          "score": 17227.16796875,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 36,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 6,
+        "source_id": "mmmlu-medical-genetics:6",
+        "target": "C"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 145,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 6,
+          "source_id": "mmmlu-medical-genetics:6",
+          "language": "fr",
+          "target": "C",
+          "rank": 1,
+          "score": 59460.9375,
+          "same_source": true
+        },
+        {
+          "train_index": 147,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 6,
+          "source_id": "mmmlu-medical-genetics:6",
+          "language": "es",
+          "target": "C",
+          "rank": 2,
+          "score": 47016.265625,
+          "same_source": true
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 35096.74609375,
+          "same_source": false
+        },
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 33614.20703125,
+          "same_source": false
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 37,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 7,
+        "source_id": "mmmlu-medical-genetics:7",
+        "target": "D"
+      },
+      "top4_same_source_count": 4,
+      "top4_same_source_accuracy": 1.0,
+      "top4_all_same_source": true,
+      "top4_languages": [
+        "es",
+        "fr",
+        "ko",
+        "zh"
+      ],
+      "top4": [
+        {
+          "train_index": 149,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 7,
+          "source_id": "mmmlu-medical-genetics:7",
+          "language": "fr",
+          "target": "D",
+          "rank": 1,
+          "score": 25515.751953125,
+          "same_source": true
+        },
+        {
+          "train_index": 151,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 7,
+          "source_id": "mmmlu-medical-genetics:7",
+          "language": "es",
+          "target": "D",
+          "rank": 2,
+          "score": 24875.134765625,
+          "same_source": true
+        },
+        {
+          "train_index": 150,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 7,
+          "source_id": "mmmlu-medical-genetics:7",
+          "language": "ko",
+          "target": "D",
+          "rank": 3,
+          "score": 23303.55859375,
+          "same_source": true
+        },
+        {
+          "train_index": 148,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 7,
+          "source_id": "mmmlu-medical-genetics:7",
+          "language": "zh",
+          "target": "D",
+          "rank": 4,
+          "score": 21743.681640625,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 38,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 8,
+        "source_id": "mmmlu-medical-genetics:8",
+        "target": "C"
+      },
+      "top4_same_source_count": 1,
+      "top4_same_source_accuracy": 0.25,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 69,
+          "dataset": "mmmlu-clinical-knowledge",
+          "index": 7,
+          "source_id": "mmmlu-clinical-knowledge:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 1,
+          "score": 42048.6953125,
+          "same_source": false
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 2,
+          "score": 39652.54296875,
+          "same_source": false
+        },
+        {
+          "train_index": 109,
+          "dataset": "mmmlu-college-medicine",
+          "index": 7,
+          "source_id": "mmmlu-college-medicine:7",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 36730.15625,
+          "same_source": false
+        },
+        {
+          "train_index": 153,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 8,
+          "source_id": "mmmlu-medical-genetics:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 4,
+          "score": 36684.3203125,
+          "same_source": true
+        }
+      ]
+    },
+    {
+      "query": {
+        "test_index": 39,
+        "dataset": "mmmlu-medical-genetics",
+        "index": 9,
+        "source_id": "mmmlu-medical-genetics:9",
+        "target": "A"
+      },
+      "top4_same_source_count": 2,
+      "top4_same_source_accuracy": 0.5,
+      "top4_all_same_source": false,
+      "top4_languages": [
+        "es",
+        "fr"
+      ],
+      "top4": [
+        {
+          "train_index": 159,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 9,
+          "source_id": "mmmlu-medical-genetics:9",
+          "language": "es",
+          "target": "A",
+          "rank": 1,
+          "score": 17166.240234375,
+          "same_source": true
+        },
+        {
+          "train_index": 33,
+          "dataset": "mmmlu-college-biology",
+          "index": 8,
+          "source_id": "mmmlu-college-biology:8",
+          "language": "fr",
+          "target": "C",
+          "rank": 2,
+          "score": 15604.1455078125,
+          "same_source": false
+        },
+        {
+          "train_index": 157,
+          "dataset": "mmmlu-medical-genetics",
+          "index": 9,
+          "source_id": "mmmlu-medical-genetics:9",
+          "language": "fr",
+          "target": "A",
+          "rank": 3,
+          "score": 15187.396484375,
+          "same_source": true
+        },
+        {
+          "train_index": 113,
+          "dataset": "mmmlu-college-medicine",
+          "index": 8,
+          "source_id": "mmmlu-college-medicine:8",
+          "language": "fr",
+          "target": "A",
+          "rank": 4,
+          "score": 14787.2392578125,
+          "same_source": false
+        }
+      ]
+    }
+  ]
+}

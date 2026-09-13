@@ -22,13 +22,14 @@ Delta_t(o, u) ~= eta (g_o^T g_u)(h_L,o^T h_L,u)
 
 | Paper theme | Question | Release coverage |
 | --- | --- | --- |
-| Selection / attribution (Sec. 4) | What should the model learn from? | Uses the interaction developed and validated in `interaction/`; the supplied release does not include the full Sec. 4 selection pipeline. |
+| Selection / attribution (Sec. 4) | What should the model learn from? | `attribution/agent_memory/` and `attribution/retrieval/` as two separate experiments sharing the ForValue core. |
 | Interference / forgetting (Sec. 5) | What does an update break? | `interaction/` for collision/update energy; `forgetting/` for erosion. |
 | Plasticity loss (Sec. 6) | Will future learning still work? | `plasticity/` |
 
 ## Repository structure
 
 ```text
+attribution/   # Sec. 4: separate agent_memory and retrieval experiments
 interaction/   # Secs. 2-3, 5.1, App. B.2: CH1/CH2 validation and collision diagnostics
 forgetting/    # Secs. 5.2-5.3: behavioral erosion and pre-finetuning prediction
 plasticity/    # Sec. 6: readout transmission, long-horizon training, reset interventions
@@ -53,7 +54,23 @@ The forgetting training and model-loading paths additionally require the compani
 
 Run commands from the repository root.
 
-### 1. Interaction validation
+### 1. Selection and attribution
+
+The attribution release separates downstream Agent Memory from direct Translation Retrieval; each subfolder has its own data, scores, source entry points, reference metrics, and README. Its integrity check does not load a model:
+
+```bash
+python attribution/scripts/validate_release.py
+```
+
+Reproduce a downstream memory run directly from the saved deterministic scores:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python attribution/scripts/reproduce.py memory qwen25_1p5b --allow-download
+```
+
+See [Agent Memory](attribution/agent_memory/README.md), [Translation Retrieval](attribution/retrieval/README.md), and the [attribution overview](attribution/README.md) for experiment-specific protocols and comparisons.
+
+### 2. Interaction validation
 
 This covers the empirical validation in Sec. 3 (Figure 4); the same module also contains the SFT-vs-generation update-energy diagnostics for Sec. 5.1 (Figure 6) and layer-wise diagnostics from Appendix B.2.
 
@@ -67,7 +84,7 @@ python interaction/src/run_section3_validation.py \
 
 The runner writes its resolved configuration, pair-level measurements, summary metrics, and optional CSV artifacts. Downloads are disabled unless `--allow_download` is supplied. See [interaction/README.md](interaction/README.md) and use `--help` for the smaller hidden-state and one-step workflows.
 
-### 2. Interference and forgetting
+### 3. Interference and forgetting
 
 The cheapest correctness check validates the closed-form token-force and sequence-score calculations without loading a language model:
 
@@ -90,7 +107,7 @@ python forgetting/scripts/run_sequence_score.py \
 
 See [forgetting/README.md](forgetting/README.md) for training, evaluation, aggregation, and the required LLaMA-Factory integration.
 
-### 3. Plasticity loss
+### 4. Plasticity loss
 
 A small SFT invocation checks the public Python entry point; it is not a reproduction of the long-horizon experiment:
 
@@ -107,7 +124,7 @@ The full Sec. 6 pipeline prepares probe sets, tracks the normalized readout-tran
 
 ## Reproducing paper results
 
-This is a minimal code release, not a one-command artifact bundle. Exact paper-scale runs require external Hugging Face datasets and checkpoints, gated-model access where applicable, substantial GPU resources, and the companion LLaMA-Factory fork for the forgetting experiments. Raw outputs, checkpoints, model caches, W&B histories, and paper figures are intentionally not committed.
+This is a minimal code release, not a one-command artifact bundle. Exact paper-scale runs require external Hugging Face datasets and checkpoints, gated-model access where applicable, substantial GPU resources, and the companion LLaMA-Factory fork for the forgetting experiments. The attribution module includes its compact translated datasets, selection scores, and reference metrics. Large raw generation outputs, checkpoints, model caches, W&B histories, and paper figures are intentionally not committed.
 
 The default commands write beneath `outputs/`. Use explicit path arguments for external datasets and checkpoints, and inspect each command with `--help` before launching a full run.
 
